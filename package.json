@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "test": "jest --verbose",
     "test:watch": "jest --watchAll"
   },
