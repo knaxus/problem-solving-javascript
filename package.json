@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "coverage": "jest --coverage",
     "test": "jest --verbose",
     "test:watch": "jest --watchAll"
   },
