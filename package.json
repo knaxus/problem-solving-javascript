@@ -7,6 +7,9 @@
     "test": "jest --verbose",
     "test:watch": "jest --watchAll"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "keywords": [],
   "author": "Ashok Dey <ashokdey100@gmail.com> (http://ashokdey.in)",
   "license": "MIT",
