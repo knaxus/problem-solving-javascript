@@ -1,6 +1,8 @@
+const pattern = /[^\w]/g;
+
 function createCharMap(str) {
   const charMap = {};
-  const sanitizedString = str.replace(/[^\w]/g, '').toLowerCase();
+  const sanitizedString = str.replace(pattern, '').toLowerCase();
   sanitizedString.split('').forEach((char) => {
     if (!charMap[char]) {
       charMap[char] = 1;
@@ -10,6 +12,15 @@ function createCharMap(str) {
     return 0;
   });
   return charMap;
+}
+
+function sanitizeAndSortString(str) {
+  return str
+    .replace(pattern, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
 }
 
 function checkAnagrams({ firstString, secondString }) {
@@ -30,7 +41,11 @@ function checkAnagrams({ firstString, secondString }) {
   return true;
 }
 
+function checkAnagramUsingHelpers({ firstString, secondString }) {
+  return sanitizeAndSortString(firstString) === sanitizeAndSortString(secondString);
+}
+
 module.exports = {
   checkAnagrams,
-  createCharMap,
+  checkAnagramUsingHelpers,
 };
