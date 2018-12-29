@@ -8,6 +8,10 @@ class Queue {
     return this.data.unshift(element);
   }
 
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+
   remove() {
     return this.data.pop();
   }
