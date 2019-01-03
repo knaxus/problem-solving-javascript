@@ -46,6 +46,15 @@ class LinkedList {
     }
     return count;
   }
+
+  removeFromBeginning() {
+    if (!this.head) {
+      return null;
+    }
+    const temp = this.head;
+    this.head = this.head.next;
+    return temp.data;
+  }
 }
 
 module.exports = { LinkedList, Node };

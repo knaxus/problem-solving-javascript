@@ -47,6 +47,7 @@ describe('Data Structures: Linked Lists', () => {
       list.addAtEnd(15);
       expect(list.head.data).toEqual(12);
       expect(list.head.next.data).toEqual(15);
+      expect(list.length()).toEqual(2);
     });
 
     it('Should return the present size of the list using list.length()', () => {
@@ -55,6 +56,16 @@ describe('Data Structures: Linked Lists', () => {
       list.addAtBeginning(2);
       list.addAtBeginning(3);
       expect(list.length()).toEqual(3);
+    });
+
+    it('Should remove element at front using list.removeFromBeginning()', () => {
+      list.addAtBeginning(12);
+      expect(list.removeFromBeginning()).toEqual(12);
+
+      list.addAtBeginning(15);
+      list.addAtBeginning(16);
+      expect(list.removeFromBeginning()).toEqual(16);
+      expect(list.length()).toEqual(1);
     });
   });
 });
