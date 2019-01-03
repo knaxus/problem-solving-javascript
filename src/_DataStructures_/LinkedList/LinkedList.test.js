@@ -67,5 +67,14 @@ describe('Data Structures: Linked Lists', () => {
       expect(list.removeFromBeginning()).toEqual(16);
       expect(list.length()).toEqual(1);
     });
+
+    it('Should remove element at last using list.removeFromEnd()', () => {
+      expect(list.removeFromEnd()).toEqual(null);
+
+      list.addAtBeginning(15);
+      list.addAtBeginning(14);
+      expect(list.removeFromEnd()).toEqual(15);
+      expect(list.length()).toEqual(1);
+    });
   });
 });
