@@ -40,6 +40,15 @@ describe('Data Structures: Linked Lists', () => {
       expect(list.head.data).toEqual(15);
     });
 
+    it('Should add element at end using list.addAtEnd()', () => {
+      list.addAtEnd(12);
+      expect(list.head.data).toEqual(12);
+
+      list.addAtEnd(15);
+      expect(list.head.data).toEqual(12);
+      expect(list.head.next.data).toEqual(15);
+    });
+
     it('Should return the present size of the list using list.length()', () => {
       expect(list.length()).toEqual(0);
       list.addAtBeginning(1);

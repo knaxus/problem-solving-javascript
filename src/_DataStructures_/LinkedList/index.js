@@ -21,6 +21,22 @@ class LinkedList {
     }
   }
 
+  addAtEnd(element) {
+    const node = new Node(element, null);
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      let address = this.head;
+
+      while (address.next) {
+        address = address.next;
+      }
+
+      address.next = node;
+    }
+  }
+
   length() {
     let address = this.head;
     let count = 0;
