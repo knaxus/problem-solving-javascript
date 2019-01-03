@@ -20,8 +20,8 @@ describe('Data Structure : Queue', () => {
     it('Should remove() an element from the queue', () => {
       queue.add(2);
       queue.add(3);
-      queue.remove();
 
+      expect(queue.remove()).toEqual(2);
       expect(queue.data).toEqual([3]);
     });
 

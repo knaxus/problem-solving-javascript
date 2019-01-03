@@ -9,6 +9,7 @@ function removeDuplicatesUsingHashTable(str) {
     }
   }
 
+  // eslint-disable-next-line array-callback-return
   Object.keys(charHash).map((char) => {
     result += char;
   });
