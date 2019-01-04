@@ -32,9 +32,9 @@ class LinkedList {
     if (!this.head) {
       return null;
     }
-    const temp = this.head;
+    const node = this.head;
     this.head = this.head.next;
-    return temp.data;
+    return node;
   }
 
   removeFromEnd() {
@@ -46,9 +46,10 @@ class LinkedList {
     while (address.next.next) {
       address = address.next;
     }
-    const { data } = address.next;
+
+    const node = address.next;
     address.next = null;
-    return data;
+    return node;
   }
 
   getFirst() {
@@ -126,9 +127,9 @@ class LinkedList {
       count -= 1;
     }
 
-    const { data } = address.data;
+    const node = address;
     previous.next = address.next.next;
-    return data;
+    return node;
   }
 
   length() {

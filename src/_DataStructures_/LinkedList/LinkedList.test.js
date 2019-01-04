@@ -98,14 +98,14 @@ describe('Data Structures: Linked Lists', () => {
     describe('removeFromBeginning()', () => {
       it('Should remove element at front', () => {
         list.addAtBeginning(12);
-        expect(list.removeFromBeginning()).toEqual(12);
+        expect(list.removeFromBeginning().data).toEqual(12);
         expect(list.length()).toEqual(0);
       });
 
       it('Should return the element after removing it', () => {
         list.addAtBeginning(15);
         list.addAtBeginning(16);
-        expect(list.removeFromBeginning()).toEqual(16);
+        expect(list.removeFromBeginning().data).toEqual(16);
       });
 
       it('Should not throw error if the list is empty', () => {
@@ -122,7 +122,7 @@ describe('Data Structures: Linked Lists', () => {
         list.addAtBeginning('Hello');
         list.addAtBeginning(14);
         list.addAtEnd(15);
-        expect(list.removeFromEnd()).toEqual(15);
+        expect(list.removeFromEnd().data).toEqual(15);
       });
 
       it('Should reduce the lengh of the list', () => {
@@ -137,7 +137,7 @@ describe('Data Structures: Linked Lists', () => {
       it('Should return the last element after removing it', () => {
         list.addAtBeginning(14);
         list.addAtEnd(15);
-        expect(list.removeFromEnd()).toEqual(15);
+        expect(list.removeFromEnd().data).toEqual(15);
       });
     });
 
@@ -218,13 +218,13 @@ describe('Data Structures: Linked Lists', () => {
           expect(list.removeAt(10)).toEqual(null);
         });
 
-        it('Should remove last element for large index value', () => {
-          expect(list.removeAt(10)).toEqual('Welcome');
+        it('Should remove and return last element for large index value', () => {
+          expect(list.removeAt(10).data).toEqual('Welcome');
         });
 
-        it('Should remove the element at given index value', () => {
-          expect(list.removeAt(3)).toEqual('Welcome');
-          expect(list.removeAt(2)).toEqual('There!');
+        it('Should remove and return the element at given index value', () => {
+          expect(list.removeAt(3).data).toEqual('Welcome');
+          expect(list.removeAt(2).data).toEqual('There!');
         });
       });
     });
