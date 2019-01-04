@@ -168,5 +168,26 @@ describe('Data Structures: Linked Lists', () => {
         expect(list.getFirst().data).toEqual(15);
       });
     });
+
+    describe('getAt(index)', () => {
+      beforeEach(() => {
+        list.addAtBeginning('Hello');
+        list.addAtEnd('There!');
+        list.addAtEnd('Welcome');
+      });
+      
+      it('Should return `null` for empty list regardless of index value', () => {
+        list.delete();
+        expect(list.getAt(10)).toEqual(null);
+      });
+
+      it('Should return the node for given index', () => {
+        expect(list.getAt(1).data).toEqual('There!');
+      });
+
+      it('Should return the last element for large index', () => {
+        expect(list.getAt(10).data).toEqual('Welcome');
+      });
+    });
   });
 });
