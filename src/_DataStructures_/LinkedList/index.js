@@ -11,14 +11,7 @@ class LinkedList {
   }
 
   addAtBeginning(element) {
-    const node = new Node(element, null);
-
-    if (!this.head) {
-      this.head = node;
-    } else {
-      node.next = this.head;
-      this.head = node;
-    }
+    this.head = new Node(element, this.head);
   }
 
   addAtEnd(element) {
@@ -35,16 +28,6 @@ class LinkedList {
 
       address.next = node;
     }
-  }
-
-  length() {
-    let address = this.head;
-    let count = 0;
-    while (address) {
-      count += 1;
-      address = address.next;
-    }
-    return count;
   }
 
   removeFromBeginning() {
@@ -68,6 +51,41 @@ class LinkedList {
     const { data } = address.next;
     address.next = null;
     return data;
+  }
+
+  getFirst() {
+    if (!this.head) {
+      return null;
+    }
+    return this.head.data;
+  }
+
+  getLast() {
+    if (!this.head) {
+      return null;
+    }
+
+    let address = this.head;
+
+    while (address.next) {
+      address = address.next;
+    }
+
+    return address.data;
+  }
+
+  length() {
+    let address = this.head;
+    let count = 0;
+    while (address) {
+      count += 1;
+      address = address.next;
+    }
+    return count;
+  }
+
+  delete() {
+    this.head = null;
   }
 }
 
