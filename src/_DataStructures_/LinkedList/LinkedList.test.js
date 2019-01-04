@@ -43,7 +43,7 @@ describe('Data Structures: Linked Lists', () => {
 
       it('Should return the 10 as the first element in the list', () => {
         list.addAtBeginning(10);
-        expect(list.getFirst(10));
+        expect(list.getFirst().data).toEqual(10);
       });
     });
 
@@ -51,7 +51,7 @@ describe('Data Structures: Linked Lists', () => {
       it('Should add element at end', () => {
         list.addAtBeginning(10);
         list.addAtEnd(12);
-        expect(list.getLast()).toEqual(12);
+        expect(list.getLast().data).toEqual(12);
       });
 
       it('Should add at the beginning if the list is empty', () => {
@@ -151,7 +151,7 @@ describe('Data Structures: Linked Lists', () => {
         list.addAtEnd(23);
         list.addAtEnd(33);
         list.addAtEnd(10);
-        expect(list.getLast()).toEqual(10);
+        expect(list.getLast().data).toEqual(10);
       });
     });
 
@@ -165,7 +165,7 @@ describe('Data Structures: Linked Lists', () => {
         list.addAtEnd(23);
         list.addAtEnd(33);
         list.addAtEnd(10);
-        expect(list.getFirst()).toEqual(15);
+        expect(list.getFirst().data).toEqual(15);
       });
     });
   });

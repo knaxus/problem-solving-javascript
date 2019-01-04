@@ -57,21 +57,18 @@ class LinkedList {
     if (!this.head) {
       return null;
     }
-    return this.head.data;
+    return this.head;
   }
 
   getLast() {
     if (!this.head) {
       return null;
     }
-
     let address = this.head;
-
     while (address.next) {
       address = address.next;
     }
-
-    return address.data;
+    return address;
   }
 
   length() {
