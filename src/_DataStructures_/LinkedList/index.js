@@ -84,6 +84,29 @@ class LinkedList {
     return address;
   }
 
+  addAt(index, element) {
+    if (!this.head) {
+      return this.addAtBeginning(element);
+    }
+
+    if (index >= this.length()) {
+      return this.addAtEnd(element);
+    }
+
+    let address = this.head;
+    let previous = this.head;
+    let count = index;
+
+    while (count) {
+      previous = address;
+      address = address.next;
+      count -= 1;
+    }
+
+    previous.next = new Node(element, previous.next);
+    return 0;
+  }
+
   length() {
     let address = this.head;
     let count = 0;

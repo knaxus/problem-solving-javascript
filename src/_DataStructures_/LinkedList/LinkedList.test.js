@@ -175,7 +175,7 @@ describe('Data Structures: Linked Lists', () => {
         list.addAtEnd('There!');
         list.addAtEnd('Welcome');
       });
-      
+
       it('Should return `null` for empty list regardless of index value', () => {
         list.delete();
         expect(list.getAt(10)).toEqual(null);
@@ -187,6 +187,33 @@ describe('Data Structures: Linked Lists', () => {
 
       it('Should return the last element for large index', () => {
         expect(list.getAt(10).data).toEqual('Welcome');
+      });
+    });
+
+    describe('addAt(index, value)', () => {
+      beforeEach(() => {
+        list.addAtBeginning('Hello');
+        list.addAtEnd('There!');
+        list.addAtEnd('Welcome');
+      });
+
+      it('Should add at the beginning of empty list', () => {
+        list.delete();
+        list.addAt(10, 'Boom');
+        expect(list.getFirst().data).toEqual('Boom');
+      });
+
+      it('Should add at the end of the list if the index is out of bound', () => {
+        list.addAtEnd(1010);
+        list.addAt(10, 'Boom');
+        expect(list.getLast().data).toEqual('Boom');
+      });
+
+      it('Should add new element at the given position', () => {
+        list.addAt(2, 'Stranger');
+        expect(list.getAt(2).data).toEqual('Stranger');
+        expect(list.getAt(1).data).toEqual('There!');
+        expect(list.getAt(0).data).toEqual('Hello');
       });
     });
   });
