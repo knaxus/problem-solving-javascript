@@ -169,51 +169,63 @@ describe('Data Structures: Linked Lists', () => {
       });
     });
 
-    describe('getAt(index)', () => {
+    describe('Get/Add/Remove at specific positions', () => {
       beforeEach(() => {
         list.addAtBeginning('Hello');
         list.addAtEnd('There!');
         list.addAtEnd('Welcome');
       });
 
-      it('Should return `null` for empty list regardless of index value', () => {
-        list.delete();
-        expect(list.getAt(10)).toEqual(null);
+      describe('getAt(index)', () => {
+        it('Should return `null` for empty list regardless of index value', () => {
+          list.delete();
+          expect(list.getAt(10)).toEqual(null);
+        });
+
+        it('Should return the node for given index', () => {
+          expect(list.getAt(1).data).toEqual('There!');
+        });
+
+        it('Should return the last element for large index', () => {
+          expect(list.getAt(10).data).toEqual('Welcome');
+        });
       });
 
-      it('Should return the node for given index', () => {
-        expect(list.getAt(1).data).toEqual('There!');
+      describe('addAt(index, value)', () => {
+        it('Should add at the beginning of empty list', () => {
+          list.delete();
+          list.addAt(10, 'Boom');
+          expect(list.getFirst().data).toEqual('Boom');
+        });
+
+        it('Should add at the end of the list if the index is out of bound', () => {
+          list.addAtEnd(1010);
+          list.addAt(10, 'Boom');
+          expect(list.getLast().data).toEqual('Boom');
+        });
+
+        it('Should add new element at the given position', () => {
+          list.addAt(2, 'Stranger');
+          expect(list.getAt(2).data).toEqual('Stranger');
+          expect(list.getAt(1).data).toEqual('There!');
+          expect(list.getAt(0).data).toEqual('Hello');
+        });
       });
 
-      it('Should return the last element for large index', () => {
-        expect(list.getAt(10).data).toEqual('Welcome');
-      });
-    });
+      describe('removeAt(index)', () => {
+        it('Should return null for empty list', () => {
+          list.delete();
+          expect(list.removeAt(10)).toEqual(null);
+        });
 
-    describe('addAt(index, value)', () => {
-      beforeEach(() => {
-        list.addAtBeginning('Hello');
-        list.addAtEnd('There!');
-        list.addAtEnd('Welcome');
-      });
+        it('Should remove last element for large index value', () => {
+          expect(list.removeAt(10)).toEqual('Welcome');
+        });
 
-      it('Should add at the beginning of empty list', () => {
-        list.delete();
-        list.addAt(10, 'Boom');
-        expect(list.getFirst().data).toEqual('Boom');
-      });
-
-      it('Should add at the end of the list if the index is out of bound', () => {
-        list.addAtEnd(1010);
-        list.addAt(10, 'Boom');
-        expect(list.getLast().data).toEqual('Boom');
-      });
-
-      it('Should add new element at the given position', () => {
-        list.addAt(2, 'Stranger');
-        expect(list.getAt(2).data).toEqual('Stranger');
-        expect(list.getAt(1).data).toEqual('There!');
-        expect(list.getAt(0).data).toEqual('Hello');
+        it('Should remove the element at given index value', () => {
+          expect(list.removeAt(3)).toEqual('Welcome');
+          expect(list.removeAt(2)).toEqual('There!');
+        });
       });
     });
   });

@@ -104,7 +104,31 @@ class LinkedList {
     }
 
     previous.next = new Node(element, previous.next);
-    return 0;
+    return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) {
+      return null;
+    }
+
+    if (index >= this.length()) {
+      return this.removeFromEnd();
+    }
+
+    let address = this.head;
+    let previous = address;
+    let count = index;
+
+    while (count) {
+      address = address.next;
+      previous = address;
+      count -= 1;
+    }
+
+    const { data } = address.data;
+    previous.next = address.next.next;
+    return data;
   }
 
   length() {
