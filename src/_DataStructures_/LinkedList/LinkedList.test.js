@@ -32,49 +32,141 @@ describe('Data Structures: Linked Lists', () => {
       list = new LinkedList();
     });
 
-    it('Should add element at beginning using list.addAtBeginning()', () => {
-      list.addAtBeginning(12);
-      expect(list.head.data).toEqual(12);
+    describe('addAtBeginning(value)', () => {
+      it('Should add element at beginning', () => {
+        list.addAtBeginning(12);
+        expect(list.head.data).toEqual(12);
 
-      list.addAtBeginning(15);
-      expect(list.head.data).toEqual(15);
+        list.addAtBeginning(15);
+        expect(list.head.data).toEqual(15);
+      });
+
+      it('Should return the 10 as the first element in the list', () => {
+        list.addAtBeginning(10);
+        expect(list.getFirst(10));
+      });
     });
 
-    it('Should add element at end using list.addAtEnd()', () => {
-      list.addAtEnd(12);
-      expect(list.head.data).toEqual(12);
+    describe('addAtEnd(value)', () => {
+      it('Should add element at end', () => {
+        list.addAtBeginning(10);
+        list.addAtEnd(12);
+        expect(list.getLast()).toEqual(12);
+      });
 
-      list.addAtEnd(15);
-      expect(list.head.data).toEqual(12);
-      expect(list.head.next.data).toEqual(15);
-      expect(list.length()).toEqual(2);
+      it('Should add at the beginning if the list is empty', () => {
+        list.addAtEnd(15);
+
+        expect(list.head.data).toEqual(15);
+        expect(list.head.next).toEqual(null);
+      });
+
+      it('Should return 4 as length of the list after adding at the end', () => {
+        list.addAtEnd(15);
+        list.addAtEnd(23);
+        list.addAtEnd(33);
+        list.addAtEnd(10);
+
+        expect(list.length()).toEqual(4);
+      });
     });
 
-    it('Should return the present size of the list using list.length()', () => {
-      expect(list.length()).toEqual(0);
-      list.addAtBeginning(1);
-      list.addAtBeginning(2);
-      list.addAtBeginning(3);
-      expect(list.length()).toEqual(3);
+    describe('length() of the list', () => {
+      it('Should return 0 if the list is empty', () => {
+        expect(list.length()).toEqual(0);
+      });
+
+      it('Should return the present size of the list after adding elements', () => {
+        list.addAtBeginning(1);
+        list.addAtBeginning(2);
+        list.addAtBeginning(3);
+        expect(list.length()).toEqual(3);
+      });
+
+      it('Should return the present size of the list after removing elements', () => {
+        list.addAtBeginning(1);
+        list.addAtBeginning(2);
+        list.addAtBeginning(3);
+        expect(list.length()).toEqual(3);
+
+        list.removeFromEnd();
+        list.removeFromBeginning();
+        expect(list.length()).toEqual(1);
+      });
     });
 
-    it('Should remove element at front using list.removeFromBeginning()', () => {
-      list.addAtBeginning(12);
-      expect(list.removeFromBeginning()).toEqual(12);
+    describe('removeFromBeginning()', () => {
+      it('Should remove element at front', () => {
+        list.addAtBeginning(12);
+        expect(list.removeFromBeginning()).toEqual(12);
+        expect(list.length()).toEqual(0);
+      });
 
-      list.addAtBeginning(15);
-      list.addAtBeginning(16);
-      expect(list.removeFromBeginning()).toEqual(16);
-      expect(list.length()).toEqual(1);
+      it('Should return the element after removing it', () => {
+        list.addAtBeginning(15);
+        list.addAtBeginning(16);
+        expect(list.removeFromBeginning()).toEqual(16);
+      });
+
+      it('Should not throw error if the list is empty', () => {
+        expect(() => list.removeFromBeginning()).not.toThrow();
+      });
     });
 
-    it('Should remove element at last using list.removeFromEnd()', () => {
-      expect(list.removeFromEnd()).toEqual(null);
+    describe('removeFromEnd()', () => {
+      it('Should return `null` for empty list', () => {
+        expect(list.removeFromEnd()).toEqual(null);
+      });
 
-      list.addAtBeginning(15);
-      list.addAtBeginning(14);
-      expect(list.removeFromEnd()).toEqual(15);
-      expect(list.length()).toEqual(1);
+      it('Should remove element at last', () => {
+        list.addAtBeginning('Hello');
+        list.addAtBeginning(14);
+        list.addAtEnd(15);
+        expect(list.removeFromEnd()).toEqual(15);
+      });
+
+      it('Should reduce the lengh of the list', () => {
+        list.addAtBeginning(14);
+        list.addAtEnd(15);
+        expect(list.length()).toEqual(2);
+
+        list.removeFromEnd();
+        expect(list.length()).toEqual(1);
+      });
+
+      it('Should return the last element after removing it', () => {
+        list.addAtBeginning(14);
+        list.addAtEnd(15);
+        expect(list.removeFromEnd()).toEqual(15);
+      });
+    });
+
+    describe('getLast()', () => {
+      it('Should return `null` if the list is empty', () => {
+        expect(list.getLast()).toEqual(null);
+      });
+
+      it('Should return 10 as the last item in the list', () => {
+        list.addAtEnd(15);
+        list.addAtEnd(23);
+        list.addAtEnd(33);
+        list.addAtEnd(10);
+        expect(list.getLast()).toEqual(10);
+      });
+    });
+
+    describe('getFirst()', () => {
+      it('Should return `null` if the list is empty', () => {
+        expect(list.getFirst()).toEqual(null);
+      });
+
+      it('Should return 15 as the last item in the list', () => {
+        list.addAtBeginning(15);
+        list.addAtEnd(23);
+        list.addAtEnd(33);
+        list.addAtEnd(10);
+        expect(list.getFirst()).toEqual(15);
+      });
     });
   });
 });
