@@ -21,11 +21,9 @@ class LinkedList {
       this.head = node;
     } else {
       let address = this.head;
-
       while (address.next) {
         address = address.next;
       }
-
       address.next = node;
     }
   }
@@ -68,6 +66,21 @@ class LinkedList {
     while (address.next) {
       address = address.next;
     }
+    return address;
+  }
+
+  getAt(index) {
+    if (!this.length()) {
+      return null;
+    }
+    let address = this.head;
+    let count = index;
+
+    while (count && address.next) {
+      address = address.next;
+      count -= 1;
+    }
+
     return address;
   }
 
