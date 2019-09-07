@@ -1,0 +1,21 @@
+/**
+ * Note: Array must be sorted for binary search
+ */
+function binarySearch(arr, key) {
+  let low = 0;
+  let high = arr.length - 1;
+
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+
+    if (key < arr[mid]) {
+      high = mid - 1;
+    } else if (key > arr[mid]) {
+      low = mid + 1;
+    } else {
+      // return the key
+      return mid;
+    }
+  }
+  return null;
+}
