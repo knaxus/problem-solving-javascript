@@ -19,3 +19,19 @@ function binarySearch(arr, key) {
   }
   return null;
 }
+
+function binarySearchRecursive(arr, low, high, key) {
+  const mid = Math.floor((high - low) / 2 + low);
+
+  if (high < low) {
+    return null;
+  } else if (key < arr[mid]) {
+    return binarySearchRecursive(arr, low, mid - 1, key);
+  } else if (key > arr[mid]) {
+    return binarySearchRecursive(arr, mid + 1, high, key);
+  } else if (key === arr[mid]) {
+    return mid;
+  }
+
+  return null;
+}
