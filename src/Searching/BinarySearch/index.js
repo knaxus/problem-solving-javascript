@@ -33,3 +33,8 @@ function binarySearchRecursive(arr, low, high, key) {
     return binarySearchRecursive(arr, mid + 1, high, key);
   }
 }
+
+module.exports = {
+  binarySearch,
+  binarySearchRecursive,
+};
