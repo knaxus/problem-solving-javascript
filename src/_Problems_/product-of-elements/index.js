@@ -21,9 +21,41 @@ function findProduct(arr) {
   let right = 1;
 
   // multiply all the numbers to the right side
-  for (let i = arr.length - 1; i > 0; i -= 1) {
+  for (let i = arr.length - 1; i >= 0; i -= 1) {
     result[i] *= right;
     right *= arr[i];
   }
   return result;
 }
+
+function findProduct2(arr) {
+  let countZeros = 0;
+  let positionOfZero = -1;
+  let productOffAllExpectZero = 1;
+  let result = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] === 0) {
+      countZeros += 1;
+      positionOfZero = i;
+    } else {
+      productOffAllExpectZero *= arr[i];
+    }
+  }
+
+  if (countZeros === 0) {
+    for (let i = 0; i < arr.length; i += 1) {
+      result[i] = productOffAllExpectZero / arr[i];
+    }
+  } else if (countZeros === 1) {
+    result = Array(arr.length).fill(0);
+    result[positionOfZero] = productOffAllExpectZero;
+  } else if (countZeros >= 2) {
+    result = Array(arr.length).fill(0);
+  }
+  return result;
+}
+
+module.exports = {
+  findProduct,
+  findProduct2,
+};
