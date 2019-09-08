@@ -23,6 +23,10 @@ function caeserCipher(str, num) {
       newIndex -= totalAlphabets;
     }
 
+    if (newIndex < 0) {
+      newIndex = totalAlphabets + newIndex;
+    }
+
     // check if the character in original string was upper case
     if (str[index] === alphabets[currentIndex].toUpperCase()) {
       result += alphabets[newIndex].toUpperCase();
