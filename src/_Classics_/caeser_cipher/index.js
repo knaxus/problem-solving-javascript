@@ -4,7 +4,7 @@
  * @param {Number} num
  */
 
-function caeserCipher(str, num) {
+function caesarCipher(str, num) {
   const lowerCaseString = str.toLowerCase();
   const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
   const totalAlphabets = alphabets.length;
