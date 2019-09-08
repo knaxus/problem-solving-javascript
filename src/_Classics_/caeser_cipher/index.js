@@ -1,8 +1,17 @@
+/**
+ * Most simplest encryption scheme. Read more: [http://practicalcryptography.com/ciphers/caesar-cipher/]
+ * @param {String} str
+ * @param {Number} num
+ */
+
 function caeserCipher(str, num) {
   const lowerCaseString = str.toLowerCase();
   const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
   const totalAlphabets = alphabets.length;
   let result = '';
+
+  // handle large number, like 300 or -300
+  num %= totalAlphabets;
 
   for (let index in lowerCaseString) {
     // get the current character
@@ -28,12 +37,11 @@ function caeserCipher(str, num) {
     }
 
     // check if the character in original string was upper case
-    if (str[index] === alphabets[currentIndex].toUpperCase()) {
+    if (str[index] === str[index].toUpperCase()) {
       result += alphabets[newIndex].toUpperCase();
+    } else {
+      result += alphabets[newIndex];
     }
-    result += alphabets[newIndex];
   }
   return result;
 }
-
-console.log(caeserCipher('abCz', 2));
