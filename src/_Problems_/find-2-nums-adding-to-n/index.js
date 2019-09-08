@@ -28,5 +28,5 @@ function findTwoNumsAddingToN2(arr, number) {
     }
   }
 
-  return pair.length ? pair : null;
+  return pair.length ? pair : false;
 }
