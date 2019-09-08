@@ -4,7 +4,7 @@ function findTwoNumsAddingToN(arr, number) {
   const store = new Set();
 
   for (let i = 0; i < arr.length; i += 1) {
-    // check if the set contains one of the pair that sum upto given number
+    // check if the set contains one of the element that sum upto the given number
     if (store.has(number - arr[i])) {
       pair.push(number - arr[i]);
       pair.push(arr[i]);
