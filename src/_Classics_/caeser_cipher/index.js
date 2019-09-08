@@ -1,24 +1,35 @@
 function caeserCipher(str, num) {
   const lowerCaseString = str.toLowerCase();
   const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const totalAlphabets = alphabets.length;
   let result = '';
 
-  for (let char of lowerCaseString) {
-    const current = char;
-    if (current === ' ') {
-      result += current;
+  for (let index in lowerCaseString) {
+    // get the current character
+    const currentCharacter = lowerCaseString[index];
+
+    // if character is space, add it to the result and continue to next
+    if (currentCharacter === ' ') {
+      result += currentCharacter;
       continue;
     }
 
-    const currentIndex = alphabets.indexOf(current);
+    // determine the new index
+    const currentIndex = alphabets.indexOf(currentCharacter);
     let newIndex = currentIndex + num;
 
-    if (newIndex > alphabets.length - 1) {
-      newIndex -= alphabets.length;
+    // if the index passes 25, restart from 0
+    if (newIndex > totalAlphabets - 1) {
+      newIndex -= totalAlphabets;
+    }
+
+    // check if the character in original string was upper case
+    if (str[index] === alphabets[currentIndex].toUpperCase()) {
+      result += alphabets[newIndex].toUpperCase();
     }
     result += alphabets[newIndex];
   }
   return result;
 }
 
-console.log(caeserCipher('abcz', 2));
+console.log(caeserCipher('abCz', 2));
