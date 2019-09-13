@@ -3,6 +3,7 @@
 // SUBSTRING OF 'bc'  ---->>>>  ['', 'b', 'c', 'bc']
 // SUBSTRING OF 'c'   ---->>>>  ['', 'c']
 // A pattern can be noticed in above three substrings. Technique followed is recursion.
+// Time complexity : O(2^n)  n is the length of the string provided.
 
 
 let getSubesequence = (str) => {
@@ -26,3 +27,4 @@ let getSubesequence = (str) => {
 
 let subsequence = getSubesequence('abc');
 console.log(subsequence);
+
