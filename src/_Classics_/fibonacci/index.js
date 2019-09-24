@@ -34,3 +34,24 @@ function fibonacciMemoized(index, cache) {
   }
   return cache[index];
 }
+
+/**
+ * Using the bottom up approach, also known as tabular method
+ */
+
+function fibonacciTabular(n) {
+  const table = [0, 1];
+
+  for (let i = 2; i <= n; i += 1) {
+    table[i] = table[i - 1] + table[i - 2];
+  }
+
+  return table[n];
+}
+
+// const number = 50;
+
+// console.log(`Fib normal - ${fibonacci(number)}`);
+// console.log('--');
+// console.log(`Fib memo - ${fibonacciMemoized(number)}`);
+// console.log(`Fib table - ${fibonacciTabular(number)}`);
