@@ -1,3 +1,11 @@
+/**
+ * Find the length of maximum consecutive 1s in an array of o & 1
+ * Input: [1, 0, 1, 1, 0] O/P - 2
+ * Input: [0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1] O/P - 4
+ *
+ * Solved in O(n)
+ */
+
 function findMaxConsecutive1s(arr) {
   let count = 0;
   let max = 0;
@@ -17,5 +25,3 @@ function findMaxConsecutive1s(arr) {
   }
   return max;
 }
-
-console.log(findMaxConsecutive1s([1, 1, 0, 1]));
