@@ -18,10 +18,7 @@ function findMaxConsecutive1s(arr) {
       if (count > max) max = count;
       count = 0;
     }
-
-    if (i === length - 1) {
-      if (count > max) max = count;
-    }
   }
+  if (count > max) max = count;
   return max;
 }
