@@ -21,3 +21,26 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
+
+### Logical Problems
+
+- [Anagrams](src/_Problems_/anagrams)
+- [Array Chunk](src/_Problems_/array-chunk)
+- [Count Vowels](src/_Problems_/count-vowels)
+- [Find 2 numbers that add upto N](src/_Problems_/find-2-nums-adding-to-n)
+- [Find 2nd Maxinum from an Array](src/_Problems_/find-2nd-max)
+- [FizzBuzz](src/_Problems_/fizzbuzz)
+- [String Permutaions](src/_Problems_/get_string_permutations)
+- [Get Subsequence](src/_Problems_/get_subsequence)
+- [Get Maze Path](src/_Problems_/get_subsequence)
+- [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
+- [Get Max Char](src/_Problems_/maxchar)
+- [Merge 2 Sorted Arrays](src/_Problems_/merge-two-sorted-arrays)
+- [Palindrome](src/_Problems_/palindrome)
+- [Product of Elements](src/_Problems_/product-of-elements)
+- [Remove Duplicates](src/_Problems_/remove-duplicates)
+- [Reverse String](src/_Problems_/reverse_string)
+
+### Searching
+
+- [Binary Search](src/_Searching_/BinarySearch)
