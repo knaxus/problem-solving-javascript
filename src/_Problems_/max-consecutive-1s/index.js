@@ -1,7 +1,7 @@
 /**
  * Find the length of maximum consecutive 1s in an array of o & 1
  * Input: [1, 0, 1, 1, 0] O/P - 2
- * Input: [0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1] O/P - 4
+ * Input: [0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1] O/P - 5
  *
  * Solved in O(n)
  */
