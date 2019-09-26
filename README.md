@@ -7,6 +7,10 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 ## Table of Contents
 
+### Path Finder
+
+- [A*](src/PathFinder/AStart)
+
 ### Classics
 
 - [Caeser Cipher](src/_Classics_/caeser_cipher)
