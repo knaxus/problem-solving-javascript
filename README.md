@@ -7,15 +7,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 ## Table of Contents
 
-### Path Finder
-
-- [A*](src/PathFinder/AStart)
-
-### Classics
-
-- [Caeser Cipher](src/_Classics_/caeser_cipher)
-- [Fibonacci](src/_Classics_/fibonacci)
-
 ### Data Structures
 
 - [Singly Linked List](src/_DataStructures_/LinkedList)
@@ -48,3 +39,13 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 ### Searching
 
 - [Binary Search](src/_Searching_/BinarySearch)
+
+
+### Path Finder
+
+- [A*](src/PathFinder/AStart)
+
+### Classics
+
+- [Caeser Cipher](src/_Classics_/caeser_cipher)
+- [Fibonacci](src/_Classics_/fibonacci)
