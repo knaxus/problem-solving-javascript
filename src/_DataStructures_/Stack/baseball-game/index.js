@@ -26,7 +26,8 @@ function sumOfPoints(arr) {
     throw new Error('Invalid Argument!');
   }
   // Track the value of `sum` accordingly
-  for (let el of arr) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const el of arr) {
     // console.log('data : ', pointsTracker.data);
     // console.log('sum : ', sum);
 
@@ -52,8 +53,8 @@ function sumOfPoints(arr) {
       pointsTracker.push(result);
     } else {
       // push to the Stack if the value is integer
-      sum += parseInt(el);
-      pointsTracker.push(parseInt(el));
+      sum += parseInt(el, 10);
+      pointsTracker.push(parseInt(el, 10));
     }
   }
   return sum;
