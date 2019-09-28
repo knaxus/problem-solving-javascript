@@ -15,6 +15,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Stack](src/_DataStructures_/Stack)
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
   - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
+  - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
 
