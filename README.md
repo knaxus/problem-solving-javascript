@@ -38,6 +38,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Remove Duplicates](src/_Problems_/remove-duplicates)
 - [Reverse String](src/_Problems_/reverse_string)
 - [Maximum Product of Three Numbers](src/_Problems_/max-product-of-3-numbers)
+- [Next Greater for Every Element in an Array](src/_Problems_/next-greater-element)
 
 ### Searching
 
