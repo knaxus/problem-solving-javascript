@@ -35,15 +35,15 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Product of Elements](src/_Problems_/product-of-elements)
 - [Remove Duplicates](src/_Problems_/remove-duplicates)
 - [Reverse String](src/_Problems_/reverse_string)
+- [Maximum Product of Three Numbers](src/_Problems_/max-product-of-3-numbers)
 
 ### Searching
 
 - [Binary Search](src/_Searching_/BinarySearch)
 
-
 ### Path Finder
 
-- [A*](src/PathFinder/AStart)
+- [A\*](src/PathFinder/AStart)
 
 ### Classics
 
