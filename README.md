@@ -12,8 +12,11 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Singly Linked List](src/_DataStructures_/LinkedList)
   - [N Element From Last](src/_DataStructures_/LinkedList/element-from-last)
   - [Middle Node](src/_DataStructures_/LinkedList/middle-node)
+  - [Detect Loop](src/_DataStructures_/LinkedList/loop-in-list)
 - [Stack](src/_DataStructures_/Stack)
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
+  - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
+  - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
 
@@ -35,15 +38,16 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Product of Elements](src/_Problems_/product-of-elements)
 - [Remove Duplicates](src/_Problems_/remove-duplicates)
 - [Reverse String](src/_Problems_/reverse_string)
+- [Maximum Product of Three Numbers](src/_Problems_/max-product-of-3-numbers)
+- [Next Greater for Every Element in an Array](src/_Problems_/next-greater-element)
 
 ### Searching
 
 - [Binary Search](src/_Searching_/BinarySearch)
 
-
 ### Path Finder
 
-- [A*](src/PathFinder/AStart)
+- [A\*](src/PathFinder/AStart)
 
 ### Classics
 
