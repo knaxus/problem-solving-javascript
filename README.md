@@ -3,13 +3,11 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo/HacktoberFest)
 [![Build Status](https://travis-ci.org/knaxus/problem-solving-javascript.svg?branch=master)](https://travis-ci.org/knaxus/problem-solving-javascript)
 [![Coverage Status](https://coveralls.io/repos/github/knaxus/problem-solving-javascript/badge.svg?branch=master)](https://coveralls.io/github/knaxus/problem-solving-javascript?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
 
----
 ![Hacktober Fest 2019](https://camo.githubusercontent.com/73b77ee452271049513e503ff3e8e8c172eaadab/68747470733a2f2f6861636b746f626572666573742e6469676974616c6f6365616e2e636f6d2f6173736574732f484631395f736f6369616c2d373434643937366632323765346166663638363634343361626365646538633635316233303965633963376339663734313066353934346638653132393962392e706e67)
-
----
 
 ## Table of Contents
 
