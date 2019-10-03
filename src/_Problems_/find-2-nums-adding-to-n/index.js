@@ -18,15 +18,19 @@ function findTwoNumsAddingToN(arr, number) {
 
 // the Brute force approach
 function findTwoNumsAddingToN2(arr, number) {
-  const pair = [];
+
   for (let i = 0; i < arr.length; i += 1) {
     for (let j = i + 1; j < arr.length; j += 1) {
       if (arr[i] + arr[j] === number) {
-        pair.push(arr[i], arr[j]);
-        break;
+        return [arr[i], arr[j]];
       }
     }
   }
 
-  return pair.length ? pair : false;
+  return false;
 }
+
+module.exports = {
+  findTwoNumsAddingToN,
+  findTwoNumsAddingToN2,
+};
