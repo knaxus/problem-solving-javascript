@@ -1,5 +1,5 @@
 const { LinkedList } = require('../index');
-const { reverseLinkedList } = require('.').default;
+const { reverseLinkedList } = require('.');
 
 describe('Reverse a LinkedList', () => {
   let list = null;
@@ -18,18 +18,20 @@ describe('Reverse a LinkedList', () => {
   });
 
   it('Should return `5`->`4`->`3`->`2`->`1` for the given list', () => {
-    expect(reverseLinkedList(list).data).toEqual('5');
-    expect(reverseLinkedList(list).next.data).toEqual('4');
-    expect(reverseLinkedList(list).next.next.data).toEqual('3');
-    expect(reverseLinkedList(list).next.next.next.data).toEqual('2');
-    expect(reverseLinkedList(list).next.next.next.next.data).toEqual('1');
+    let reversedList = reverseLinkedList(list);
+    expect(reversedList.data).toEqual('5');
+    expect(reversedList.next.data).toEqual('4');
+    expect(reversedList.next.next.data).toEqual('3');
+    expect(reversedList.next.next.next.data).toEqual('2');
+    expect(reversedList.next.next.next.next.data).toEqual('1');
   });
 
   it('Should return `3`->`2`->`1` after deleting 2 last nodes of the list', () => {
     list.removeFromEnd();
     list.removeFromEnd();
-    expect(reverseLinkedList(list).data).toEqual('3');
-    expect(reverseLinkedList(list).next.data).toEqual('2');
-    expect(reverseLinkedList(list).next.next.data).toEqual('1');
+    let reversedList2 = reverseLinkedList(list);
+    expect(reversedList2.data).toEqual('3');
+    expect(reversedList2.next.data).toEqual('2');
+    expect(reversedList2.next.next.data).toEqual('1');
   });
 });
