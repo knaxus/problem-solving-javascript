@@ -17,6 +17,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [N Element From Last](src/_DataStructures_/LinkedList/element-from-last)
   - [Middle Node](src/_DataStructures_/LinkedList/middle-node)
   - [Detect Loop](src/_DataStructures_/LinkedList/loop-in-list)
+  - [Reverse Linked List](src/_DataStructures_/LinkedList/reverse-linked-list)
 - [Stack](src/_DataStructures_/Stack)
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
   - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
