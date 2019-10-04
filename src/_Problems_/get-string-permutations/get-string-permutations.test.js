@@ -22,6 +22,13 @@ describe('Get permutations of a string', () => {
     expect(getPermutations(shortString)).toEqual(expectedPermutations);
   });
 
+  it('returns an empty array for an empty string', () => {
+    const shortString = '';
+    const expectedPermutations = [];
+
+    expect(getPermutations(shortString)).toEqual(expectedPermutations);
+  });
+
   it('is case sensitive', () => {
     const shortString = 'aB';
 
