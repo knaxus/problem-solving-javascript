@@ -32,7 +32,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Find 2 numbers that add upto N](src/_Problems_/find-2-nums-adding-to-n)
 - [Find 2nd Maxinum from an Array](src/_Problems_/find-2nd-max)
 - [FizzBuzz](src/_Problems_/fizzbuzz)
-- [String Permutaions](src/_Problems_/get_string_permutations)
+- [String Permutaions](src/_Problems_/get-string-permutations)
 - [Get Subsequence](src/_Problems_/get_subsequence)
 - [Get Maze Path](src/_Problems_/get_subsequence)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
