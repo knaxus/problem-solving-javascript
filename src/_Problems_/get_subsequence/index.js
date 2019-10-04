@@ -24,7 +24,6 @@ let getSubesequence = (str) => {
     return result;
 }
 
-
-let subsequence = getSubesequence('abc');
-console.log(subsequence);
-
+module.exports = {
+  getSubesequence,
+};
