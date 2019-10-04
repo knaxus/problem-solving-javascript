@@ -20,3 +20,7 @@ function findSecondMax(arr) {
   }
   return max2;
 }
+
+module.exports = {
+  findSecondMax,
+};
