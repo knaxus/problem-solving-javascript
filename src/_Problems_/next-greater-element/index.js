@@ -42,5 +42,4 @@ function nextGreaterElement(arr) {
   return nextGreater;
 }
 
-// eslint-disable-next-line no-console
-console.log(nextGreaterElement([4, 6, 3, 2, 8, 1]));
+module.exports = { nextGreaterElement };
