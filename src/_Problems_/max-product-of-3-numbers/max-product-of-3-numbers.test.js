@@ -30,4 +30,10 @@ describe("Maximum Product of three numbers", () => {
     expect(maxProductof3Numbers(largeArray)).toEqual(100 * 100 * 100);
     expect(maxProductof3NumbersII(largeArray)).toEqual(100 * 100 * 100);
   });
+
+  it("returns an error if there are less than 3 numbers", () => {
+    expect(() => {
+      maxProductof3Numbers([-10, -1]);
+    }).toThrowError();
+  });
 });
