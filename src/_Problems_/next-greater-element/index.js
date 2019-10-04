@@ -4,7 +4,7 @@
   To keep it simple, the next greater element for the last or maximum value in the array is -1.
 
   Input: [4, 6, 3, 2, 8, 1]
-  Output: {6, 8, 8, 8, -1, -1}
+  Output: [6, 8, 8, 8, -1, -1]
  */
 
 const Stack = require('../../_DataStructures_/Stack');
@@ -42,5 +42,4 @@ function nextGreaterElement(arr) {
   return nextGreater;
 }
 
-// eslint-disable-next-line no-console
-console.log(nextGreaterElement([4, 6, 3, 2, 8, 1]));
+module.exports = { nextGreaterElement };
