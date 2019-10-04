@@ -1,6 +1,6 @@
 // GET PERMUTATION OF A GIVEN STRING
 
-let getPermutation = (str) => {
+const getPermutations = (str) => {
   if (str.length == 1) {
     let array = [];
     array.push(str);
@@ -10,7 +10,7 @@ let getPermutation = (str) => {
   let currentCharacter = str.charAt(0);
   let restOfString = str.substring(1);
   let result = [];
-  let returnResult = getPermutation(restOfString);
+  let returnResult = getPermutations(restOfString);
 
   for (j = 0; j < returnResult.length; j++) {
     for (i = 0; i <= returnResult[j].length; i++) {
@@ -20,4 +20,6 @@ let getPermutation = (str) => {
   }
 
   return result;
-}
+};
+
+module.exports = { getPermutations };
