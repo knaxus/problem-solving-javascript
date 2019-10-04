@@ -1,7 +1,7 @@
 function reverseLinkedList(linkedList) {
-    var next = linkedList.getFirst();
-    var current = null;
-    var prev;
+    let next = linkedList.getFirst();
+    let current = null;
+    let prev;
     while(next != null){
         prev = current;
         current = next;
