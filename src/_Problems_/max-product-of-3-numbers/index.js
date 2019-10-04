@@ -63,3 +63,5 @@ function maxProductof3NumbersII(arr) {
 
   return p1 > p2 ? p1 : p2;
 }
+
+module.exports = { maxProductof3Numbers, maxProductof3NumbersII };
