@@ -9,7 +9,7 @@
 
 /** The following solution is O(nlogn) because of sorting */
 function maxProductof3Numbers(arr) {
-  if (!Array.isArray(arr)) {
+  if (!Array.isArray(arr) || arr.length < 3) {
     throw new Error('Invalid Argument');
   }
 
@@ -30,7 +30,7 @@ function maxProductof3Numbers(arr) {
 
 /** The following solution is O(n) */
 function maxProductof3NumbersII(arr) {
-  if (!Array.isArray(arr)) {
+  if (!Array.isArray(arr) || arr.length < 3) {
     throw new Error('Invalid Argument');
   }
 
