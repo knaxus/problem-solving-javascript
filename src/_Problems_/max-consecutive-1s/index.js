@@ -22,3 +22,5 @@ function findMaxConsecutive1s(arr) {
   if (count > max) max = count;
   return max;
 }
+
+module.exports = { findMaxConsecutive1s };
