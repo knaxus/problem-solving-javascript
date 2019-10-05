@@ -8,7 +8,7 @@ set(key, value) – Set or insert the value if the key is not already present. W
 Complexity: O(1)
 */
 
-const DoublyLinkedList = require('../index');
+const DoublyLinkedList = require('../../_DataStructures_/DoublyLinkedList/index');
 
 class LRUCache {
   constructor(n) {
