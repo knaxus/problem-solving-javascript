@@ -23,6 +23,8 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
   - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
   - [Balanced Parenthesis](src/_DataStructures_/Stack/balanced-parenthesis)
+  - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
+
 
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
