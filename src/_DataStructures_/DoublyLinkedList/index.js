@@ -4,7 +4,6 @@ class Node {
     this.data = data;
     this.previous = previous;
     this.next = next;
-    this.length = 0;
   }
 }
 
@@ -16,30 +15,31 @@ class DoublyLinkedList {
     this.tail = new Node(null, null, null);
     this.head.next = this.tail; // head next point to tail
     this.tail.previous = this.head; // tail previous point to head
+    this.size = 0;
   }
 
   addAtBeginning(value) {
     const newNode = new Node(value, this.head, this.head.next);
     this.head.next.previous = newNode;
     this.head.next = newNode;
-    this.length += 1;
+    this.size += 1;
   }
 
   addAtEnd(value) {
     const newNode = new Node(value, this.tail.previous, this.tail);
     this.tail.previous.next = newNode;
     this.tail.previous = newNode;
-    this.length += 1;
+    this.size += 1;
   }
 
   removeAtBeginning() {
     this.remove(this.head.next);
-    this.length -= 1;
+    this.size -= 1;
   }
 
   removeAtEnd() {
     this.remove(this.tail.previous);
-    this.length -= 1;
+    this.size -= 1;
   }
 
   remove(node) {
@@ -50,7 +50,7 @@ class DoublyLinkedList {
   }
 
   length() {
-    return this.length;
+    return this.size;
   }
 
   display() {
@@ -62,6 +62,4 @@ class DoublyLinkedList {
   }
 }
 
-module.exports = {
-  DoublyLinkedList,
-};
+module.exports = DoublyLinkedList;
