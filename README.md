@@ -24,6 +24,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
   - [Balanced Parenthesis](src/_DataStructures_/Stack/balanced-parenthesis)
   - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
+  - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/ remove-consecutive-repeated-digits)
 
 
 - [Queue](src/_DataStructures_/Queue)
