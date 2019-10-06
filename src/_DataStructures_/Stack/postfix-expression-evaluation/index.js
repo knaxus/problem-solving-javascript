@@ -38,7 +38,3 @@ function evaluatePostfixExpression(expression) {
     //pop the value of postfix expression
     return s.pop();
 }
-
-console.log(evaluatePostfixExpression("123+*8-")); // -3
-
-console.log(evaluatePostfixExpression("12345*+*+")); // 47
