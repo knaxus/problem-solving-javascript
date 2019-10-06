@@ -1,8 +1,6 @@
 /**
- * So what special in this implementation?
- * This deals with Dynamic array without a size hence the implemetation uses
- * lot of space and I can sense that it can be further improved hence feel free
- * to open PR
+ * Revision to PR #35 where I implemented bullshit thinking of
+ * new breakthrough :D
  */
 
 class TwoStacks {
