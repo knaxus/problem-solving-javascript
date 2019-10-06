@@ -8,39 +8,60 @@
 class TwoStacks {
   constructor(capacity) {
     this.data = [];
-    this.capacity = capacity;
     this.top1 = -1;
     this.top2 = capacity;
+
+    this.capacity = capacity;
+    this.total = 0;
   }
 
   push1(value) {
-    if (this.top1 === -1 || this.top1 < this.top2 - 1) {
+    if (this.total >= this.capacity + 1) {
+      throw new Error('Overflow');
+    }
+    if (this.top1 < this.top2 - 1) {
       this.top1 += 1;
       this.data[this.top1] = value;
-      return;
+      this.total += 1;
     }
-    throw new Error('Overflow');
   }
 
   push2(value) {
-    if (this.top2 <= this.capacity && this.top2 > this.top1) {
-      this.data[this.top2] = value;
-      this.top2 -= 1;
-      return;
+    if (this.total >= this.capacity + 1) {
+      throw new Error('Overflow');
     }
-    throw new Error('Overflow');
+    if (this.top1 < this.top2 - 1) {
+      this.top2 -= 1;
+      this.data[this.top2] = value;
+      this.total += 1;
+    }
   }
 
-  pop1() {}
+  pop1() {
+    if (this.top1 >= 0) {
+      const item = this.data[this.top1];
+      this.top1 -= 1;
+      return item;
+    }
+    return -1;
+  }
 
-  pop2() {}
+  pop2() {
+    if (this.top2 < this.capacity) {
+      const item = this.data[this.top2];
+      this.top2 += 1;
+      return item;
+    }
+    return -1;
+  }
 }
 
 module.exports = TwoStacks;
 
 /** Test cases */
 
-const s = new TwoStacks(3);
+/*
+const s = new TwoStacks(4);
 
 s.push1('a');
 console.log(s.data);
@@ -56,3 +77,11 @@ console.log(s.data);
 
 s.push2('b3');
 console.log(s.data);
+
+console.log(s.pop2());
+console.log(s.data);
+
+console.log(s.pop1());
+console.log(s.data);
+
+*/
