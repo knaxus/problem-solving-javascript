@@ -6,117 +6,53 @@
  */
 
 class TwoStacks {
-  constructor() {
+  constructor(capacity) {
     this.data = [];
-    this.top1 = null;
-    this.top2 = null;
-    this.stack1Count = 0;
-    this.stack2Count = 0;
+    this.capacity = capacity;
+    this.top1 = -1;
+    this.top2 = capacity;
   }
 
   push1(value) {
-    if (!this.data.length) {
-      this.data.push(value);
-      this.top1 = value;
-      this.stack1Count += 1;
-    } else {
-      const arr = [];
-      for (let i = 0; i < this.stack1Count; i += 1) {
-        arr.push(this.data[i]);
-      }
-      arr.push(value);
-      for (let i = this.stack1Count; i < this.data.length; i += 1) {
-        arr.push(this.data[i]);
-      }
-      this.data = arr;
-      this.top1 = value;
-      this.stack1Count += 1;
+    if (this.top1 === -1 || this.top1 < this.top2 - 1) {
+      this.top1 += 1;
+      this.data[this.top1] = value;
+      return;
     }
+    throw new Error('Overflow');
   }
 
   push2(value) {
-    if (!this.data.length) {
-      this.data.push(value);
-      this.top2 = value;
-      this.stack2Count += 1;
-    } else {
-      const arr = [];
-      for (let i = 0; i < this.stack1Count; i += 1) {
-        arr.push(this.data[i]);
-      }
-      arr.push(value);
-
-      for (let i = this.stack1Count; i < this.data.length; i += 1) {
-        arr.push(this.data[i]);
-      }
-      this.data = arr;
-      this.top2 = value;
-      this.stack2Count += 1;
+    if (this.top2 <= this.capacity && this.top2 > this.top1) {
+      this.data[this.top2] = value;
+      this.top2 -= 1;
+      return;
     }
+    throw new Error('Overflow');
   }
 
-  pop1() {
-    if (!this.top1) {
-      return null;
-    }
+  pop1() {}
 
-    const indexOfTop1 = this.data.indexOf(this.top1);
-    const arr = [];
-
-    delete this.data[indexOfTop1];
-
-    this.data.forEach(el => arr.push(el));
-
-    const oldTop = this.top1;
-    this.top1 = this.data[indexOfTop1 - 1];
-    this.data = arr;
-    return oldTop;
-  }
-
-  pop2() {
-    return this.data.pop();
-  }
+  pop2() {}
 }
 
 module.exports = TwoStacks;
 
 /** Test cases */
 
-/*
+const s = new TwoStacks(3);
 
-const s = new TwoStacks();
-
+s.push1('a');
 console.log(s.data);
 
-s.push1(5);
-s.push1(4);
+s.push2('a2');
 console.log(s.data);
 
-
-s.push2(2)
-s.push2(1);
+s.push1('b');
 console.log(s.data);
 
-s.push1(14);
-console.log(s.data);
-console.log(s.top1);
-
-console.log(s.pop1())
+s.push2('b2');
 console.log(s.data);
 
-console.log(s.pop1())
+s.push2('b3');
 console.log(s.data);
-
-console.log(s.pop2())
-console.log(s.data);
-
-console.log(s.pop2())
-console.log(s.data);
-
-console.log(s.pop2())
-console.log(s.data);
-
-console.log(s.pop1())
-console.log(s.data);
-
-*/
