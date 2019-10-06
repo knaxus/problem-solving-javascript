@@ -10,28 +10,19 @@ class TwoStacks {
     this.top2 = capacity;
 
     this.capacity = capacity;
-    this.total = 0;
   }
 
   push1(value) {
-    if (this.total >= this.capacity + 1) {
-      throw new Error('Overflow');
-    }
     if (this.top1 < this.top2 - 1) {
       this.top1 += 1;
       this.data[this.top1] = value;
-      this.total += 1;
     }
   }
 
   push2(value) {
-    if (this.total >= this.capacity + 1) {
-      throw new Error('Overflow');
-    }
     if (this.top1 < this.top2 - 1) {
       this.top2 -= 1;
       this.data[this.top2] = value;
-      this.total += 1;
     }
   }
 
@@ -75,7 +66,10 @@ console.log(s.data);
 s.push2('b2');
 console.log(s.data);
 
-s.push2('b3');
+s.push2('d2');
+console.log(s.data);
+
+s.push2('c23');
 console.log(s.data);
 
 console.log(s.pop2());
@@ -83,5 +77,4 @@ console.log(s.data);
 
 console.log(s.pop1());
 console.log(s.data);
-
 */
