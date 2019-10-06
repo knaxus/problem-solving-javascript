@@ -40,6 +40,7 @@ class TwoStacks {
   pop1() {
     if (this.top1 >= 0) {
       const item = this.data[this.top1];
+      delete this.data[this.top1];
       this.top1 -= 1;
       return item;
     }
@@ -49,6 +50,7 @@ class TwoStacks {
   pop2() {
     if (this.top2 < this.capacity) {
       const item = this.data[this.top2];
+      delete this.data[this.top2];
       this.top2 += 1;
       return item;
     }
