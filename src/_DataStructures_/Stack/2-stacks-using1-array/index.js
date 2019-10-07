@@ -8,6 +8,7 @@ class TwoStacks {
     this.data = [];
     this.top1 = -1;
     this.top2 = capacity;
+    this.overflow = new Error('Overflow: Stack is full');
 
     this.capacity = capacity;
   }
@@ -16,6 +17,8 @@ class TwoStacks {
     if (this.top1 < this.top2 - 1) {
       this.top1 += 1;
       this.data[this.top1] = value;
+    } else {
+      throw this.overflow;
     }
   }
 
@@ -23,6 +26,8 @@ class TwoStacks {
     if (this.top1 < this.top2 - 1) {
       this.top2 -= 1;
       this.data[this.top2] = value;
+    } else {
+      throw this.overflow;
     }
   }
 
