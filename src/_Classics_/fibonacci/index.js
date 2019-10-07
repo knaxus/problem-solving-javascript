@@ -38,7 +38,7 @@ function fibonacciMemoized(index, cache) {
 /**
  * Using the bottom up approach, also known as tabular method
  */
-
+//  @TODO: Handle this function for indexes 0 and negative numbers
 function fibonacciTabular(n) {
   const table = [0, 1];
 
@@ -47,6 +47,12 @@ function fibonacciTabular(n) {
   }
 
   return table[n];
+}
+
+module.exports = {
+    fibonacci,
+    fibonacciMemoized,
+    fibonacciTabular
 }
 
 // const number = 50;
