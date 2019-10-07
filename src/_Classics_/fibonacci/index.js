@@ -1,9 +1,11 @@
+//The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
 // the algorithm has time complexity of O(n^2), very bad!
 function fibonacci(position) {
   // if position is 1 or 2, the number in fibonacci sequence will be 1
-  if (position < 3) {
-    return 1;
+  if (position <= 1) {
+    return position;
   }
+
   // else the element in fibonacci sequence will be the sum of
   // element at position(p) (p -1) and (p - 2)
   return fibonacci(position - 2) + fibonacci(position - 1);
@@ -24,8 +26,8 @@ function fibonacciMemoized(index, cache) {
   if (cache[index]) {
     return cache[index];
   } else {
-    if (index < 3) {
-      return 1;
+    if (index <=1) {
+      return index;
     } else {
       cache[index] =
         fibonacciMemoized(index - 1, cache) +
@@ -41,7 +43,9 @@ function fibonacciMemoized(index, cache) {
 
 function fibonacciTabular(n) {
   const table = [0, 1];
-
+  if (n <= 1) {
+    return n;
+  }
   for (let i = 2; i <= n; i += 1) {
     table[i] = table[i - 1] + table[i - 2];
   }
