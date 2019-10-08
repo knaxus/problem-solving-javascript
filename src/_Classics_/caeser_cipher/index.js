@@ -21,7 +21,7 @@ function caesarCipher(str, num) {
     alphabetsMap[alphabets[index]] = index;
   }
 
-  for (let index in lowerCaseString) {
+  for (const index in lowerCaseString) {
     // get the current character
     const currentCharacter = lowerCaseString[index];
 
@@ -59,3 +59,7 @@ function caesarCipher(str, num) {
   }
   return result;
 }
+
+module.exports = {
+  caesarCipher,
+};
