@@ -121,6 +121,11 @@ class BinarySearchTree {
     return this.findMinNode(root.leftChild);
   }
 
+  findMaxNode(root) {
+    if (root.rightChild === null) return root;
+    return this.findMaxNode(root.rightChild);
+  }
+
   isEmpty() {
     return this.root === null;
   }
@@ -147,9 +152,14 @@ class BinarySearchTree {
     return this.search(this.root, value);
   }
 
-  findMinimum() {
+  getMinimum() {
     const minNode = this.findMinNode(this.root);
     return minNode.value;
+  }
+
+  getMaximum() {
+    const maxNode = this.findMaxNode(this.root);
+    return maxNode.value;
   }
 
   remove(value) {
@@ -180,8 +190,11 @@ class BinarySearchTree {
 // const search = 18;
 // console.log(`Search for ${search}`, bst.searchFor(search));
 
-// const minNode = bst.findMinimum();
+// const minNode = bst.getMinimum();
 // console.log('Minimum value =>', minNode);
+
+// const maxNode = bst.getMaximum();
+// console.log('Maximum value =>', maxNode);
 
 // bst.remove(4);
 // console.log(bst.traversePreorder());
