@@ -41,6 +41,7 @@ class BinarySearchTree {
   }
 
   inorder(root) {
+    /** left - root - right */
     if (root === null) return [];
     let arr = [];
     const left = this.inorder(root.leftChild);
@@ -52,6 +53,21 @@ class BinarySearchTree {
     const right = this.inorder(root.rightChild);
     arr = [...arr, ...right];
     return arr;
+  }
+
+  postorder(root) {
+    /** left - right - root */
+
+    if (root === null) return [];
+    let arr = [];
+
+    const left = this.postorder(root.leftChild);
+    arr = [...left, ...arr];
+
+    const right = this.postorder(root.rightChild);
+    arr = [...arr, ...right];
+
+    return [...arr, root.value];
   }
 }
 
@@ -71,5 +87,8 @@ class BinarySearchTree {
 
 // const inorder = bst.inorder(bst.root);
 // console.log('Inorder Traversal - ', inorder);
+
+// const postorder = bst.postorder(bst.root);
+// console.log('Postorder Traversal - ', postorder);
 
 module.exports = BinarySearchTree;
