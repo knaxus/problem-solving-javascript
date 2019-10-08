@@ -77,8 +77,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Caeser Cipher](src/_Classics_/caeser_cipher)
 - [Fibonacci](src/_Classics_/fibonacci)
 
----
-
 ## CONTRIBUTION Guide
 
 It's great to know that you want to contribute to this repo. Thanks for taking interest. Before you start, read the following carefully.
