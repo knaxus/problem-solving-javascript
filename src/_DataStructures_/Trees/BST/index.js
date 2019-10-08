@@ -39,19 +39,37 @@ class BinarySearchTree {
     arr = [...arr, ...right];
     return arr;
   }
+
+  inorder(root) {
+    if (root === null) return [];
+    let arr = [];
+    const left = this.inorder(root.leftChild);
+    arr = [...left, ...arr];
+
+    // print root
+    arr = [...arr, root.value];
+
+    const right = this.inorder(root.rightChild);
+    arr = [...arr, ...right];
+    return arr;
+  }
 }
 
-// const bst = new BinarySearchTree(10);
+// const bst = new BinarySearchTree(6);
 // console.log(bst.root);
-// bst.insert(bst.root, 12);
+// bst.insert(bst.root, 4);
 // bst.insert(bst.root, 9);
-// bst.insert(bst.root, 19);
-// bst.insert(bst.root, 11);
-// bst.insert(bst.root, 6);
+// bst.insert(bst.root, 2);
+// bst.insert(bst.root, 5);
+// bst.insert(bst.root, 8);
+// bst.insert(bst.root, 12);
 
 // console.log(bst.root);
 
-// const a = bst.preorder(bst.root);
-// console.log('arr = ', a);
+// const preorder = bst.preorder(bst.root);
+// console.log('Preorder Traversal - ', preorder);
+
+// const inorder = bst.inorder(bst.root);
+// console.log('Inorder Traversal - ', inorder);
 
 module.exports = BinarySearchTree;
