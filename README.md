@@ -34,6 +34,9 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
 
+- [Suffix Tree](src/_DataStructures_/SuffixTree)
+
+
 ### Logical Problems
 
 - [Anagrams](src/_Problems_/anagrams)
