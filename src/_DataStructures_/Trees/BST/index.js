@@ -83,6 +83,31 @@ class BinarySearchTree {
     return false;
   }
 
+  delete(root, value) {
+    if (root === null) {
+      return root;
+    }
+
+    if (value > root.value) {
+      // eslint-disable-next-line no-param-reassign
+      root.rightChild = this.delete(root.rightChild, value);
+    } else if (value < root.value) {
+      // eslint-disable-next-line no-param-reassign
+      root.leftChild = this.delete(root.leftChild, value);
+    } else {
+      // found the node
+      if (root.leftChild === null) {
+        // there is a right sub-tree
+        return root.rightChild;
+      }
+      if (root.rightChild === null) {
+        // there is a left sub-tree
+        return root.leftChild;
+      }
+    }
+    return root;
+  }
+
   isEmpty() {
     return this.root === null;
   }
@@ -108,29 +133,51 @@ class BinarySearchTree {
   searchFor(value) {
     return this.search(this.root, value);
   }
+
+  remove(value) {
+    return this.delete(this.root, value);
+  }
 }
 
-// const bst = new BinarySearchTree(6);
-// console.log(bst.root);
-// bst.add(4);
-// bst.add(9);
-// bst.add(2);
-// bst.add(5);
-// bst.add(8);
-// bst.add(12);
+const bst = new BinarySearchTree(6);
+console.log(bst.root);
+bst.add(4);
+bst.add(9);
+bst.add(2);
+bst.add(5);
+bst.add(8);
+bst.add(12);
 
-// console.log(bst.root);
+console.log(bst.root);
 
-// const preorder = bst.traversePreorder();
-// console.log('Preorder Traversal - ', preorder);
+const preorder = bst.traversePreorder();
+console.log('Preorder Traversal - ', preorder);
 
-// const inorder = bst.traverseInorder();
-// console.log('Inorder Traversal - ', inorder);
+const inorder = bst.traverseInorder();
+console.log('Inorder Traversal - ', inorder);
 
-// const postorder = bst.traversePostorder();
-// console.log('Postorder Traversal - ', postorder);
+const postorder = bst.traversePostorder();
+console.log('Postorder Traversal - ', postorder);
 
-// const search = 18;
-// console.log(`Search for ${search}`, bst.searchFor(search));
+const search = 18;
+console.log(`Search for ${search}`, bst.searchFor(search));
+
+bst.remove(8);
+console.log(bst.traversePreorder());
+
+bst.remove(5);
+console.log(bst.traversePreorder());
+
+bst.remove(4);
+console.log(bst.traversePreorder());
+
+bst.remove(2);
+console.log(bst.traversePreorder());
+
+bst.remove(9);
+console.log(bst.traversePreorder());
+
+bst.remove(12);
+console.log(bst.traversePreorder());
 
 module.exports = BinarySearchTree;
