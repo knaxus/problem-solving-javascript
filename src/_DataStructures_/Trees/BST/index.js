@@ -27,6 +27,15 @@ class BinarySearchTree {
     }
     return root;
   }
+
+  preorder(root) {
+    if (root === null) return;
+    // eslint-disable-next-line no-console
+    console.log(`${root.value} `);
+
+    this.preorder(root.leftChild);
+    this.preorder(root.rightChild);
+  }
 }
 
 // const bst = new BinarySearchTree(10);
@@ -38,5 +47,7 @@ class BinarySearchTree {
 // bst.insert(bst.root, 6);
 
 // console.log(bst.root);
+
+// bst.preorder(bst.root);
 
 module.exports = BinarySearchTree;
