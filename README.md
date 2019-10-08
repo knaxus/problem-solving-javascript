@@ -29,13 +29,16 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
   - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
-  
 
 - [Queue](src/_DataStructures_/Queue)
+
   - [Weave](src/_DataStructures_/Queue/weave)
 
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
-- [Suffix Tree](src/_DataStructures_/SuffixTree)
+
+- [Trees](src/_DataStructures_/Trees)
+  - [Binary Search Tree](src/_DataStructures_/Trees/BST)
+  - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
 
@@ -66,7 +69,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 ### Algorithms
 
 - [LRU Cache](src/_Algorithms_/lru-cache)
-
 
 ### Path Finder
 
