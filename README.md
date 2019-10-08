@@ -14,20 +14,29 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 ### Data Structures
 
 - [Singly Linked List](src/_DataStructures_/LinkedList)
+
   - [N Element From Last](src/_DataStructures_/LinkedList/element-from-last)
   - [Middle Node](src/_DataStructures_/LinkedList/middle-node)
   - [Detect Loop](src/_DataStructures_/LinkedList/loop-in-list)
   - [Reverse Linked List](src/_DataStructures_/LinkedList/reverse-linked-list)
+
 - [Stack](src/_DataStructures_/Stack)
+
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
   - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
   - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
   - [Balanced Parenthesis](src/_DataStructures_/Stack/balanced-parenthesis)
+  - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
+  - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
+  - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
+  
 
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
 
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
+- [Suffix Tree](src/_DataStructures_/SuffixTree)
+
 ### Logical Problems
 
 - [Anagrams](src/_Problems_/anagrams)
@@ -41,6 +50,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Get Maze Path](src/_Problems_/get_subsequence)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
 - [Get Max Char](src/_Problems_/maxchar)
+- [Get Smallest Common Number](src/_Problems_/get-smallest-common-number)
 - [Merge 2 Sorted Arrays](src/_Problems_/merge-two-sorted-arrays)
 - [Palindrome](src/_Problems_/palindrome)
 - [Product of Elements](src/_Problems_/product-of-elements)
@@ -66,3 +76,25 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 - [Caeser Cipher](src/_Classics_/caeser_cipher)
 - [Fibonacci](src/_Classics_/fibonacci)
+
+---
+
+## CONTRIBUTION Guide
+
+It's great to know that you want to contribute to this repo. Thanks for taking interest. Before you start, read the following carefully.
+
+- When adding a new **problem** with solution
+
+  - Take care of the filename convention (Very Important)
+  - Problem statement should be there with examples
+  - Make sure you add the Run Time complexity of your solution
+  - Please take care of the segregation of the Problems as per the given Folder Structure
+  - It's great if you can add the **Unit Tests** to verify your solutions as well
+  - Strictly follow ESLINT rules
+
+- When adding a Unit Test
+
+  - Take care of the file name convention
+  - Make sure CI (Travis) is passing
+
+Keep an eye on this guide, it's subjected to change frequently.
