@@ -104,6 +104,13 @@ class BinarySearchTree {
         // there is a left sub-tree
         return root.leftChild;
       }
+      // the root contain 2 childs
+      const minRightNode = this.findMinNode(root.rightChild);
+      // eslint-disable-next-line no-param-reassign
+      root.value = minRightNode.value;
+      // eslint-disable-next-line no-param-reassign
+      root.rightChild = this.delete(root.rightChild, minRightNode.data);
+      return root;
     }
     return root;
   }
@@ -150,41 +157,36 @@ class BinarySearchTree {
   }
 }
 
-// const bst = new BinarySearchTree(6);
-// console.log(bst.root);
-// bst.add(4);
-// bst.add(9);
-// bst.add(2);
-// bst.add(5);
-// bst.add(8);
-// bst.add(12);
+const bst = new BinarySearchTree(6);
+console.log(bst.root);
+bst.add(4);
+bst.add(9);
+bst.add(2);
+bst.add(5);
+bst.add(8);
+bst.add(12);
 
-// console.log(bst.root);
+console.log(bst.root);
 
-// const preorder = bst.traversePreorder();
-// console.log('Preorder Traversal - ', preorder);
+const preorder = bst.traversePreorder();
+console.log('Preorder Traversal - ', preorder);
 
-// const inorder = bst.traverseInorder();
-// console.log('Inorder Traversal - ', inorder);
+const inorder = bst.traverseInorder();
+console.log('Inorder Traversal - ', inorder);
 
-// const postorder = bst.traversePostorder();
-// console.log('Postorder Traversal - ', postorder);
+const postorder = bst.traversePostorder();
+console.log('Postorder Traversal - ', postorder);
 
-// const search = 18;
-// console.log(`Search for ${search}`, bst.searchFor(search));
+const search = 18;
+console.log(`Search for ${search}`, bst.searchFor(search));
 
-// const minNode = bst.findMinimum();
-// console.log('Minimum value =>', minNode);
+const minNode = bst.findMinimum();
+console.log('Minimum value =>', minNode);
 
-// bst.remove(8);
-// console.log(bst.traversePreorder());
-// console.log(bst.root);
+bst.remove(4);
+console.log(bst.traversePreorder());
 
-// bst.remove(5);
-// console.log(bst.traversePreorder());
-
-// bst.remove(4);
-// console.log(bst.traversePreorder());
+console.log(bst.root);
 
 // bst.remove(2);
 // console.log(bst.traversePreorder());
