@@ -1,6 +1,6 @@
 // Floyd’s Cycle-Finding Algorithm
 
-function detechLoop(linkedList) {
+function detectLoop(linkedList) {
   let slow = linkedList.getFirst();
   let fast = linkedList.getFirst();
 
@@ -14,3 +14,7 @@ function detechLoop(linkedList) {
   }
   return false;
 }
+
+module.exports = {
+  detectLoop,
+};
