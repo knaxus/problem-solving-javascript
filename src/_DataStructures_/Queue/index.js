@@ -15,6 +15,15 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+  isEmpty() {
+    return this.data.length == 0;
+  }
+  enqueue(element) {
+    this.data.push(element);
+  }
+  length() {
+    return this.data.length;
+  }
 }
 
 module.exports = Queue;
