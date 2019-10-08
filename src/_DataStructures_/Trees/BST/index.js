@@ -14,13 +14,11 @@ class BinarySearchTree {
     }
 
     if (value < root.value) {
-      // go left
       // eslint-disable-next-line no-param-reassign
       root.leftChild = this.insert(root.leftChild, value);
       return root;
     }
     if (value > root.value) {
-      // go right
       // eslint-disable-next-line no-param-reassign
       root.rightChild = this.insert(root.rightChild, value);
       return root;
