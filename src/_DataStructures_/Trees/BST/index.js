@@ -108,6 +108,12 @@ class BinarySearchTree {
     return root;
   }
 
+  findMinNode(root) {
+    /** The minnimum values is the let most leaf node in BST */
+    if (root.leftChild === null) return root;
+    return this.findMinNode(root.leftChild);
+  }
+
   isEmpty() {
     return this.root === null;
   }
@@ -132,6 +138,11 @@ class BinarySearchTree {
 
   searchFor(value) {
     return this.search(this.root, value);
+  }
+
+  findMinimum() {
+    const minNode = this.findMinNode(this.root);
+    return minNode.value;
   }
 
   remove(value) {
@@ -162,8 +173,12 @@ class BinarySearchTree {
 // const search = 18;
 // console.log(`Search for ${search}`, bst.searchFor(search));
 
+// const minNode = bst.findMinimum();
+// console.log('Minimum value =>', minNode);
+
 // bst.remove(8);
 // console.log(bst.traversePreorder());
+// console.log(bst.root);
 
 // bst.remove(5);
 // console.log(bst.traversePreorder());
