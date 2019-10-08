@@ -82,6 +82,10 @@ class BinarySearchTree {
     }
     return false;
   }
+
+  isEmpty() {
+    return this.root === null;
+  }
 }
 
 // const bst = new BinarySearchTree(6);
