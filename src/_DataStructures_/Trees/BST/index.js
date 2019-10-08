@@ -32,11 +32,11 @@ class BinarySearchTree {
     /** returning an array so as to make testing easy */
     let arr = [];
     if (root === null) return [];
-    // eslint-disable-next-line no-console
     arr.push(root.value);
 
     const left = this.preorder(root.leftChild);
     arr = [...arr, ...left];
+
     const right = this.preorder(root.rightChild);
     arr = [...arr, ...right];
     return arr;
