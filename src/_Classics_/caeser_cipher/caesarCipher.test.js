@@ -14,6 +14,6 @@ describe('Caesar Cipher tests', () => {
   it('Shift not passed', () => {
     const ocString = 'Hello World';
     const enciphered = caesarCipher(ocString);
-    expect(compareString(ocString, enciphered)).tobe(true);
+    expect(compareString(ocString, enciphered)).toBe(true);
   });
 });
