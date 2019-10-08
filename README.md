@@ -24,15 +24,21 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
   - [Implement Queue Using Stack](src/_DataStructures_/Stack/immitate-queue-using-stack)
   - [Baseball Game](src/_DataStructures_/Stack/baseball-game)
-  - [Minimum Stack](src/_DataStructures_/Stack/min-stack)
+  - [Find minimum in the Stack](src/_DataStructures_/Stack/min-stack)
   - [Balanced Parenthesis](src/_DataStructures_/Stack/balanced-parenthesis)
   - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
   - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
-  
 
 - [Queue](src/_DataStructures_/Queue)
+
   - [Weave](src/_DataStructures_/Queue/weave)
+
+- [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
+
+- [Trees](src/_DataStructures_/Trees)
+  - [Binary Search Tree](src/_DataStructures_/Trees/BST)
+  - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
 
@@ -60,6 +66,10 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 - [Binary Search](src/_Searching_/BinarySearch)
 
+### Algorithms
+
+- [LRU Cache](src/_Algorithms_/lru-cache)
+
 ### Path Finder
 
 - [A\*](src/PathFinder/AStart)
@@ -68,8 +78,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 - [Caeser Cipher](src/_Classics_/caeser_cipher)
 - [Fibonacci](src/_Classics_/fibonacci)
-
----
 
 ## CONTRIBUTION Guide
 
