@@ -104,7 +104,13 @@ class BinarySearchTree {
         // there is a left sub-tree
         return root.leftChild;
       }
-      // the root contain 2 childs
+      /**
+       * the root contain 2 childs, we got 2 options:
+       * 1. We can either find the Node with minimum value at from the right sub-tree
+       * 2. Or, we can find the Node with maximum value from the left sub-tree
+       *
+       * I'm picking up 1 here
+       */
       const minRightNode = this.findMinNode(root.rightChild);
       // eslint-disable-next-line no-param-reassign
       root.value = minRightNode.value;
