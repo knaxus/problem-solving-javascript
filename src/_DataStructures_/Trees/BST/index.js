@@ -86,29 +86,51 @@ class BinarySearchTree {
   isEmpty() {
     return this.root === null;
   }
+
+  /** Layered methods to simplify the BST API  */
+
+  add(value) {
+    return this.insert(this.root, value);
+  }
+
+  traversePreorder() {
+    return this.preorder(this.root);
+  }
+
+  traversePostorder() {
+    return this.postorder(this.root);
+  }
+
+  traverseInorder() {
+    return this.inorder(this.root);
+  }
+
+  searchFor(value) {
+    return this.search(this.root, value);
+  }
 }
 
 // const bst = new BinarySearchTree(6);
 // console.log(bst.root);
-// bst.insert(bst.root, 4);
-// bst.insert(bst.root, 9);
-// bst.insert(bst.root, 2);
-// bst.insert(bst.root, 5);
-// bst.insert(bst.root, 8);
-// bst.insert(bst.root, 12);
+// bst.add(4);
+// bst.add(9);
+// bst.add(2);
+// bst.add(5);
+// bst.add(8);
+// bst.add(12);
 
 // console.log(bst.root);
 
-// const preorder = bst.preorder(bst.root);
+// const preorder = bst.traversePreorder();
 // console.log('Preorder Traversal - ', preorder);
 
-// const inorder = bst.inorder(bst.root);
+// const inorder = bst.traverseInorder();
 // console.log('Inorder Traversal - ', inorder);
 
-// const postorder = bst.postorder(bst.root);
+// const postorder = bst.traversePostorder();
 // console.log('Postorder Traversal - ', postorder);
 
 // const search = 18;
-// console.log(`Search for ${search}`, bst.search(bst.root, search));
+// console.log(`Search for ${search}`, bst.searchFor(search));
 
 module.exports = BinarySearchTree;
