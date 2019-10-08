@@ -29,12 +29,17 @@ class BinarySearchTree {
   }
 
   preorder(root) {
-    if (root === null) return;
+    /** returning an array so as to make testing easy */
+    let arr = [];
+    if (root === null) return [];
     // eslint-disable-next-line no-console
-    console.log(`${root.value} `);
+    arr.push(root.value);
 
-    this.preorder(root.leftChild);
-    this.preorder(root.rightChild);
+    const left = this.preorder(root.leftChild);
+    arr = [...arr, ...left];
+    const right = this.preorder(root.rightChild);
+    arr = [...arr, ...right];
+    return arr;
   }
 }
 
@@ -48,6 +53,7 @@ class BinarySearchTree {
 
 // console.log(bst.root);
 
-// bst.preorder(bst.root);
+// const a = bst.preorder(bst.root);
+// console.log('arr = ', a);
 
 module.exports = BinarySearchTree;
