@@ -54,14 +54,23 @@ describe('Caesar Cipher tests', () => {
   });
 
   it('Shift is not a numbered string', () => {
-    expect(caesarCipher('Hello World', 'abc')).toThrowError('Invalid Shift Provided');
+    function test() {
+      caesarCipher('Hello World', 'abc');
+    }
+    expect(test).toThrow('Invalid Shift Provided');
   });
 
   it('toEncipher is NaN', () => {
-    expect(caesarCipher(NaN, 1)).toThrowError('Invalid string provided');
+    function test() {
+      caesarCipher(NaN, 1);
+    }
+    expect(test).toThrowError('Invalid string provided');
   });
 
   it('toEncipher is undefined', () => {
-    expect(caesarCipher(undefined, 1)).toThrowError('Invalid string provided');
+    function test() {
+      caesarCipher(undefined, 1);
+    }
+    expect(test).toThrowError('Invalid string provided');
   });
 });

@@ -1,15 +1,15 @@
 function caesarCipher(toEncipher, shift = 0) {
     // If required for very strict shift checking then remove '=0'
-    if (Number(shift) === NaN) {
-    return Error('Invalid Shift Provided')
+    if (Number.isNaN(Number(shift)) === true) {
+    throw new Error('Invalid Shift Provided')
     } else {
         shift = Number(shift);
     }
 
-    if(typeof(toEncipher) === 'string' || (typeof(toEncipher) === 'number' && toEncipher !== NaN)) {
+    if(typeof(toEncipher) === 'string' || (typeof(toEncipher) === 'number' && Number.isNaN(toEncipher) === false)) {
         toEncipher = String(toEncipher);
     } else {
-        return Error('Invalid string provided');
+        throw new Error('Invalid string provided');
     }
 
     // These are the valid entries aacepted, you can change it according to requirements
