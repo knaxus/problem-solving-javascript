@@ -109,7 +109,7 @@ class BinarySearchTree {
       // eslint-disable-next-line no-param-reassign
       root.value = minRightNode.value;
       // eslint-disable-next-line no-param-reassign
-      root.rightChild = this.delete(root.rightChild, minRightNode.data);
+      root.rightChild = this.delete(root.rightChild, minRightNode.value);
       return root;
     }
     return root;
