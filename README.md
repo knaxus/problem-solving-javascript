@@ -34,8 +34,8 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Queue](src/_DataStructures_/Queue)
   - [Weave](src/_DataStructures_/Queue/weave)
 
+- [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 - [Suffix Tree](src/_DataStructures_/SuffixTree)
-
 
 ### Logical Problems
 
@@ -62,6 +62,11 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 ### Searching
 
 - [Binary Search](src/_Searching_/BinarySearch)
+
+### Algorithms
+
+- [LRU Cache](src/_Algorithms_/lru-cache)
+
 
 ### Path Finder
 
