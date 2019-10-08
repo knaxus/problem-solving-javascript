@@ -1,11 +1,7 @@
-/**
- * @param {String} toEncipher
- * @param {Number} shift
-*/
 function caesarCipher(toEncipher, shift = 0) {
     // If required for very strict shift checking then remove '=0'
     if (Number(shift) === NaN) {
-    throw Error('Invalid Shift Provided')
+    return Error('Invalid Shift Provided')
     } else {
         shift = Number(shift);
     }
@@ -13,7 +9,7 @@ function caesarCipher(toEncipher, shift = 0) {
     if(typeof(toEncipher) === 'string' || (typeof(toEncipher) === 'number' && toEncipher !== NaN)) {
         toEncipher = String(toEncipher);
     } else {
-        throw Error('Invalid string provided');
+        return Error('Invalid string provided');
     }
 
     // These are the valid entries aacepted, you can change it according to requirements
