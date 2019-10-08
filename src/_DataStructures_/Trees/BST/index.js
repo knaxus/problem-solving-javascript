@@ -69,6 +69,19 @@ class BinarySearchTree {
 
     return [...arr, root.value];
   }
+
+  search(root, value) {
+    if (root === null) return false;
+    if (value === root.value) return true;
+
+    if (value < root.value) {
+      return this.search(root.leftChild, value);
+    }
+    if (value > root.value) {
+      return this.search(root.rightChild, value);
+    }
+    return false;
+  }
 }
 
 // const bst = new BinarySearchTree(6);
@@ -90,5 +103,8 @@ class BinarySearchTree {
 
 // const postorder = bst.postorder(bst.root);
 // console.log('Postorder Traversal - ', postorder);
+
+// const search = 18;
+// console.log(`Search for ${search}`, bst.search(bst.root, search));
 
 module.exports = BinarySearchTree;
