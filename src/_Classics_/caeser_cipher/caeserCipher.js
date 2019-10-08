@@ -4,7 +4,7 @@
 */
 function caesarCipher(toEncipher, shift = 0) {
     // If required for very strict shift checking then remove '=0'
-    if (typeof (Number(shift)) !== 'number' && (shift !== NaN || shift !== 'NaN' || Number(shift) !== NaN )) {
+    if (Number(shift) === NaN) {
     throw Error('Invalid Shift Provided')
     } else {
         shift = Number(shift);
