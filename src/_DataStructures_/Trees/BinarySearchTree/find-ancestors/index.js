@@ -11,15 +11,15 @@ function findAncestors(root, value) {
   if (value > root.value) {
     // traverse right
     const left = findAncestors(root.rightChild, value);
-    arr = [...arr, ...left];
+    arr = [...left, ...arr];
   }
   if (value < root.value) {
     // traverse left
     const right = findAncestors(root.leftChild, value);
-    arr = [...arr, ...right];
+    arr = [...right, ...arr];
   }
   if (root.value === value) return arr;
-  arr = [root.value, ...arr];
+  arr = [...arr, root.value];
   return arr;
 }
 
