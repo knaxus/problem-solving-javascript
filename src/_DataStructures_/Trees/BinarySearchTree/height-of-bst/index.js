@@ -26,10 +26,8 @@ function findHeightOfBST(root) {
 // myBST.add(12);
 // myBST.add(10);
 
-// // find 3rd max
 // // console.log(myBST.root);
 // console.log(myBST.traversePreorder());
-// // console.log(myBST.root.rightChild);
 // console.log(findHeightOfBST(myBST.root));
 
 module.exports = findHeightOfBST;
