@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const BST = require('../index');
 
 // Inorder traversal returns a sorted array
@@ -11,12 +12,12 @@ function inOrderTraversal(root) {
   return [...arr, ...right];
 }
 
-function findKthMax(rootNode, k) {
+function findKthMin(rootNode, k) {
   const arr = inOrderTraversal(rootNode);
   if (k < 0 || k > arr.lenth) {
     throw new Error('Invalid value for K');
   }
-  return arr[arr.length - k];
+  return arr[k - 1];
 }
 
 // // create a BST
@@ -31,8 +32,9 @@ function findKthMax(rootNode, k) {
 // myBST.add(33);
 // myBST.add(52);
 // myBST.add(1);
+// myBST.add(0);
 
 // // find 3rd max
-// console.log(findKthMax(myBST.root, 3));
+// console.log(findKthMin(myBST.root, 3));
 
-module.exports = findKthMax;
+module.exports = findKthMin;
