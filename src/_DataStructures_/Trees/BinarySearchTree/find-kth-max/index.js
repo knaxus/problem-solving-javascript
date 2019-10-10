@@ -13,7 +13,7 @@ function inOrderTraversal(root) {
 
 function findKthMax(rootNode, k) {
   const arr = inOrderTraversal(rootNode);
-  if (k < 0 || k > arr.lenth) {
+  if (k <= 0 || k > arr.lenth) {
     throw new Error('Invalid value for K');
   }
   return arr[arr.length - k];
