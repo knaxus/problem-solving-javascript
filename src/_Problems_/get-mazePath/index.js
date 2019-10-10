@@ -7,10 +7,7 @@
 // --->> er = end row
 // --->> ec = end column
 
-
-
-
-let getMazePath = (cr, cc, er, ec) => {
+const getMazePath = (cr, cc, er, ec) => {
     if(cr == er && cc == ec) {              //============POSITIVE BASE CASE===========
         let br = [];
         br.push('');
@@ -37,6 +34,4 @@ let getMazePath = (cr, cc, er, ec) => {
     return myResult;
 }
 
-
-let path = getMazePath(0, 0, 2, 2);
-console.log(path);
+module.exports = { getMazePath };
