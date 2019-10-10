@@ -38,7 +38,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 - [Trees](src/_DataStructures_/Trees)
   - [Binary Search Tree](src/_DataStructures_/Trees/BST)
-    - [Find k<sup>th<sup> maximin in a BST](src/_DataStructures_/Trees/BST/find-kth-max)
+    - [Find k<sup>th</sup> maximin in a BST](src/_DataStructures_/Trees/BST/find-kth-max)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
