@@ -34,7 +34,6 @@ function findKthMin(rootNode, k) {
 // myBST.add(1);
 // myBST.add(0);
 
-// // find 3rd max
 // console.log(findKthMin(myBST.root, 3));
 
 module.exports = findKthMin;
