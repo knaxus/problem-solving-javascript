@@ -39,7 +39,9 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
 - [Trees](src/_DataStructures_/Trees)
-  - [Binary Search Tree](src/_DataStructures_/Trees/BST)
+  - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
+    - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
+    - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
@@ -52,7 +54,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [FizzBuzz](src/_Problems_/fizzbuzz)
 - [String Permutaions](src/_Problems_/get-string-permutations)
 - [Get Subsequence](src/_Problems_/get_subsequence)
-- [Get Maze Path](src/_Problems_/get_subsequence)
+- [Get Maze Path](src/_Problems_/get-mazePath)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
 - [Get Max Char](src/_Problems_/maxchar)
 - [Get Smallest Common Number](src/_Problems_/get-smallest-common-number)

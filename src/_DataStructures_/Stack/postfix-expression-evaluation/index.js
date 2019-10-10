@@ -15,9 +15,9 @@ function evaluatePostfixExpression(expression) {
             s.push(Number(char));
         } else {
             // if char is an operator then pop two elements from stack, evaluate them accordingly based on operator.
-            //push the result to stack 
+            //push the result to stack
             let val1 = s.pop();
-            let val2 = s.pop()
+            let val2 = s.pop();
             switch (char) {
                 case '+':
                     s.push(val2 + val1);
@@ -38,3 +38,7 @@ function evaluatePostfixExpression(expression) {
     //pop the value of postfix expression
     return s.pop();
 }
+
+module.exports = {
+  evaluatePostfixExpression,
+};
