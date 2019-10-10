@@ -29,3 +29,5 @@ function findKNodes(root, k) {
 // myBST.add(1);
 
 // console.log(findKNodes(myBST.root, 2));
+
+module.exports = findKNodes;
