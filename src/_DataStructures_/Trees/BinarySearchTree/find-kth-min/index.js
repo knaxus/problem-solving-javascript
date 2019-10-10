@@ -14,7 +14,7 @@ function inOrderTraversal(root) {
 
 function findKthMin(rootNode, k) {
   const arr = inOrderTraversal(rootNode);
-  if (k < 0 || k > arr.lenth) {
+  if (k <= 0 || k > arr.lenth) {
     throw new Error('Invalid value for K');
   }
   return arr[k - 1];
