@@ -55,10 +55,12 @@ class DoublyLinkedList {
 
   display() {
     let address = this.head.next;
+    let addresses = []
     while (address !== this.tail) {
-      console.log(address.data);
+      addresses.push(address.data)
       address = address.next;
     }
+    return addresses
   }
 }
 

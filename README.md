@@ -51,7 +51,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [FizzBuzz](src/_Problems_/fizzbuzz)
 - [String Permutaions](src/_Problems_/get-string-permutations)
 - [Get Subsequence](src/_Problems_/get_subsequence)
-- [Get Maze Path](src/_Problems_/get_subsequence)
+- [Get Maze Path](src/_Problems_/get-mazePath)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
 - [Get Max Char](src/_Problems_/maxchar)
 - [Get Smallest Common Number](src/_Problems_/get-smallest-common-number)
