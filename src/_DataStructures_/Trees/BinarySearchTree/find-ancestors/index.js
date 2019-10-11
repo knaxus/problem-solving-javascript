@@ -1,31 +1,35 @@
 // eslint-disable-next-line no-unused-vars
 const BST = require('../index');
 
-function searchAndPush(root, value, result) {
+/** You should go through this conversation here:
+ * https://github.com/knaxus/problem-solving-javascript/pull/63
+ */
+
+function findAncestors(root, value) {
   /**
    * search the given node and meanwhile
    * keep pushing the visited nodes
    */
-  if (root == null) {
+  if (root === null) return false;
+
+  if (value < root.value) {
+    const left = findAncestors(root.leftChild, value);
+    if (left) {
+      return [...left, root.value];
+    }
     return false;
   }
-  if (root.value === value) {
-    return true;
-  }
-  if (
-    searchAndPush(root.leftChild, value, result)
-    || searchAndPush(root.rightChild, value, result)
-  ) {
-    result.push(root.value);
-    return true;
-  }
-  return false;
-}
 
-function findAncestors(root, value) {
-  const result = [];
-  searchAndPush(root, value, result);
-  return result;
+  if (value > root.value) {
+    const right = findAncestors(root.rightChild, value);
+    if (right) {
+      return [...right, root.value];
+    }
+    return false;
+  }
+
+  if (value === root.value) return [];
+  return false;
 }
 
 // create a BST
