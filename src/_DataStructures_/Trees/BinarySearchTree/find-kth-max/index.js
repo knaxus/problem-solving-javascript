@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const BST = require('../index');
 
 // Inorder traversal returns a sorted array
