@@ -1,26 +1,31 @@
 // eslint-disable-next-line no-unused-vars
 const BST = require('../index');
 
-function findAncestors(root, value) {
+function searchAndPush(root, value, result) {
   /**
    * search the given node and meanwhile
    * keep pushing the visited nodes
    */
-  let arr = [];
-  if (root === null) return [];
-  if (value > root.value) {
-    // traverse right
-    const left = findAncestors(root.rightChild, value);
-    arr = [...left, ...arr];
+  if (root == null) {
+    return false;
   }
-  if (value < root.value) {
-    // traverse left
-    const right = findAncestors(root.leftChild, value);
-    arr = [...right, ...arr];
+  if (root.value === value) {
+    return true;
   }
-  if (root.value === value) return arr;
-  arr = [...arr, root.value];
-  return arr;
+  if (
+    searchAndPush(root.leftChild, value, result)
+    || searchAndPush(root.rightChild, value, result)
+  ) {
+    result.push(root.value);
+    return true;
+  }
+  return false;
+}
+
+function findAncestors(root, value) {
+  const result = [];
+  searchAndPush(root, value, result);
+  return result;
 }
 
 // create a BST
@@ -34,10 +39,7 @@ function findAncestors(root, value) {
 // myBST.add(12);
 // myBST.add(10);
 
-// // find 3rd max
-// // console.log(myBST.root);
-// console.log(myBST.traversePreorder());
-// // console.log(myBST.root.rightChild);
 // console.log(findAncestors(myBST.root, 10));
+// console.log(findAncestors(myBST.root, 101));
 
 module.exports = findAncestors;
