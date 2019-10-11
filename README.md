@@ -30,6 +30,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
 
+
 - [Queue](src/_DataStructures_/Queue)
 
   - [Weave](src/_DataStructures_/Queue/weave)
@@ -37,7 +38,12 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
 - [Trees](src/_DataStructures_/Trees)
-  - [Binary Search Tree](src/_DataStructures_/Trees/BST)
+  - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
+    - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
+    - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
+    - [Find Ancestors of a Node](src/_DataStructures_/Trees/BinarySearchTree/find-ancestors)
+    - [Find Height of BST](src/_DataStructures_/Trees/BinarySearchTree/height-of-bst)
+    - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
@@ -50,7 +56,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [FizzBuzz](src/_Problems_/fizzbuzz)
 - [String Permutaions](src/_Problems_/get-string-permutations)
 - [Get Subsequence](src/_Problems_/get_subsequence)
-- [Get Maze Path](src/_Problems_/get_subsequence)
+- [Get Maze Path](src/_Problems_/get-mazePath)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
 - [Get Max Char](src/_Problems_/maxchar)
 - [Get Smallest Common Number](src/_Problems_/get-smallest-common-number)
