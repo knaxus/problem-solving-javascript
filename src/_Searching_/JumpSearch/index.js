@@ -20,7 +20,7 @@ function jumpSearch(arr, jump, key) {
     for(let i = low; i < high; i++) {
         if(arr[i] == key) {
             // return the index of the key
-            return i + 1;
+            return i;
         }
     }
     return null;
