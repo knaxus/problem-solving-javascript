@@ -41,6 +41,9 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
     - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
     - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
+    - [Find Ancestors of a Node](src/_DataStructures_/Trees/BinarySearchTree/find-ancestors)
+    - [Find Height of BST](src/_DataStructures_/Trees/BinarySearchTree/height-of-bst)
+    - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
 
 ### Logical Problems
