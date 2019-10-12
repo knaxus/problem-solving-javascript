@@ -1,5 +1,12 @@
+/**
+ * Note: Array must be sorted for jump search
+ * Complexity: 
+ * Worst case time complexity: O(√N)
+ * Average case time complexity: O(√N)
+ * Best case time complexity: O(1)
+ * Space complexity: O(1)
+*/
 function jumpSearch(arr, key) {
-    // treat jumps larger than array size as linear search
     const n = arr.length;
     const jump = Math.floor(Math.sqrt(n));
     let step = jump;
