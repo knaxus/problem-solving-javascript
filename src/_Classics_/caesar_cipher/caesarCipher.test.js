@@ -27,7 +27,7 @@ describe('Caesar Cipher tests', () => {
     const ocString = 'Hello World';
     const enCiphered = caesarCipher(ocString, 63);
     const idealResult = caesarCipher(ocString, 1);
-    expect(compareString(enCiphered, idealResult)).toBe(true);
+    expect(enCiphered).toBe(idealResult);
   });
 
   it('Negative shift Works', () => {
