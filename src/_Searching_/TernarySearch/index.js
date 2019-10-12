@@ -1,6 +1,11 @@
 /**
  * Note: Array must be sorted for binary search
- */
+ * Complexity: 
+ * Worst case time complexity: O(log N)
+ * Average case time complexity: O(log N)
+ * Best case time complexity: O(1)
+ * Space complexity: O(1)
+*/
 function ternarySearch(arr, key){
     let left = 0;
     let right = arr.length - 1;
