@@ -50,6 +50,7 @@ class LRUCache {
         value,
       });
       this.map.set(key, this.list.head.next);
+      return value;
     }
     return false;
   }
