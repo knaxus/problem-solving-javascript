@@ -22,13 +22,16 @@ class LinkedList {
   }
 
   addAtEnd(element) {
-    if (!this.head) {
-      return this.addAtBeginning(element);
-    }
     const node = new Node(element, null);
+    this.size += 1;
+
+    if (!this.head) {
+      this.head = node;
+      this.tail = node;
+      return node;
+    }
     this.tail.next = node;
     this.tail = node;
-    this.size += 1;
     return node;
   }
 
@@ -42,6 +45,7 @@ class LinkedList {
     const node = this.head;
     this.head = this.head.next;
     this.size -= 1;
+    node.next = null;
     return node;
   }
 
@@ -139,6 +143,7 @@ class LinkedList {
     const node = address;
     previous.next = address.next.next;
     this.size -= 1;
+    node.next = null;
     return node;
   }
 

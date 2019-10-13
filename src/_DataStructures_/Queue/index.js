@@ -1,19 +1,56 @@
-class Queue {
+const { LinkedList: SinglyLinkedLists } = require('../LinkedList');
+
+class Queue extends SinglyLinkedLists {
   constructor() {
-    this.data = [];
+    super();
+    this.NotAllowed = 'Not Allowed';
   }
 
-  add(element) {
-    // add element to the start of the data
-    return this.data.unshift(element);
+  enqueue(data) {
+    return this.addAtEnd(data);
+  }
+
+  dequeue() {
+    const node = this.removeFromBeginning();
+    return node ? node.data : node;
   }
 
   peek() {
-    return this.data[this.data.length - 1];
+    const node = this.getFirst();
+    return node ? node.data : node;
   }
 
-  remove() {
-    return this.data.pop();
+  length() {
+    return this.size;
+  }
+
+  destroy() {
+    this.delete();
+  }
+
+  /** Override and throw error for other LL methods */
+  addAtBeginning() {
+    throw new Error(this.NotAllowed);
+  }
+
+  addAt() {
+    throw new Error(this.NotAllowed);
+  }
+
+  removeFromEnd() {
+    throw new Error(this.NotAllowed);
+  }
+
+  getLast() {
+    throw new Error(this.NotAllowed);
+  }
+
+  getAt() {
+    throw new Error(this.NotAllowed);
+  }
+
+  removeAt() {
+    throw new Error(this.NotAllowed);
   }
 }
 
