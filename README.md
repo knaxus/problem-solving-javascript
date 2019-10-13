@@ -35,6 +35,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Weave](src/_DataStructures_/Queue/weave)
   - [Reverse First K Elements of a Queue](src/_DataStructures_/Queue/reverse-first-k)
   - [Generate all Binary Numbers from 1 to N](src/_DataStructures_/Queue/generate-binary-number)
+  - [Queue using Stack](src/_DataStructures_/Queue/queue-using-stack)
 
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
