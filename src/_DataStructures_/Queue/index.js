@@ -7,8 +7,7 @@ class Queue extends SinglyLinkedLists {
   }
 
   enqueue(data) {
-    const node = new Node(data, null);
-    return this.addAtEnd(node);
+    return this.addAtEnd(data);
   }
 
   dequeue() {
@@ -17,11 +16,12 @@ class Queue extends SinglyLinkedLists {
   }
 
   peek() {
-    return this.getFirst();
+    const node = this.getFirst();
+    return node.data;
   }
 
-  size() {
-    return this.length();
+  length() {
+    return this.size;
   }
 
   destroy() {
@@ -53,5 +53,14 @@ class Queue extends SinglyLinkedLists {
     throw new Error(this.NotAllowed);
   }
 }
+
+const q = new Queue();
+
+q.enqueue(10);
+q.enqueue(101);
+q.enqueue(44);
+
+console.log(q.length());
+console.log(q.dequeue());
 
 module.exports = Queue;
