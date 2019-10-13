@@ -17,6 +17,20 @@ describe('Binary search tree traversals', () => {
     });
   });
 
+  describe('Check bst was created as expected', () => {
+    it('Inorder traversal of the created bst should be [ 2, 4, 5, 6, 8, 9, 12 ]', () => {
+      expect(bst.traverseInorder()).toEqual([2, 4, 5, 6, 8, 9, 12]);
+    });
+
+    it('Preorder traversal of the created bst should be [ 6, 4, 2, 5, 9, 8, 12 ]', () => {
+      expect(bst.traversePreorder()).toEqual([6, 4, 2, 5, 9, 8, 12]);
+    });
+
+    it('Postorder traversal of the created bst should be  [ 2, 5, 4, 8, 12, 9, 6 ]', () => {
+      expect(bst.traversePostorder()).toEqual([2, 5, 4, 8, 12, 9, 6]);
+    });
+  });
+
   describe('BST node deletions', () => {
     it('should check height of bst to be 3 prior deletion', () => {
       expect(heightOfBST(bst.root)).toEqual(3);
