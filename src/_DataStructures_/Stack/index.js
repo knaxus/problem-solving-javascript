@@ -15,8 +15,10 @@ class Stack {
   peek() {
     return this.data[this.data.length - 1];
   }
-  isEmpty(){ //check if stack is empty
-    return this.data.length==0;
+
+  isEmpty() {
+    // check if stack is empty
+    return this.data.length === 0;
   }
 }
 
