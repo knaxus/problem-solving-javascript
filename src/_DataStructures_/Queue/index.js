@@ -1,4 +1,4 @@
-const { LinkedList: SinglyLinkedLists, Node } = require('../LinkedList');
+const { LinkedList: SinglyLinkedLists } = require('../LinkedList');
 
 class Queue extends SinglyLinkedLists {
   constructor() {
@@ -53,14 +53,5 @@ class Queue extends SinglyLinkedLists {
     throw new Error(this.NotAllowed);
   }
 }
-
-const q = new Queue();
-
-q.enqueue(10);
-q.enqueue(101);
-q.enqueue(44);
-
-console.log(q.length());
-console.log(q.dequeue());
 
 module.exports = Queue;
