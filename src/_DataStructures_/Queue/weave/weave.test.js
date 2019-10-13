@@ -10,18 +10,18 @@ describe('Weave two queues using weaveQueues()', () => {
     const q1 = new Queue();
     const q2 = new Queue();
 
-    q1.add('Hello');
-    q2.add(1);
-    q1.add('World');
-    q2.add(2);
-    q2.add(3);
+    q1.enqueue('Hello');
+    q2.enqueue(1);
+    q1.enqueue('World');
+    q2.enqueue(2);
+    q2.enqueue(3);
 
     const q3 = weaveQueues(q1, q2);
 
-    expect(q3.remove()).toEqual('Hello');
-    expect(q3.remove()).toEqual(1);
-    expect(q3.remove()).toEqual('World');
-    expect(q3.remove()).toEqual(2);
-    expect(q3.remove()).toEqual(3);
+    expect(q3.dequeue()).toEqual('Hello');
+    expect(q3.dequeue()).toEqual(1);
+    expect(q3.dequeue()).toEqual('World');
+    expect(q3.dequeue()).toEqual(2);
+    expect(q3.dequeue()).toEqual(3);
   });
 });
