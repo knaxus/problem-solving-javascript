@@ -2,7 +2,6 @@ class Node {
   constructor(data, next) {
     this.data = data;
     this.next = next;
-    this.length = 0;
   }
 }
 
@@ -10,6 +9,7 @@ class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
+    this.size = 0;
   }
 
   addAtBeginning(element) {
@@ -17,6 +17,7 @@ class LinkedList {
     if (!this.tail) {
       this.tail = this.head;
     }
+    this.size += 1;
     return this.head;
   }
 
@@ -27,12 +28,12 @@ class LinkedList {
     const node = new Node(element, null);
     this.tail.next = node;
     this.tail = node;
+    this.size += 1;
     return node;
   }
 
   removeFromBeginning() {
     if (!this.head) {
-      this.tail = null;
       return null;
     }
     if (this.head.next === null) {
@@ -40,6 +41,7 @@ class LinkedList {
     }
     const node = this.head;
     this.head = this.head.next;
+    this.size -= 1;
     return node;
   }
 
@@ -57,6 +59,7 @@ class LinkedList {
 
     const node = this.tail.next;
     this.tail.next = null;
+    this.size -= 1;
     return node;
   }
 
@@ -108,8 +111,10 @@ class LinkedList {
       count -= 1;
     }
 
-    previous.next = new Node(element, previous.next);
-    return null;
+    const node = new Node(element, previous.next);
+    previous.next = node;
+    this.size += 1;
+    return node;
   }
 
   removeAt(index) {
@@ -133,21 +138,18 @@ class LinkedList {
 
     const node = address;
     previous.next = address.next.next;
+    this.size -= 1;
     return node;
   }
 
   length() {
-    let address = this.head;
-    let count = 0;
-    while (address) {
-      count += 1;
-      address = address.next;
-    }
-    return count;
+    return this.size;
   }
 
   delete() {
     this.head = null;
+    this.tail = this.head;
+    this.size = 0;
   }
 }
 
