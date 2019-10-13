@@ -4,12 +4,12 @@ function weaveQueues(first, second) {
   const weaved = new Queue();
 
   while (first.peek() || second.peek()) {
-    if (first.peek() !== undefined) {
-      weaved.add(first.remove());
+    if (first.peek()) {
+      weaved.enqueue(first.dequeue());
     }
 
-    if (second.peek() !== undefined) {
-      weaved.add(second.remove());
+    if (second.peek()) {
+      weaved.enqueue(second.dequeue());
     }
   }
   return weaved;

@@ -12,12 +12,12 @@ class Queue extends SinglyLinkedLists {
 
   dequeue() {
     const node = this.removeFromBeginning();
-    return node.data;
+    return node ? node.data : node;
   }
 
   peek() {
     const node = this.getFirst();
-    return node.data;
+    return node ? node.data : node;
   }
 
   length() {
