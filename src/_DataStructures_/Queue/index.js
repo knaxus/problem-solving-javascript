@@ -17,7 +17,7 @@ class Queue extends SinglyLinkedLists {
   }
 
   peek() {
-    return this.getLast();
+    return this.getFirst();
   }
 
   size() {
@@ -41,7 +41,7 @@ class Queue extends SinglyLinkedLists {
     throw new Error(this.NotAllowed);
   }
 
-  getFirst() {
+  getLast() {
     throw new Error(this.NotAllowed);
   }
 
