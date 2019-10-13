@@ -30,15 +30,15 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
 
-* [Queue](src/_DataStructures_/Queue)
+- [Queue](src/_DataStructures_/Queue)
 
   - [Weave](src/_DataStructures_/Queue/weave)
   - [Reverse First K Elements of a Queue](src/_DataStructures_/Queue/reverse-first-k)
   - [Generate all Binary Numbers from 1 to N](src/_DataStructures_/Queue/generate-binary-number)
 
-* [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
+- [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
-* [Trees](src/_DataStructures_/Trees)
+- [Trees](src/_DataStructures_/Trees)
   - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
     - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
     - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
