@@ -2,9 +2,12 @@ const BinarySearchTree = require('./index');
 
 describe('Binary Search Tree', () => {
   let bst;
-  let rootsLeftChild, rootsRightChild;
-  let rootsLeftChildsLeftChild, rootsLeftChildsRightChild;
-  let rootsRightChildsLeftChild, rootsRightChildsRightChild;
+  let rootsLeftChild;
+  let rootsRightChild;
+  let rootsLeftChildsLeftChild;
+  let rootsLeftChildsRightChild;
+  let rootsRightChildsLeftChild;
+  let rootsRightChildsRightChild;
 
   describe('Creates a binary search tree', () => {
     it('should create a bst with root 100', () => {
@@ -46,6 +49,20 @@ describe('Binary Search Tree', () => {
       bst.add(600);
       rootsRightChildsRightChild = bst.root.rightChild.rightChild;
       expect(rootsRightChildsRightChild.value).toEqual(600);
+    });
+  });
+
+  describe('Check insertion was as expected', () => {
+    it('Inorder traversal of the created bst should be [ 10, 20, 30, 100, 400, 500, 600 ]', () => {
+      expect(bst.traverseInorder()).toEqual([10, 20, 30, 100, 400, 500, 600]);
+    });
+
+    it('Preorder traversal of the created bst should be [ 100, 20, 10, 30, 500, 400, 600 ]', () => {
+      expect(bst.traversePreorder()).toEqual([100, 20, 10, 30, 500, 400, 600]);
+    });
+
+    it('Postorder traversal of the created bst should be [ 10, 30, 20, 400, 600, 500, 100 ]', () => {
+      expect(bst.traversePostorder()).toEqual([10, 30, 20, 400, 600, 500, 100]);
     });
   });
 });
