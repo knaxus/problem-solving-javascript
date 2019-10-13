@@ -8,32 +8,40 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.tail = null;
+    this.size = 0;
   }
 
   addAtBeginning(element) {
     this.head = new Node(element, this.head);
+    if (!this.tail) {
+      this.tail = this.head;
+    }
+    this.size += 1;
+    return this.head;
   }
 
   addAtEnd(element) {
-    const node = new Node(element, null);
-
     if (!this.head) {
-      this.head = node;
-    } else {
-      let address = this.head;
-      while (address.next) {
-        address = address.next;
-      }
-      address.next = node;
+      return this.addAtBeginning(element);
     }
+    const node = new Node(element, null);
+    this.tail.next = node;
+    this.tail = node;
+    this.size += 1;
+    return node;
   }
 
   removeFromBeginning() {
     if (!this.head) {
       return null;
     }
+    if (this.head.next === null) {
+      this.tail = this.head;
+    }
     const node = this.head;
     this.head = this.head.next;
+    this.size -= 1;
     return node;
   }
 
@@ -47,8 +55,11 @@ class LinkedList {
       address = address.next;
     }
 
-    const node = address.next;
-    address.next = null;
+    this.tail = address;
+
+    const node = this.tail.next;
+    this.tail.next = null;
+    this.size -= 1;
     return node;
   }
 
@@ -63,11 +74,7 @@ class LinkedList {
     if (!this.head) {
       return null;
     }
-    let address = this.head;
-    while (address.next) {
-      address = address.next;
-    }
-    return address;
+    return this.tail;
   }
 
   getAt(index) {
@@ -104,8 +111,10 @@ class LinkedList {
       count -= 1;
     }
 
-    previous.next = new Node(element, previous.next);
-    return null;
+    const node = new Node(element, previous.next);
+    previous.next = node;
+    this.size += 1;
+    return node;
   }
 
   removeAt(index) {
@@ -129,21 +138,18 @@ class LinkedList {
 
     const node = address;
     previous.next = address.next.next;
+    this.size -= 1;
     return node;
   }
 
   length() {
-    let address = this.head;
-    let count = 0;
-    while (address) {
-      count += 1;
-      address = address.next;
-    }
-    return count;
+    return this.size;
   }
 
   delete() {
     this.head = null;
+    this.tail = this.head;
+    this.size = 0;
   }
 }
 
