@@ -123,28 +123,20 @@ class LinkedList {
 
   removeAt(index) {
     if (!this.head) {
-      return null;
+         return null;
+     }
+    if (index === 0) {
+        this.head = this.head.next;
+        return;
     }
-
-    if (index >= this.length()) {
-      return this.removeFromEnd();
+    const previous = this.getAt(index - 1);
+    
+    if (!previous || !previous.next) {
+        return;
     }
-
-    let address = this.head;
-    let previous = address;
-    let count = index;
-
-    while (count) {
-      address = address.next;
-      previous = address;
-      count -= 1;
-    }
-
-    const node = address;
-    previous.next = address.next.next;
-    this.size -= 1;
-    node.next = null;
-    return node;
+    
+    previous.next = previous.next.next;     
+    return this.head
   }
 
   length() {
