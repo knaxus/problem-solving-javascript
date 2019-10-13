@@ -2,35 +2,41 @@ class Node {
   constructor(data, next) {
     this.data = data;
     this.next = next;
+    this.length = 0;
   }
 }
 
 class LinkedList {
   constructor() {
     this.head = null;
+    this.tail = null;
   }
 
   addAtBeginning(element) {
     this.head = new Node(element, this.head);
+    if (!this.tail) {
+      this.tail = this.head;
+    }
+    return this.head;
   }
 
   addAtEnd(element) {
-    const node = new Node(element, null);
-
     if (!this.head) {
-      this.head = node;
-    } else {
-      let address = this.head;
-      while (address.next) {
-        address = address.next;
-      }
-      address.next = node;
+      return this.addAtBeginning(element);
     }
+    const node = new Node(element, null);
+    this.tail.next = node;
+    this.tail = node;
+    return node;
   }
 
   removeFromBeginning() {
     if (!this.head) {
+      this.tail = null;
       return null;
+    }
+    if (this.head.next === null) {
+      this.tail = this.head;
     }
     const node = this.head;
     this.head = this.head.next;
@@ -47,8 +53,10 @@ class LinkedList {
       address = address.next;
     }
 
-    const node = address.next;
-    address.next = null;
+    this.tail = address;
+
+    const node = this.tail.next;
+    this.tail.next = null;
     return node;
   }
 
@@ -63,11 +71,7 @@ class LinkedList {
     if (!this.head) {
       return null;
     }
-    let address = this.head;
-    while (address.next) {
-      address = address.next;
-    }
-    return address;
+    return this.tail;
   }
 
   getAt(index) {
