@@ -1,4 +1,4 @@
-const { findSecondMax } = require('.');
+const { lca } = require('.');
 
 describe('LCA', () => {
   it('Should return 12', () => {
