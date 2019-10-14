@@ -2,6 +2,7 @@
  * Sort a stack with the help of a temporary stack.
  * Input:[1,10,21,3,9,-11,32]
  * Output:[32,21,10,9,3,1,-11]
+ * Time Complexity:O(N^2) 
 */
 const Stack = require('../index');
 
