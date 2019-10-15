@@ -1,5 +1,5 @@
 /**
- * Note: Array must be sorted for binary search
+ * Note: Array must be sorted for ternary search
  * Complexity: 
  * Worst case time complexity: O(log N)
  * Average case time complexity: O(log N)
@@ -7,46 +7,43 @@
  * Space complexity: O(1)
 */
 function ternarySearch(arr, key){
-    let left = 0;
-    let right = arr.length - 1;
-    while(left <= right){
-        let temp2 = left + Math.floor((right - left) / 3);
-        let temp3 = left + 2 * Math.floor((right - left) / 3);
-        if(key == arr[left]){
-            return left;
-        } else if(key  == arr[right]){
-            return right;
-        } else if(key < arr[left] || key > arr[right]){
-            return null;
-        } else if(key <= arr[temp2]){
-            right = temp2;
-        } else if(key > arr[temp2] && key <= arr[temp3]){
-            left = temp2 + 1;
-            right = temp3;
+    let low = 0;
+    let high = arr.length - 1;
+    while(low <= high){
+        let lowMiddle = low + Math.floor((high - low) / 3);
+        let highMiddle = low + 2 * Math.floor((high - low) / 3);
+        if(key == arr[low]){
+            return low;
+        } else if(key  == arr[high]){
+            return high;
+        } else if(key <= arr[lowMiddle]){
+            high = lowMiddle;
+        } else if(key > arr[lowMiddle] && key <= arr[highMiddle]){
+            low = lowMiddle + 1;
+            high = highMiddle;
         } else {
-            left = temp3 + 1;
+            low = highMiddle + 1;
         }
     }
     return null;
 }
 
 function ternarySearchRecursive(arr, low, high, key){
-
-    if(high >= low){
+    if(high > low){
         let highMiddle = low + 2 * Math.floor((high - low) / 3);
         let lowMiddle = low + Math.floor((high - low) / 3);
         if(key === arr[lowMiddle]){
             return lowMiddle;
         } else if(key === arr[highMiddle]){
             return highMiddle;
-        } else if(key < arr[highMiddle]){
-            return ternarySearchRecursive(arr, low, lowMiddle, key);
+        } else if(key === arr[high]){
+            return high;
+        } else if(key < arr[lowMiddle]){
+            return ternarySearchRecursive(arr, low, lowMiddle - 1, key);
         } else if(key > arr[lowMiddle] && key < arr[highMiddle]){
-            return ternarySearchRecursive(arr, lowMiddle, highMiddle, key);
-        } else if(arr.indexOf(key) == - 1){
-            return null;
+            return ternarySearchRecursive(arr, lowMiddle + 1, highMiddle - 1, key);
         } else {
-            return ternarySearchRecursive(arr, highMiddle, high, key);
+            return ternarySearchRecursive(arr, highMiddle + 1, high, key);
         } 
     } 
     return null;

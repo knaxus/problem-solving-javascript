@@ -15,10 +15,10 @@ describe('Ternary Search', () => {
   });
   describe('When element to find is at last position ', () => {
     it('Ternary search with Loop', () => {
-      expect(ternarySearch(array, 7)).toEqual(6);
+      expect(ternarySearch(array, 8)).toEqual(7);
     });
     it('Ternary serach with recursion', () => {
-      expect(ternarySearchRecursive(array, low, high, 7)).toEqual(6);
+      expect(ternarySearchRecursive(array, low, high, 8)).toEqual(7);
     });
   });
   describe('When element to find is at random position ', () => {
