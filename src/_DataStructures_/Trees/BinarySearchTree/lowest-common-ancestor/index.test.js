@@ -15,14 +15,14 @@ describe('LCA', () => {
   bst.add(10);
 
   it('Should return 12', () => {
-    expect(lca(bst.root, 10, 14).data).toEqual(12);
+    expect(lca(bst.root, 10, 14).value).toEqual(12);
   });
   
   it('Should return 8', () => {
-    expect(lca(bst.root, 14, 8).data).toEqual(8);
+    expect(lca(bst.root, 14, 8).value).toEqual(8);
   });
   
   it('Should return 20', () => {
-    expect(lca(bst.root, 10, 22).data).toEqual(20);
+    expect(lca(bst.root, 10, 22).value).toEqual(20);
   });
 });
