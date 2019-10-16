@@ -26,7 +26,7 @@ describe('Ternary Search', () => {
       expect(ternarySearch(array, 3)).toEqual(2);
     });
     it('Ternary serach with recursion', () => {
-      expect(ternarySearchRecursive(array, low, high, 3)).toEqual(2);
+      expect(ternarySearchRecursive(array, low, high, 4)).toEqual(3);
     });
   });
   describe('When element to find is no present in array ', () => {

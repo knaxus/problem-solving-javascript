@@ -29,15 +29,13 @@ function ternarySearch(arr, key){
 }
 
 function ternarySearchRecursive(arr, low, high, key){
-    if(high > low){
+    if(high >= low){
         let highMiddle = low + 2 * Math.floor((high - low) / 3);
         let lowMiddle = low + Math.floor((high - low) / 3);
         if(key === arr[lowMiddle]){
             return lowMiddle;
         } else if(key === arr[highMiddle]){
             return highMiddle;
-        } else if(key === arr[high]){
-            return high;
         } else if(key < arr[lowMiddle]){
             return ternarySearchRecursive(arr, low, lowMiddle - 1, key);
         } else if(key > arr[lowMiddle] && key < arr[highMiddle]){
