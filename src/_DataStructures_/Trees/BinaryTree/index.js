@@ -2,10 +2,10 @@ const Node = require('./Node');
 
 class BinaryTree {
   constructor(arr) {
-    if (!Array.isArray(arr)) {
+    if (!Array.isArray(arr) || !arr.length) {
       throw new Error('Invalid argument to create a Binary Tre');
     }
-    this.root = this.createBinaryTree(this.root, arr, 0);
+    this.root = this.createBinaryTree((this.root = null), arr, 0);
   }
 
   // eslint-disable-next-line class-methods-use-this
