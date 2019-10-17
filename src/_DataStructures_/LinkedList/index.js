@@ -97,29 +97,29 @@ class LinkedList {
   }
 
   addAt(index, element) {
-    if (!this.head) {
-      return this.addAtBeginning(element);
+        if (!this.head || index==1) {
+            return this.addAtBeginning(element);
+        }
+
+        if (index >= this.size) {
+            return this.addAtEnd(element);
+        }
+
+        let address = this.head;
+        let previous = address;
+        let count = index;
+
+        while (count!=1) {
+            previous = address;
+            address = address.next;
+            count -= 1;
+        }
+
+        const node = new Node(element, previous.next);
+        previous.next = node;
+        this.size += 1;
+        return node;
     }
-
-    if (index >= this.length()) {
-      return this.addAtEnd(element);
-    }
-
-    let address = this.head;
-    let previous = this.head;
-    let count = index;
-
-    while (count) {
-      previous = address;
-      address = address.next;
-      count -= 1;
-    }
-
-    const node = new Node(element, previous.next);
-    previous.next = node;
-    this.size += 1;
-    return node;
-  }
 
   removeAt(index) {
     if (!this.head) {
