@@ -122,30 +122,33 @@ class LinkedList {
   }
 
   removeAt(index) {
-    if (!this.head) {
-      return null;
+        if (!this.head) {
+            return null;
+        }
+        if (index==1){
+            this.head=this.head.next
+            this.size -= 1;
+            return
+        }
+        if (index >= this.size) {
+            return this.removeFromEnd();
+
+        }
+
+        let address = this.head;
+        let previous = address;
+        let count = index;
+
+        while (count!=1) {
+            previous = address;
+            address = address.next;
+            count -= 1;
+        }
+
+        previous.next = address.next;
+        console.log(address.next)
+        this.size -= 1;
     }
-
-    if (index >= this.length()) {
-      return this.removeFromEnd();
-    }
-
-    let address = this.head;
-    let previous = address;
-    let count = index;
-
-    while (count) {
-      address = address.next;
-      previous = address;
-      count -= 1;
-    }
-
-    const node = address;
-    previous.next = address.next.next;
-    this.size -= 1;
-    node.next = null;
-    return node;
-  }
 
   length() {
     return this.size;
