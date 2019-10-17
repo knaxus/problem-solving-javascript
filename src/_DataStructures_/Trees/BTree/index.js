@@ -9,7 +9,7 @@ class BTree {
   }
 
   splitChild(index, parent, y) {
-    const z = new Node(this.t, y.isLeaf);
+    const z = new Node(y.isLeaf);
     z.totalKey = this.t - 1;
 
     for (let i = 0; i < this.t - 1; i += 1) {
@@ -53,7 +53,6 @@ class BTree {
 
       if (node.child[i + 1].totalKey === 2 * this.t - 1) {
         this.splitChild(i + 1, node, node.child[i + 1]);
-
         if (node.keys[i + 1] < key) i += 1;
       }
       this.insertNonFull(node.child[i + 1], key);
@@ -62,11 +61,11 @@ class BTree {
 
   insert(key) {
     if (this.root === null) {
-      this.root = new Node(this.t, true);
+      this.root = new Node(true);
       this.root.keys.push(key);
       this.root.totalKey = 1;
     } else if (this.root.totalKey === 2 * this.t - 1) {
-      const newRoot = new Node(this.t, false);
+      const newRoot = new Node(false);
       newRoot.child[0] = this.root;
       this.splitChild(0, newRoot, this.root);
       let i = 0;

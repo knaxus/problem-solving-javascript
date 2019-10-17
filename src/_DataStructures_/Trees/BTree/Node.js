@@ -1,6 +1,5 @@
 module.exports = class Node {
-  constructor(t, isLeaf) {
-    this.t = t;
+  constructor(isLeaf) {
     this.isLeaf = isLeaf;
     this.keys = [];
     this.child = [];
