@@ -40,6 +40,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 - [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
 - [Trees](src/_DataStructures_/Trees)
+  - [Binary Tree (creation using level order)](src/_DataStructures_/Trees/BinaryTree)
   - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
     - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
     - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
