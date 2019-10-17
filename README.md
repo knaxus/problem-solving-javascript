@@ -29,6 +29,8 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Postfix Expression Evaluation](src/_DataStructures_/Stack/postfix-expression-evaluation)
   - [Remove Consecutive Repeated Digits](src/_DataStructures_/Stack/remove-consecutive-repeated-digits)
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
+  - [Sort a Stack](src/_DataStructures_/Stack/sort-a-stack)
+
 
 - [Queue](src/_DataStructures_/Queue)
 
