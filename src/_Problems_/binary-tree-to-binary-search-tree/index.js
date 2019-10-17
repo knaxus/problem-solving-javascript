@@ -1,3 +1,21 @@
+/**
+ * Given a Binary Tree, convert it to a Binary Search Tree. 
+ * The conversion must be done in such a way that keeps the original structure of Binary Tree.
+ * Example 1
+Input:
+          10
+         /  \
+        2    7
+       / \
+      8   4
+Output:
+          8
+         /  \
+        4    10
+       / \
+      2   7
+ */
+
 // Helper function to store inorder traversal of a binary tree
 function storeInorder(root, inorder) {
   // Base case
@@ -15,17 +33,18 @@ function storeInorder(root, inorder) {
 
 // Helper function that copies of sorted array
 function arrayToBST(arr, root) {
+  const node = root;
   // Base case
-  if (!root) return;
+  if (!node) return;
 
   // First update the left subtree
-  arrayToBST(arr, root.left);
+  arrayToBST(arr, node.left);
 
   // update the root's data and remove it from sorted array
-  root.data = arr.shift();
+  node.data = arr.shift();
 
   // Finally update the right subtree
-  arrayToBST(arr, root.right);
+  arrayToBST(arr, node.right);
 }
 
 function binaryTreeToBST(root) {
@@ -39,26 +58,6 @@ function binaryTreeToBST(root) {
   arrayToBST(arr, root);
 }
 
-function printInorder(root) {
-  if (!root) return;
-
-  printInorder(root.left);
-
-  console.log(root.data);
-
-  printInorder(root.right);
-}
-
-function run(tree) {
-  printInorder(tree);
-
-  binaryTreeToBST(tree);
-
-  printInorder(tree);
-}
-
-const a = {
-  data: 10,
-  left: { data: 30, left: { data: 20 } },
-  right: { data: 15, right: { data: 5 } },
+module.exports = {
+  binaryTreeToBST,
 };
