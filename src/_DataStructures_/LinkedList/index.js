@@ -156,6 +156,16 @@ class LinkedList {
     this.tail = this.head;
     this.size = 0;
   }
+
+  traverseList() {
+    const arr = [];
+    let node = this.head;
+    while (node !== null) {
+      arr.push(node.data);
+      node = node.next;
+    }
+    return arr;
+  }
 }
 
 module.exports = { LinkedList, Node };
