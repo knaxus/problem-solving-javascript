@@ -53,7 +53,7 @@ class DoublyLinkedList {
     return this.size;
   }
 
-  display() {
+  traverse() {
     let address = this.head.next;
     const elements = [];
     while (address !== this.tail) {
