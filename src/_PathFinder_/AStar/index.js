@@ -11,7 +11,7 @@ function AStar(s, e, row, col, inputGrid) {
   const end = e;
   const path = [];
 
-  if (end.i > inputGrid.length || end.j > inputGrid[0].length) {
+  if (end.i >= inputGrid.length || end.j >= inputGrid[0].length) {
     throw new Error('Error: Endpoint outside grid bounds');
   }
 
