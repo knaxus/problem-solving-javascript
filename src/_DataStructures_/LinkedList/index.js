@@ -122,33 +122,38 @@ class LinkedList {
   }
 
   removeAt(index) {
-        if (!this.head) {
-            return null;
-        }
-        if (index==1){
-            this.head=this.head.next
-            this.size -= 1;
-            return
-        }
-        if (index >= this.size) {
-            return this.removeFromEnd();
-
-        }
-
-        let address = this.head;
-        let previous = address;
-        let count = index;
-
-        while (count!=1) {
-            previous = address;
-            address = address.next;
-            count -= 1;
-        }
-
-        previous.next = address.next;
-        console.log(address.next)
-        this.size -= 1;
+    if (!this.head) {
+      return null;
     }
+    if (index === 0) {
+      const node = this.head;
+      this.head = this.head.next;
+      this.size -= 1;
+      // set the next of the node null
+      node.next = null;
+      return node;
+    }
+
+    if (index >= this.size - 1) {
+      return this.removeFromEnd();
+    }
+
+    let address = this.head;
+    let previous = address;
+    let count = index;
+
+    while (count >= 1) {
+      previous = address;
+      address = address.next;
+      count -= 1;
+    }
+    const node = previous.next;
+    previous.next = address.next;
+    this.size -= 1;
+
+    node.next = null;
+    return node;
+  }
 
   length() {
     return this.size;
@@ -159,6 +164,30 @@ class LinkedList {
     this.tail = this.head;
     this.size = 0;
   }
+
+  traverseList() {
+    const arr = [];
+    let node = this.head;
+    while (node !== null) {
+      arr.push(node.data);
+      node = node.next;
+    }
+    return arr;
+  }
 }
+
+// const ll = new LinkedList();
+// ll.addAtBeginning(20);
+// ll.addAtBeginning(15);
+// ll.addAtBeginning(10);
+// ll.addAtBeginning(5);
+
+// console.log(ll.traverseList());
+
+// console.log(ll.removeAt(0));
+// console.log(ll.traverseList());
+
+// console.log(ll.removeAt(1));
+// console.log(ll.traverseList());
 
 module.exports = { LinkedList, Node };
