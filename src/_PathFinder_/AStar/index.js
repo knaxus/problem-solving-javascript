@@ -9,6 +9,15 @@ function AStar(s, e, row, col, inputGrid) {
   const Col = col;
   const start = s;
   const end = e;
+  const path = [];
+
+  if (end.i > inputGrid.length || end.j > inputGrid[0].length) {
+    throw new Error('Error: Endpoint outside grid bounds');
+  }
+
+  if (inputGrid[end.i][end.j] === 0) {
+    throw new Error('Error: Endpoint is unreachable');
+  }
 
   function cell() {
     this.cellValue = null;
@@ -53,7 +62,6 @@ function AStar(s, e, row, col, inputGrid) {
 
     let i = endRow;
     let j = endCol;
-    const path = [];
 
     while (!(i === startRow && j === startCol)) {
       path.push([i, j]);
@@ -64,10 +72,6 @@ function AStar(s, e, row, col, inputGrid) {
       j = nextJ;
     }
     path.push([i, j]);
-
-    for (let i = 0; i < path.length; i += 1) {
-      console.log(path[i]);
-    }
   };
 
   const neighbourExplorer = (i, j, parentI, parentJ, openList, openListMap,
@@ -173,7 +177,10 @@ function AStar(s, e, row, col, inputGrid) {
     }
     return true;
   };
-  search();
+  if (!search()) {
+    throw new Error('Error: Endpoint cannot be reached');
+  }
+  return path;
 }
 
 
