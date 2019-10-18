@@ -92,20 +92,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 ## CONTRIBUTION Guide
 
-It's great to know that you want to contribute to this repo. Thanks for taking interest. Before you start, read the following carefully.
-
-- When adding a new **problem** with solution
-
-  - Take care of the filename convention (Very Important)
-  - Problem statement should be there with examples
-  - Make sure you add the Run Time complexity of your solution
-  - Please take care of the segregation of the Problems as per the given Folder Structure
-  - It's great if you can add the **Unit Tests** to verify your solutions as well
-  - Strictly follow ESLINT rules
-
-- When adding a Unit Test
-
-  - Take care of the file name convention
-  - Make sure CI (Travis) is passing
+It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 
 Keep an eye on this guide, it's subjected to change frequently.
