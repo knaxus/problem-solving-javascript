@@ -58,16 +58,16 @@ class Trie {
   }
 }
 
-const words = ['bed', 'ball', 'apple', 'java', 'javascript'];
-const trie = new Trie();
+// const words = ['bed', 'ball', 'apple', 'java', 'javascript'];
+// const trie = new Trie();
 
-words.forEach(word => trie.insert(word));
+// words.forEach(word => trie.insert(word));
 
-console.log(trie.root);
+// console.log(trie.root);
 
-console.log(trie.search(words[3]));
-console.log(trie.search('word'));
-console.log(trie.search(words[4]));
-console.log(trie.search('random'));
+// console.log(trie.search(words[3]));
+// console.log(trie.search('word'));
+// console.log(trie.search(words[4]));
+// console.log(trie.search('random'));
 
 module.exports = Trie;
