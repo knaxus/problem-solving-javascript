@@ -17,47 +17,49 @@ Output:
  */
 
 // Helper function to store inorder traversal of a binary tree
-function storeInorder(root, inorder) {
-  // Base case
-  if (!root) return;
+function storeInorder(root) {
+  /** left - root - right */
+  if (root === null) return [];
 
   // First store the left subtree
-  storeInorder(root.left, inorder);
+  let arr = [];
+  const left = storeInorder(root.leftChild);
+  arr = [...left, ...arr];
 
   // Append root's data
-  inorder.push(root.data);
+  arr = [...arr, root.value];
 
   // Store right subtree
-  storeInorder(root.right, inorder);
+  const right = storeInorder(root.rightChild);
+  arr = [...arr, ...right];
+  return arr;
 }
 
-// Helper function that copies of sorted array
+// Helper function to copy elements from sorted array to make BST while keeping same structure
 function arrayToBST(arr, root) {
   const node = root;
   // Base case
   if (!node) return;
 
   // First update the left subtree
-  arrayToBST(arr, node.left);
+  arrayToBST(arr, node.leftChild);
 
   // update the root's data and remove it from sorted array
-  node.data = arr.shift();
+  node.value = arr.shift();
 
   // Finally update the right subtree
-  arrayToBST(arr, node.right);
+  arrayToBST(arr, node.rightChild);
 }
 
 function binaryTreeToBST(root) {
   // Tree is empty
   if (!root) return;
-
-  const arr = [];
-  storeInorder(root, arr);
-
+  const arr = storeInorder(root);
   arr.sort((a, b) => a - b);
   arrayToBST(arr, root);
 }
 
 module.exports = {
   binaryTreeToBST,
+  storeInorder,
 };
