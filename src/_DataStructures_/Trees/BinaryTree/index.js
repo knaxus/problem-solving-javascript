@@ -78,16 +78,14 @@ class BinaryTree {
       return arr;
   }
   
+  preOrder() {
+    return this.traversePreorder(this.root);
+  }
 }
 
 //const bt = new BinaryTree([1, 2, 3, 4, 5, 6]);
 // console.log(bt.root);
 //console.log(bt.traverseZigZag(bt.root));
-
-  preOrder() {
-    return this.traversePreorder(this.root);
-  }
-}
 
 // const bt = new BinaryTree([1, 2, 3, 4, 5, 6]);
 // console.log(bt.root);
