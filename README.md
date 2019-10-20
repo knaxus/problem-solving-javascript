@@ -31,17 +31,17 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
   - [Sort a Stack](src/_DataStructures_/Stack/sort-a-stack)
 
-
-- [Queue](src/_DataStructures_/Queue)
+* [Queue](src/_DataStructures_/Queue)
 
   - [Weave](src/_DataStructures_/Queue/weave)
   - [Reverse First K Elements of a Queue](src/_DataStructures_/Queue/reverse-first-k)
   - [Generate all Binary Numbers from 1 to N](src/_DataStructures_/Queue/generate-binary-number)
   - [Queue using Stack](src/_DataStructures_/Queue/queue-using-stack)
 
-- [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
+* [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
-- [Trees](src/_DataStructures_/Trees)
+* [Trees](src/_DataStructures_/Trees)
+  - [Binary Tree (creation using level order)](src/_DataStructures_/Trees/BinaryTree)
   - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
     - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
     - [Find k<sup>th</sup> minimum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-min)
@@ -50,6 +50,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
     - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
   - [BTree](src/_DataStructures_/BTree)
+
 
 ### Logical Problems
 
@@ -92,20 +93,6 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 ## CONTRIBUTION Guide
 
-It's great to know that you want to contribute to this repo. Thanks for taking interest. Before you start, read the following carefully.
-
-- When adding a new **problem** with solution
-
-  - Take care of the filename convention (Very Important)
-  - Problem statement should be there with examples
-  - Make sure you add the Run Time complexity of your solution
-  - Please take care of the segregation of the Problems as per the given Folder Structure
-  - It's great if you can add the **Unit Tests** to verify your solutions as well
-  - Strictly follow ESLINT rules
-
-- When adding a Unit Test
-
-  - Take care of the file name convention
-  - Make sure CI (Travis) is passing
+It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 
 Keep an eye on this guide, it's subjected to change frequently.

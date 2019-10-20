@@ -1,3 +1,4 @@
+// do not change the node class, you never know how many things it caan break! :) 
 class Node {
   constructor(data, next) {
     this.data = data;
@@ -155,6 +156,16 @@ class LinkedList {
     this.head = null;
     this.tail = this.head;
     this.size = 0;
+  }
+
+  traverseList() {
+    const arr = [];
+    let node = this.head;
+    while (node !== null) {
+      arr.push(node.data);
+      node = node.next;
+    }
+    return arr;
   }
 }
 
