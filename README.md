@@ -51,6 +51,7 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
   - [Trie](src/_DataStructures_/Trees/Trie)
     - [Total Words in a Trie](src/_DataStructures_/Trees/Trie/total-words-in-trie)
+    - [All the words from a Trie](src/_DataStructures_/Trees/Trie/all-words-in-trie)
 
 ### Logical Problems
 
