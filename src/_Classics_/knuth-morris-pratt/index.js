@@ -1,4 +1,11 @@
 
+    /* *
+     * The time complexity of KMP algorithm is O(n) in the worst case
+     * Example use case: Pattern = AABCAB Text = AAABACABAABCABAABCA
+     * LPSArray = [ 0, 0, 1, 2, 3, 0 ]
+     * Found = true, at position 13
+     * */ 
+    
     // Longest prefix suffix - generate an array of the longest previous suffix for each pattern array value
     const createLPS = (pattern, patternLength, lps) => {
       // initialise the current longest prefix suffix length and iterator index values
@@ -37,6 +44,7 @@
      * array/table to essentially skip chunks of the text that we know will match the pattern. 
      * This algorithm will return true if the pattern is a subset of the text, else it will return false.
      * This algorithm accepts two strings, the pattern and text.
+     * The time complexity of the KMP algorithm is O(n) in the worst case.
      * */ 
     const KMPSearch = (pattern, text) => {
       const patternLength = pattern.length; // Often referred to as M
@@ -44,6 +52,7 @@
 
       let lps = [patternLength]; // Longest Pattern Suffix - array containing the lps for all pattern value positions
       lps = createLPS(pattern, patternLength, lps); // This is preprocessed - before the text is searched for the pattern.
+      // console.log({ lpsArray: lps })
 
       let patternIndex = 0; // Referred to as P
       let textIndex = 0; // Referred to as T
