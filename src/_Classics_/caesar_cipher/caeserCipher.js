@@ -6,7 +6,7 @@ function caesarCipher(toEncipher, shift = 0) {
   if (Number.isNaN(Number(shift)) === true) {
     throw new Error('Invalid Shift Provided');
   } else {
-    shift = Number(shift);
+    shift = parseInt(Number(shift), 10);
   }
 
   if (typeof (toEncipher) === 'string' || (typeof (toEncipher) === 'number' && Number.isNaN(toEncipher) === false)) {
