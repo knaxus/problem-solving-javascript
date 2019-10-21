@@ -7,6 +7,7 @@ function armstrongNum(num) {
   for (let i = 0; i < num.length; i += 1) {
     total += num[i] ** num.length;
   }
+  // eslint-disable-next-line no-unneeded-ternary
   return (total === Math.abs(Number(num))) ? true : false;
 }
 module.exports = armstrongNum;
