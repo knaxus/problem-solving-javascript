@@ -13,7 +13,7 @@ function evaluatePostfixExpression(expression) {
   expression = expression.trim();
 
   if (expression.length === 0 || expression.length === 1) {
-    return ERROR_STRING;
+    throw new Error(ERROR_STRING);
   }
 
   const s = new Stack();
@@ -49,13 +49,13 @@ function evaluatePostfixExpression(expression) {
   }
   // pop the value from stack
   const result = s.pop();
-  if (s.isEmpty()) {
-    return result;
+  if (!s.isEmpty()) {
+    throw new Error(ERROR_STRING);
   }
-  return ERROR_STRING;
+  return result;
 }
 
 module.exports = {
   evaluatePostfixExpression,
-  ERROR_STRING
+  ERROR_STRING,
 };
