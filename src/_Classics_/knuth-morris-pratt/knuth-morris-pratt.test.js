@@ -1,7 +1,7 @@
 const { KMPSearch } = require('.');
 
 describe('Pattern Matching Classic Algorithm: Knuth-Morris-Pratt', () => {
-  describe('KMPSearch', () =>{
+  describe('KMPSearch', () => {
     it('Should return true when the pattern equals the text', () => {
       expect(KMPSearch('A', 'A')).toEqual(true);
     });
