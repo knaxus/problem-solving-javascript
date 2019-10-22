@@ -11,7 +11,12 @@ function getAllWords(root, level, word) {
     for (let i = 0; i < level; i += 1) {
       temp += String(word[i]);
     }
-    result = [...result, temp];
+    // get the count and push all the occurences
+    const res = [];
+    for (let i = 0; i < root.wordCount; i += 1) {
+      res.push(temp);
+    }
+    result = [...result, ...res];
   }
 
   for (let i = 0; i < 26; i += 1) {
@@ -32,7 +37,7 @@ function allWordsFromTrie(root) {
   return getAllWords(root, 0, word);
 }
 
-// const words = ['bed', 'ball', 'apple', 'java', 'javascript'];
+// const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
 // const trie = new Trie();
 
 // words.forEach(word => trie.insert(word));
