@@ -1,9 +1,15 @@
+// Check if a binary tree is subtree of another binary tree 
+// Root of the source tree and the tree to be matched are provided in the parameters.
+// Return true/false based on whether or not the given tree is the subtree of the source tree
+// Time complexity : O(m*n) m is the number of nodes of the original tree, 
+// n is the number of nodes in the tree to be matched
+
 function areIdentical(rootOfOriginalTree, rootOfMatchingTree) {
     if (rootOfOriginalTree === null && rootOfMatchingTree === null) {
         return true;
     }
 
-    if (Roo1 === null || rootOfMatchingTree === null) {
+    if (rootOfOriginalTree === null || rootOfMatchingTree === null) {
         return false;
     }
 
