@@ -50,8 +50,10 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
     - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
   - [Trie](src/_DataStructures_/Trees/Trie)
-    - [Total count of words in a Trie](src/_DataStructures_/Trees/Trie/total-words-in-trie)
+    - [Total words count count in a Trie](src/_DataStructures_/Trees/Trie/total-words-in-trie)
+    - [Unique words count in a Trie](src/_DataStructures_/Trees/Trie/unique-word-count)
     - [All the words from a Trie](src/_DataStructures_/Trees/Trie/all-words-in-trie)
+    - [Unique words in a Trie](src/_DataStructures_/Trees/Trie/get-unique-words)
 
 ### Logical Problems
 
