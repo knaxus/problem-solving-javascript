@@ -1,14 +1,14 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 const Trie = require('../index');
 
-function totalWords(root) {
+function uniqueWordCount(root) {
   let result = 0;
   if (root.isEndOfWord) {
-    result += root.wordCount;
+    result += 1;
   }
   for (let i = 0; i < 26; i += 1) {
-    if (root.children[i] !== null) {
-      result += totalWords(root.children[i]);
+    if (root.children[i]) {
+      result += uniqueWordCount(root.children[i]);
     }
   }
   return result;
@@ -18,6 +18,6 @@ function totalWords(root) {
 // const trie = new Trie();
 
 // words.forEach(word => trie.insert(word));
-// console.log(totalWords(trie.root));
+// console.log(uniqueWordCount(trie.root));
 
-module.exports = totalWords;
+module.exports = uniqueWordCount;
