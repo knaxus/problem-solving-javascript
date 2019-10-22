@@ -31,16 +31,16 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
   - [Implement 2 Stacks using Single Array](src/_DataStructures_/Stack/2-stacks-using1-array)
   - [Sort a Stack](src/_DataStructures_/Stack/sort-a-stack)
 
-* [Queue](src/_DataStructures_/Queue)
+- [Queue](src/_DataStructures_/Queue)
 
   - [Weave](src/_DataStructures_/Queue/weave)
   - [Reverse First K Elements of a Queue](src/_DataStructures_/Queue/reverse-first-k)
   - [Generate all Binary Numbers from 1 to N](src/_DataStructures_/Queue/generate-binary-number)
   - [Queue using Stack](src/_DataStructures_/Queue/queue-using-stack)
 
-* [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
+- [Doubly Linked List](src/_DataStructures_/DoublyLinkedList)
 
-* [Trees](src/_DataStructures_/Trees)
+- [Trees](src/_DataStructures_/Trees)
   - [Binary Tree (creation using level order)](src/_DataStructures_/Trees/BinaryTree)
   - [Binary Search Tree](src/_DataStructures_/Trees/BinarySearchTree)
     - [Find k<sup>th</sup> maximum in a BinarySearchTree](src/_DataStructures_/Trees/BinarySearchTree/find-kth-max)
@@ -50,6 +50,10 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
     - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
   - [Trie](src/_DataStructures_/Trees/Trie)
+    - [Total words count count in a Trie](src/_DataStructures_/Trees/Trie/total-words-in-trie)
+    - [Unique words count in a Trie](src/_DataStructures_/Trees/Trie/unique-word-count)
+    - [All the words from a Trie](src/_DataStructures_/Trees/Trie/all-words-in-trie)
+    - [Unique words in a Trie](src/_DataStructures_/Trees/Trie/get-unique-words)
 
 ### Logical Problems
 
