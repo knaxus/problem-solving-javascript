@@ -39,13 +39,57 @@ class BinaryTree {
     return arr;
   }
 
+  traverseZigZag(root){
+      let arr=[];
+      let stack1=[];
+      let stack2=[];
+
+      stack1.push(root);
+      while(stack1.length!==0 || stack2.length!==0)
+      {
+        while(stack1.length!==0)
+        {
+          let top=stack1[stack1.length-1];
+          if(top==null)
+          {
+            stack1.pop();
+            continue;
+          }
+        
+          arr.push(top.value);
+          stack2.push(top.leftChild);
+          stack2.push(top.rightChild);
+          stack1.pop();
+        }
+        while(stack2.length!==0)
+        {
+          let top=stack2[stack2.length-1];
+          if(top==null)
+          {
+            stack2.pop();
+            continue;
+          }
+          arr.push(top.value);
+          stack1.push(top.leftChild);
+          stack1.push(top.rightChild);
+          stack2.pop();
+        }
+      }
+      return arr;
+  }
+  
   preOrder() {
     return this.traversePreorder(this.root);
   }
 }
 
+//const bt = new BinaryTree([1, 2, 3, 4, 5, 6]);
+// console.log(bt.root);
+//console.log(bt.traverseZigZag(bt.root));
+
 // const bt = new BinaryTree([1, 2, 3, 4, 5, 6]);
 // console.log(bt.root);
 // console.log(bt.preOrder());
+
 
 module.exports = BinaryTree;

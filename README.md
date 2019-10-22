@@ -49,7 +49,8 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
     - [Find Height of BST](src/_DataStructures_/Trees/BinarySearchTree/height-of-bst)
     - [Find k Nodes from Root of BST](src/_DataStructures_/Trees/BinarySearchTree/find-k-nodes-from-root)
   - [Suffix Tree](src/_DataStructures_/SuffixTree)
-  - [Trie](src/_DataStructures_/Trees/Trie)
+  - [BTree](src/_DataStructures_/BTree)
+
 
 ### Logical Problems
 
