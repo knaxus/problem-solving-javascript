@@ -32,6 +32,7 @@ class Trie {
     // when we are done with inserting all the character of the word,
     // mark the node as end leaf
     currentNode.markAsLeaf();
+    currentNode.increaseCount();
     return true;
   }
 
