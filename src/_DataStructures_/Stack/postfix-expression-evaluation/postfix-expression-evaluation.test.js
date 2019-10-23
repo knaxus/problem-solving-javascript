@@ -56,8 +56,7 @@ describe('Postfix expression evaluation', () => {
   describe('should throw error on invalid expressions', () => {
     const invalidExpressions = ['12', '1', '+', '1+2', '+12'];
     test.each(invalidExpressions)('running for %p', (expression) => {
-      const result = evaluatePostfixExpression(expression);
-      expect(result).toEqual(ERROR_STRING);
+      expect(() => evaluatePostfixExpression(expression)).toThrow(ERROR_STRING);
     });
   });
 });
