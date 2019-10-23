@@ -1,9 +1,9 @@
 
 /* *
 * The time complexity of KMP algorithm is O(n) in the worst case
-* Example use case: Pattern = AABCAB Text = AAABACABAABCABAABCA
-* LPSArray = [ 0, 0, 1, 2, 3, 0 ]
-* Found = true, at position 13
+* Example use case: Pattern = ABCABCACA Text = AAABCBAABCABCACACABBCA
+* LPSArray = [ 0, 0, 0, 1, 2, 3, 4, 0, 1 ]
+* Found = true, at index 7
 * */
 
 // Longest prefix suffix - generate an array of the lps for each pattern array value
