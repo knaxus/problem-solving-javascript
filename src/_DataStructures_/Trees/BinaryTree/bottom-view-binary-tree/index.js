@@ -1,4 +1,3 @@
-const HashMap = require('hashmap');
 const Queue = require('../../../Queue');
 
 // Determines the bottom view of a binary tree
@@ -15,7 +14,7 @@ module.exports = function bottomView(binaryTree) {
   const horizontalDistance = 0;
 
   // create a map to track most recent visited nodes per hd
-  const hdToNodeValue = new HashMap();
+  const hdToNodeValue = new Map();
 
   // perform bfs
   const q = new Queue();

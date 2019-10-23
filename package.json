@@ -21,7 +21,5 @@
     "eslint-plugin-import": "^2.14.0",
     "jest": "^25.0.0"
   },
-  "dependencies": {
-    "hashmap": "^2.4.0"
-  }
+  "dependencies": {}
 }
