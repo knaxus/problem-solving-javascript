@@ -20,5 +20,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^25.0.0"
+  },
+  "dependencies": {
+    "hashmap": "^2.4.0"
   }
 }
