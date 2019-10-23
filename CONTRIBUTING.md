@@ -29,6 +29,7 @@ This is the most simple project when it comes to contributions, setup, opening i
 - When adding a Unit Test
   - Take care of the file name convention
   - Make sure CI (Travis) is passing
+  - Expanding the test suite until (close to) 100 percent code coverage is achieved
 
 ### Notes
 
