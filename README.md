@@ -84,10 +84,9 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 ### Algorithms
 
 - [LRU Cache](src/_Algorithms_/lru-cache)
+- Path Finders
+  - [A*](src/_Algorithms_/path-finder/a-star)
 
-### Path Finder
-
-- [A\*](src/PathFinder/AStart)
 
 ### Classics
 
