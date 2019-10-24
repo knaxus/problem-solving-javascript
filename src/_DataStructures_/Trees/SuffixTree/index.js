@@ -32,7 +32,7 @@ class Node {
 class SuffixTree {
   constructor(string) {
     this.head = new Node();
-    this.string = string;
+    this.string = string.toLowerCase();
   }
 
   constructSuffixTree() {
@@ -103,6 +103,7 @@ class SuffixTree {
   }
 
   findSubstring(string) {
+    string = string.toLowerCase();
     if (!this.head.next.has(string[0])) {
       return -1;
     }
@@ -131,10 +132,9 @@ class SuffixTree {
   }
 }
 
-// const st = 'asdjkxhcjbzdmnsjakdhasdbajw';
+// const st = 'CatatecheeseMouseatecheesetooCatatemousetoo';
 // const s = new SuffixTree(st);
 // s.constructSuffixTree();
-// // console.log(s.head.next);
 
 
 // for (let i = 0; i < st.length; i++) {
