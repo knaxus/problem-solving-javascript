@@ -35,5 +35,5 @@ module.exports = function bottomView(binaryTree) {
     }
   }
 
-  return hdToNodeValue.values();
+  return Array.from(hdToNodeValue.values());
 };
