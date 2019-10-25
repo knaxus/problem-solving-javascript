@@ -119,4 +119,76 @@ describe('A*', () => {
       expect(() => { AStar(start, end, ROW, COL, inputGrid); }).toThrowError('Error: Endpoint is unreachable');
     });
   });
+  describe('Completes grid successfully when no block', () => {
+    it('A*', () => {
+      const inputGrid = [
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+      ];
+      const ROW = inputGrid.length;
+      const COL = inputGrid[0].length;
+      const start = {
+        i: 2,
+        j: 2,
+      };
+      const end1 = {
+        i: 0,
+        j: 0,
+      };
+      const completedPath1 = [[0, 0], [1, 1], [2, 2]];
+      expect(AStar(start, end1, ROW, COL, inputGrid)).toEqual(completedPath1);
+
+      const end2 = {
+        i: 0,
+        j: 2,
+      };
+      const completedPath2 = [[0, 2], [1, 2], [2, 2]];
+      expect(AStar(start, end2, ROW, COL, inputGrid)).toEqual(completedPath2);
+
+      const end3 = {
+        i: 0,
+        j: 4,
+      };
+      const completedPath3 = [[0, 4], [1, 3], [2, 2]];
+      expect(AStar(start, end3, ROW, COL, inputGrid)).toEqual(completedPath3);
+
+      const end4 = {
+        i: 2,
+        j: 4,
+      };
+      const completedPath4 = [[2, 4], [2, 3], [2, 2]];
+      expect(AStar(start, end4, ROW, COL, inputGrid)).toEqual(completedPath4);
+
+      const end5 = {
+        i: 4,
+        j: 4,
+      };
+      const completedPath5 = [[4, 4], [3, 3], [2, 2]];
+      expect(AStar(start, end5, ROW, COL, inputGrid)).toEqual(completedPath5);
+
+      const end6 = {
+        i: 4,
+        j: 2,
+      };
+      const completedPath6 = [[4, 2], [3, 2], [2, 2]];
+      expect(AStar(start, end6, ROW, COL, inputGrid)).toEqual(completedPath6);
+
+      const end7 = {
+        i: 4,
+        j: 0,
+      };
+      const completedPath7 = [[4, 0], [3, 1], [2, 2]];
+      expect(AStar(start, end7, ROW, COL, inputGrid)).toEqual(completedPath7);
+
+      const end8 = {
+        i: 2,
+        j: 0,
+      };
+      const completedPath8 = [[2, 0], [2, 1], [2, 2]];
+      expect(AStar(start, end8, ROW, COL, inputGrid)).toEqual(completedPath8);
+    });
+  });
 });

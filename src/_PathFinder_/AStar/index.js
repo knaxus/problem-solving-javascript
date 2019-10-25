@@ -11,7 +11,10 @@ function AStar(s, e, row, col, inputGrid) {
   const end = e;
   const path = [];
 
-  if (end.i >= inputGrid.length || end.j >= inputGrid[0].length) {
+  const isValid = (i, j) => i >= 0 && j >= 0 && i < Row && j < Col;
+
+
+  if (!isValid(start.i, start.j) || !isValid(end.i, end.j)) {
     throw new Error('Error: Endpoint outside grid bounds');
   }
 
@@ -43,9 +46,6 @@ function AStar(s, e, row, col, inputGrid) {
       grid[i][j].cellValue = inputGrid[i][j];
     }
   }
-
-
-  const isValid = (i, j) => i >= 0 && j >= 0 && i < Row && j < Col;
 
   const isDestination = (i, j) => end.i === i && end.j === j;
 
@@ -124,10 +124,6 @@ function AStar(s, e, row, col, inputGrid) {
   };
 
   const search = () => {
-    if (!isValid(start.i, start.j) || !isValid(end.i, end.j)) {
-      return false;
-    }
-
     let i = start.i;
     let j = start.j;
     const openList = [];
@@ -185,36 +181,66 @@ function AStar(s, e, row, col, inputGrid) {
 
 
 // const inputGrid = [
-//   [1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
-//   [1, 1, 1, 0, 1, 1, 1, 0, 1, 1],
-//   [1, 1, 1, 0, 1, 1, 0, 1, 0, 1],
-//   [0, 0, 1, 0, 1, 0, 0, 0, 0, 1],
-//   [1, 1, 1, 0, 1, 1, 1, 0, 1, 0],
-//   [1, 0, 1, 1, 1, 1, 0, 1, 0, 0],
-//   [1, 0, 0, 0, 0, 1, 0, 0, 0, 1],
-//   [1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
-//   [1, 1, 1, 0, 0, 0, 1, 0, 0, 1],
+//   [1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1],
 // ];
+// const ROW = inputGrid.length;
+// const COL = inputGrid[0].length;
+// const start = {
+//   i: 2,
+//   j: 2,
+// };
+// const end1 = {
+//   i: 0,
+//   j: 0,
+// };
+// console.log(AStar(start, end1, ROW, COL, inputGrid));
 
-const inputGrid = [
-  [1, 0, 0, 0, 0, 0],
-  [1, 1, 1, 1, 1, 1],
-  [1, 0, 0, 0, 0, 0],
-  [1, 1, 1, 1, 1, 1],
-];
+// const end2 = {
+//   i: 0,
+//   j: 2,
+// };
+// console.log(AStar(start, end2, ROW, COL, inputGrid));
 
-const ROW = inputGrid.length;
-const COL = inputGrid[0].length;
-const start = {
-  i: 0,
-  j: 0,
-};
-const end = {
-  i: 3,
-  j: 5,
-};
+// const end3 = {
+//   i: 0,
+//   j: 4,
+// };
+// console.log(AStar(start, end3, ROW, COL, inputGrid));
 
-AStar(start, end, ROW, COL, inputGrid);
+// const end4 = {
+//   i: 2,
+//   j: 4,
+// };
+// console.log(AStar(start, end4, ROW, COL, inputGrid));
+
+// const end5 = {
+//   i: 4,
+//   j: 4,
+// };
+// console.log(AStar(start, end5, ROW, COL, inputGrid));
+
+// const end6 = {
+//   i: 4,
+//   j: 2,
+// };
+// console.log(AStar(start, end6, ROW, COL, inputGrid));
+
+// const end7 = {
+//   i: 4,
+//   j: 0,
+// };
+// console.log(AStar(start, end7, ROW, COL, inputGrid));
+
+// const end8 = {
+//   i: 2,
+//   j: 0,
+// };
+// console.log(AStar(start, end8, ROW, COL, inputGrid));
+
 
 
 module.exports = {
