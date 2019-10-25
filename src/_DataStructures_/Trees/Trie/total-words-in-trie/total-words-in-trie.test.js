@@ -14,13 +14,13 @@ describe('Data Structure : Trie', () => {
       let newTrie = new Trie();
       const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
       words.forEach(word => newTrie.insert(word));
-      result = totalWordsInTrie.totalWords(newTrie.root);
+      result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });
 
     it('Should return 0.', () => {
       let newTrie = new Trie();
-      result = totalWordsInTrie.totalWords(newTrie.root);
+      result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 0);
     });
 
@@ -28,7 +28,7 @@ describe('Data Structure : Trie', () => {
       let newTrie = new Trie();
       const words = ['bed', 'ball','', 'apple', 'java', 'javascript', 'bed'];
       words.forEach(word => newTrie.insert(word));
-      result = totalWordsInTrie.totalWords(newTrie.root);
+      result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });
   });
