@@ -43,7 +43,7 @@ function evaluatePostfixExpression(expression) {
           s.push(val2 / val1);
           break;
         default:
-          break;
+          throw new Error('Operation is not valid');
       }
     }
   }
