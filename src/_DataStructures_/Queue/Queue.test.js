@@ -53,6 +53,30 @@ describe('Data Structure : Queue', () => {
       expect(queue.dequeue()).toEqual(1);
       expect(queue.dequeue()).toEqual(4);
       expect(queue.dequeue()).toEqual(3);
+      expect(queue.dequeue()).toEqual(null);
+    });
+
+    it('Length of linkedlist', () => {
+      const queue2 = new Queue();
+      queue2.enqueue(2);
+      queue2.enqueue(1);
+      queue2.enqueue(4);
+      queue2.enqueue(3);
+      expect(queue2.length()).toEqual(4);
+    });
+
+    it('Destroy linkedList', () => {
+      queue.destroy();
+      expect(queue.length()).toEqual(0);
+    });
+
+    it('Override and throw error for other LL methods', () => {
+      expect(() => { queue.addAtBeginning(); }).toThrowError('Not Allowed');
+      expect(() => { queue.addAt(); }).toThrowError('Not Allowed');
+      expect(() => { queue.removeFromEnd(); }).toThrowError('Not Allowed');
+      expect(() => { queue.getLast(); }).toThrowError('Not Allowed');
+      expect(() => { queue.getAt(); }).toThrowError('Not Allowed');
+      expect(() => { queue.removeAt(); }).toThrowError('Not Allowed');
     });
   });
 });
