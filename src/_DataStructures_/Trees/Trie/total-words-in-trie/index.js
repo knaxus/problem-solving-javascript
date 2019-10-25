@@ -14,10 +14,10 @@ function totalWords(root) {
   return result;
 }
 
-// const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
-// const trie = new Trie();
+const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
+const trie = new Trie();
 
-// words.forEach(word => trie.insert(word));
-// console.log(totalWords(trie.root));
+words.forEach(word => trie.insert(word));
+console.log(totalWords(trie.root));
 
 module.exports = totalWords;
