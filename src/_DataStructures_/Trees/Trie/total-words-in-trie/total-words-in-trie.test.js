@@ -1,6 +1,6 @@
 const totalWordsInTrie = require('./index')
 const Trie = require('../index');
-var assert = require('assert');
+const assert = require('assert');
 
 describe('Data Structure : Trie', () => {
   it('Should be class of type Trie', () => {
