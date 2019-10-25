@@ -24,9 +24,13 @@ describe('Ternary Search', () => {
   describe('When element to find is at random position ', () => {
     it('Ternary search with Loop', () => {
       expect(ternarySearch(array, 3)).toEqual(2);
+      expect(ternarySearch(array, 5)).toEqual(4);
     });
     it('Ternary serach with recursion', () => {
       expect(ternarySearchRecursive(array, low, high, 4)).toEqual(3);
+    });
+    it('Ternary serach with recursion', () => {
+      expect(ternarySearchRecursive(array, low, high, 5)).toEqual(4);
     });
   });
   describe('When element to find is no present in array ', () => {
@@ -37,5 +41,4 @@ describe('Ternary Search', () => {
       expect(ternarySearchRecursive(array, low, high, 10)).toEqual(null);
     });
   });
-  
 });
