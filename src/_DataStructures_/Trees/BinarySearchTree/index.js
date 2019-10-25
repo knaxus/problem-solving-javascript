@@ -169,7 +169,7 @@ class BinarySearchTree {
   }
 
   remove(value) {
-    return this.delete(this.root, value);
+    this.root = this.delete(this.root, value);
   }
 }
 
