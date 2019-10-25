@@ -1,5 +1,5 @@
-const BinarySearchTree = require('./index');
-const heightOfBST = require('./height-of-bst/index');
+const BinarySearchTree = require('../index');
+const heightOfBST = require('./index');
 
 describe('Binary search tree traversals', () => {
   let bst;
@@ -46,6 +46,22 @@ describe('Binary search tree traversals', () => {
       bst.remove(5);
       bst.remove(12);
       expect(heightOfBST(bst.root)).toEqual(2);
+    });
+  });
+
+  describe('Check bst was created as expected', () => {
+    const bst2 = new BinarySearchTree(10);
+    bst2.add(11);
+    bst2.add(20);
+    bst2.add(9);
+    bst2.add(8);
+    bst2.add(7);
+    bst2.add(6);
+    bst2.add(5);
+    bst2.add(4);
+
+    it('Height should be 7', () => {
+      expect(heightOfBST(bst2.root)).toEqual(7);
     });
   });
 });
