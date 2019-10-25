@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-const Trie = require('../index');
-
 function uniqueWordCount(root) {
   let result = 0;
   if (root.isEndOfWord) {
@@ -13,11 +10,5 @@ function uniqueWordCount(root) {
   }
   return result;
 }
-
-// const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
-// const trie = new Trie();
-
-// words.forEach(word => trie.insert(word));
-// console.log(uniqueWordCount(trie.root));
 
 module.exports = uniqueWordCount;
