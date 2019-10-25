@@ -1,6 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-const Trie = require('../index');
-
 function totalWords(root) {
   let result = 0;
   if (root.isEndOfWord) {
@@ -20,4 +18,4 @@ function totalWords(root) {
 // words.forEach(word => trie.insert(word));
 // console.log(totalWords(trie.root));
 
-module.exports = totalWords;
+module.exports = { totalWords };
