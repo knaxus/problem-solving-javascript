@@ -1,7 +1,7 @@
 const DLL = require('.');
 
 describe('Doubly Linked List', () => {
-  it('Should be class', () => {
+  it('Doubly linked list should be class', () => {
     expect(typeof DLL.prototype.constructor).toEqual('function');
   });
 

@@ -1,4 +1,4 @@
-const { lca } = require('.');
+const { lowestCommonAncestor } = require('.');
 const BinarySearchTree = require('../index');
 
 // Quick JSON equivalent
@@ -10,15 +10,15 @@ describe('Lowest Common Ancestor in BST', () => {
   keys.forEach(el => bst.add(el));
 
   it('Should return Lowest Common Ancestor Node ', () => {
-    expect(lca(bst.root, 10, 14).value).toEqual(12);
-    expect(lca(bst.root, 14, 8).value).toEqual(8);
-    expect(lca(bst.root, 10, 22).value).toEqual(20);
+    expect(lowestCommonAncestor(bst.root, 10, 14).value).toEqual(12);
+    expect(lowestCommonAncestor(bst.root, 14, 8).value).toEqual(8);
+    expect(lowestCommonAncestor(bst.root, 10, 22).value).toEqual(20);
   });
 
   const bst2 = new BinarySearchTree(6);
   bst2.remove(6);
 
   it('Should return Null when root is null', () => {
-    expect(lca(bst2.root, 10, 22)).toEqual(null);
+    expect(lowestCommonAncestor(bst2.root, 10, 22)).toEqual(null);
   });
 });
