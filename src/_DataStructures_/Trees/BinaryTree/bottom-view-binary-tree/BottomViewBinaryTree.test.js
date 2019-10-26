@@ -11,4 +11,7 @@ describe('Bottom View Binary Tree', () => {
   it('Determines the bottom view of a binary tree', () => {
     expect(bottomView(btree)).toEqual([6, 2, 3, 4]);
   });
+  it('handles null binary tree', () => {
+    expect(bottomView(null)).toEqual([]);
+  });
 });
