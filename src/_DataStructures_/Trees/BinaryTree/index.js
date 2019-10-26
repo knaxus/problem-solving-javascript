@@ -3,14 +3,14 @@ const Node = require('./Node');
 class BinaryTree {
   constructor(arr) {
     if (!Array.isArray(arr) || !arr.length) {
-      throw new Error('Invalid argument to create a Binary Tre');
+      throw new Error('Invalid argument to create a Binary Tree');
     }
     this.root = this.createBinaryTree((this.root = null), arr, 0);
   }
 
   // eslint-disable-next-line class-methods-use-this
   createBinaryTree(root, arr, i) {
-    if (i < arr.length) {
+    if (i < arr.length && arr[i]) {
       // eslint-disable-next-line no-param-reassign
       root = new Node(arr[i]);
       // eslint-disable-next-line no-param-reassign

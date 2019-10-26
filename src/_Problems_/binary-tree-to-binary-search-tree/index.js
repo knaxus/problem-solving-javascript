@@ -16,6 +16,7 @@ Output:
       2   7
  */
 
+const Node = require('../../_DataStructures_/Trees/BinaryTree/Node');
 // Helper function to store inorder traversal of a binary tree
 function storeInorder(root) {
   /** left - root - right */
@@ -36,27 +37,39 @@ function storeInorder(root) {
 }
 
 // Helper function to copy elements from sorted array to make BST while keeping same structure
+// Runtime complexity iof this function is O(n) where n is number of nodes, as we are each node of tree one time.
 function arrayToBST(arr, root) {
   const node = root;
   // Base case
-  if (!node) return;
+  if (!node) return null;
 
+  const bstNode = new Node();
   // First update the left subtree
-  arrayToBST(arr, node.leftChild);
+  const leftChild = arrayToBST(arr, node.leftChild);
+  if (leftChild) {
+    bstNode.leftChild = leftChild;
+  }
 
   // update the root's data and remove it from sorted array
-  node.value = arr.shift();
+  // eslint-disable-next-line no-param-reassign
+  bstNode.value = arr.shift();
 
   // Finally update the right subtree
-  arrayToBST(arr, node.rightChild);
+  const rightChild = arrayToBST(arr, node.rightChild);
+  if (rightChild) {
+    bstNode.rightChild = rightChild;
+  }
+
+  return bstNode;
 }
 
-function binaryTreeToBST(root) {
+function binaryTreeToBST(bTree) {
   // Tree is empty
-  if (!root) return;
-  const arr = storeInorder(root);
+  if (!bTree.root) return null;
+  const arr = bTree.preOrder();
   arr.sort((a, b) => a - b);
-  arrayToBST(arr, root);
+  const bst = arrayToBST(arr, bTree.root);
+  return bst;
 }
 
 module.exports = {
