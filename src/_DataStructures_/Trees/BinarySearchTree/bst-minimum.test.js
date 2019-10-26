@@ -1,19 +1,16 @@
 const BinarySearchTree = require('./index');
 
 describe('Binary Search Tree', () => {
-  describe('Find minimum value in BST', () => {
+  describe('It should Find the minimum value in BST', () => {
     const bst = new BinarySearchTree(6);
-    bst.add(4);
-    bst.add(9);
-    bst.add(2);
-    bst.add(5);
-    bst.add(8);
-    bst.add(12);
-    it('should return 4', () => {      
+    const keys = [4, 9, 2, 5, 8, 12];
+    keys.forEach(el => bst.add(el));
+
+    it('It should expect minimum key', () => {
       expect(bst.getMinimum()).toEqual(2);
     });
 
-    it('should return 1', () => {
+    it('It should expect new minimum key added to BST', () => {
       bst.add(1);
       expect(bst.getMinimum()).toEqual(1);
     });

@@ -1,7 +1,7 @@
 const BST = require('.');
 
 describe('Data Structure : Binary Search Tree', () => {
-  it('Should be class', () => {
+  it('Binary Search Tree should be a Class', () => {
     expect(typeof BST.prototype.constructor).toEqual('function');
   });
 

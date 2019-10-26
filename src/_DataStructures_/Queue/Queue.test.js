@@ -1,7 +1,7 @@
 const Queue = require('.');
 
 describe('Data Structure : Queue', () => {
-  it('Should be class', () => {
+  it('Queue should be class', () => {
     expect(typeof Queue.prototype.constructor).toEqual('function');
   });
 
@@ -56,7 +56,7 @@ describe('Data Structure : Queue', () => {
       expect(queue.dequeue()).toEqual(null);
     });
 
-    it('Length of linkedlist', () => {
+    it('Shoud return size of Queue', () => {
       const queue2 = new Queue();
       queue2.enqueue(2);
       queue2.enqueue(1);
@@ -65,7 +65,7 @@ describe('Data Structure : Queue', () => {
       expect(queue2.length()).toEqual(4);
     });
 
-    it('Destroy linkedList', () => {
+    it('Should Destroy Queue', () => {
       queue.destroy();
       expect(queue.length()).toEqual(0);
     });

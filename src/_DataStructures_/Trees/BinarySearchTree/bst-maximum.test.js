@@ -3,17 +3,14 @@ const BinarySearchTree = require('./index');
 describe('Binary Search Tree', () => {
   describe('Find maximum value in BST', () => {
     const bst = new BinarySearchTree(6);
-    bst.add(4);
-    bst.add(9);
-    bst.add(2);
-    bst.add(5);
-    bst.add(8);
-    bst.add(12);
-    it('should return 12', () => {
+    const keys = [4, 9, 2, 5, 8, 12];
+    keys.forEach(el => bst.add(el));
+
+    it('It should expect maximum key', () => {
       expect(bst.getMaximum()).toEqual(12);
     });
 
-    it('should return 20', () => {
+    it('It should expect new maximum key added in BST', () => {
       bst.add(20);
       expect(bst.getMaximum()).toEqual(20);
     });
