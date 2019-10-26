@@ -1,4 +1,5 @@
 const Trie = require('../index');
+const TrieNode = require('../Node');
 
 function getAllUniqueWords(root, level, word) {
   let result = [];
@@ -24,6 +25,9 @@ function getAllUniqueWords(root, level, word) {
 }
 
 function allUniqueWordsFromTrie(root) {
+   if (!(root instanceof TrieNode)) {
+    throw new Error('Invalid argument: Root of Trie is required');
+  }
   const word = []; // char arr to store a word
   for (let i = 0; i < 26; i += 1) {
     word[i] = null;
