@@ -17,8 +17,8 @@ describe('Trees Total words in trie', () => {
     it("Solution for this empty_array is empty", () => {
         const empty_array = [];
         const t = new trie();
-        for (let i of empty_array) {
-            t.insert(i);
+        for (let j of empty_array) {
+            t.insert(j);
         }
         expect(wordcounts.totalWords(t.root)).toEqual(0);
     })
