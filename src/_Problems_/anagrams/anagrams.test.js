@@ -75,5 +75,14 @@ describe('Anagrams', () => {
         }),
       ).toBe(true);
     });
+
+    it('Should return FALSE for `Hello` & `Hallo`', () => {
+      expect(
+        checkAnagrams({
+          firstString: 'Hello',
+          secondString: 'Hallo',
+        }),
+      ).toBe(false);
+    });
   });
 });

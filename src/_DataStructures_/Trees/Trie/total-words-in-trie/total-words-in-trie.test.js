@@ -1,6 +1,6 @@
-const totalWordsInTrie = require('./index')
-const Trie = require('../index');
 const assert = require('assert');
+const totalWordsInTrie = require('./index');
+const Trie = require('../index');
 
 describe('Data Structure : Trie', () => {
   it('Should be class of type Trie', () => {
@@ -11,24 +11,24 @@ describe('Data Structure : Trie', () => {
   describe('Trie', () => {
 
     it('Should return 6.', () => {
-      let newTrie = new Trie();
+      const newTrie = new Trie();
       const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
       words.forEach(word => newTrie.insert(word));
-      result = totalWordsInTrie(newTrie.root);
+      const result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });
 
     it('Should return 0.', () => {
-      let newTrie = new Trie();
-      result = totalWordsInTrie(newTrie.root);
+      const newTrie = new Trie();
+      const result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 0);
     });
 
     it('Should return 6.', () => {
-      let newTrie = new Trie();
+      const newTrie = new Trie();
       const words = ['bed', 'ball','', 'apple', 'java', 'javascript', 'bed'];
       words.forEach(word => newTrie.insert(word));
-      result = totalWordsInTrie(newTrie.root);
+      const result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });
   });

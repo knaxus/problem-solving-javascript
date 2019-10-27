@@ -1,5 +1,5 @@
-const BinarySearchTree = require('./index');
-const heightOfBST = require('./height-of-bst/index');
+const BinarySearchTree = require('../index');
+const heightOfBST = require('./index');
 
 describe('Binary search tree traversals', () => {
   let bst;
@@ -8,12 +8,8 @@ describe('Binary search tree traversals', () => {
     it('should create BST', () => {
       // Creates BST
       bst = new BinarySearchTree(6);
-      bst.add(4);
-      bst.add(9);
-      bst.add(2);
-      bst.add(5);
-      bst.add(8);
-      bst.add(12);
+      const keys = [4, 9, 2, 5, 8, 12];
+      keys.forEach(el => bst.add(el));
     });
   });
 
@@ -46,6 +42,16 @@ describe('Binary search tree traversals', () => {
       bst.remove(5);
       bst.remove(12);
       expect(heightOfBST(bst.root)).toEqual(2);
+    });
+  });
+
+  describe('When root left subtree height is greater than right', () => {
+    const bst2 = new BinarySearchTree(10);
+    const keys = [11, 20, 9, 8, 7, 6, 5, 4];
+    keys.forEach(el => bst2.add(el));
+
+    it('should return height of BST ', () => {
+      expect(heightOfBST(bst2.root)).toEqual(7);
     });
   });
 });

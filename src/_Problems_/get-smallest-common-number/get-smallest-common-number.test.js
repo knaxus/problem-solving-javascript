@@ -22,6 +22,13 @@ describe('Get common smallest number between two integer arrays', () => {
     expect(getSmallestCommonNumber(arr1, arr2)).toEqual(-10);
   });
 
+  it('Should return common smallest number between unsorted two integer arrays', () => {
+    const arr1 = [-10, 3, -11];
+    const arr2 = [-11, 2, -10, 7];
+
+    expect(getSmallestCommonNumber(arr1, arr2)).toEqual(-11);
+  });
+
   it('Should return common smallest number between sorted two integer arrays', () => {
     const arr1 = [2, 3];
     const arr2 = [2, 5, 7];

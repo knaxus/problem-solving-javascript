@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 const Node = require('./Node');
 
 class BinarySearchTree {
@@ -23,7 +24,6 @@ class BinarySearchTree {
       root.rightChild = this.insert(root.rightChild, value);
       return root;
     }
-    return root;
   }
 
   preorder(root) {
@@ -80,7 +80,6 @@ class BinarySearchTree {
     if (value > root.value) {
       return this.search(root.rightChild, value);
     }
-    return false;
   }
 
   delete(root, value) {
@@ -169,7 +168,7 @@ class BinarySearchTree {
   }
 
   remove(value) {
-    return this.delete(this.root, value);
+    this.root = this.delete(this.root, value);
   }
 }
 

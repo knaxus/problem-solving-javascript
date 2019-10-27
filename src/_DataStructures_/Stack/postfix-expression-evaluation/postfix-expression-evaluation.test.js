@@ -58,5 +58,8 @@ describe('Postfix expression evaluation', () => {
     test.each(invalidExpressions)('running for %p', (expression) => {
       expect(() => evaluatePostfixExpression(expression)).toThrow(ERROR_STRING);
     });
+
+    expect(() => evaluatePostfixExpression('1&2')).toThrow('Operation is not valid');
+
   });
 });

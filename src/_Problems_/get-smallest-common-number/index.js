@@ -1,7 +1,7 @@
 // Get the common smallest number between two integer arrays
 
 const getSmallestCommonNumber = (a1, a2) => {
-  let map = {};
+  const map = {};
   let i = 0;
   let min;
 
@@ -20,7 +20,7 @@ const getSmallestCommonNumber = (a1, a2) => {
       }
     }
 
-    i++;
+    i += 1;
   }
 
   return min || -1;

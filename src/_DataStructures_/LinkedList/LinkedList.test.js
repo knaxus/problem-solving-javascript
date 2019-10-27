@@ -68,6 +68,7 @@ describe('Data Structures: Linked Lists', () => {
         list.addAtEnd(10);
 
         expect(list.length()).toEqual(4);
+        expect(list.traverseList()).toEqual([15, 23, 33, 10]);
       });
     });
 
