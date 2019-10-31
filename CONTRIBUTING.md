@@ -17,6 +17,16 @@ This is the most simple project when it comes to contributions, setup, opening i
 - Go through the folder structure carefully and follow the same
 - Go through the format and file convenetions used while adding tests (both test case and test files)
 
+## How to pick up an Issue
+- Comment on the issue first so that we can assign you the issue. 
+- If you raise a Pull Request for an issue and the Issue was not assigned to you, your PR will be marked as **Invalid**
+
+## Submititng a Pull Request (PR)
+- Add yourself to the assignee section
+- Add meaningful heading and description to your PR
+- Also mention the issue number in the description using **'#'**, e.g: **#12**
+- Not following the above will mark your PR invalid
+
 ## Adding your code
 
 - When adding a new problem with a solution
