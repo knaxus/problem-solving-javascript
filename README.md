@@ -15,7 +15,7 @@ This repo contains the following in **JavaScript**
 - Logical Problems
 - Classics (Few of the classical questions)
 
-Find the detailed Table of Contents here: [Detailed TOC](TOC.MD)
+Find the detailed Table of Contents here: [Detailed TOC](TOC.md)
 
 ## CONTRIBUTION Guide
 
