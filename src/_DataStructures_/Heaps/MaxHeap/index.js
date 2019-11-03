@@ -69,6 +69,10 @@ class MaxHeap {
       this.__traverseUpAndSwap(parent);
     }
   }
+
+  destroy() {
+    this.heap = [];
+  }
 }
 
 module.exports = MaxHeap;
