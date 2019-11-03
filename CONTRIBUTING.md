@@ -35,6 +35,7 @@ This is the most simple project when it comes to contributions, setup, opening i
   - Make sure you've added the **Run Time Complexity** of your solution
   - Please take care of the segregation of the Problems as per the given Folder Structure
   - It's great if you can add the Unit Tests to verify your solutions as well
+  - Do not forget to update **[TOC.md](TOC.md)** with your new problem or data structure 
 
 - When adding a Unit Test
   - Take care of the file name convention
