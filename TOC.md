@@ -46,6 +46,9 @@
 - [Heaps](src/_DataStructures_/Heaps)
   - [MaxHeap](src/_DataStructures_/Heaps/MaxHeap)
   - [MinHeap](src/_DataStructures_/Heaps/MinHeap)
+  - Problems
+    - [K Largest Elements](src/_DataStructures_/Heaps/k-largest-in-array)
+    - [K Smallest Elements](src/_DataStructures_/Heaps/k-smallest-in-array)
 
 ### Logical Problems
 
