@@ -17,20 +17,19 @@ class MinHeap {
   }
 
   getMin() {
-    return this.heap[0] || null;
+    return this.heap[0] !== undefined ? this.heap[0] : null;
   }
 
   remove() {
-    const min = this.heap[0] || null;
-
+    const min = this.heap[0] !== undefined ? this.heap[0] : null;
+    if (this.heap.length === 1) {
+      this.heap.pop();
+    }
     if (this.heap.length > 1) {
       this.heap[0] = this.heap[this.heap.length - 1];
       this.heap.pop();
       // eslint-disable-next-line no-underscore-dangle
       this.__heapify(0);
-    }
-    if (this.heap.length === 1) {
-      this.heap.pop();
     }
     return min;
   }

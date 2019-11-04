@@ -16,11 +16,11 @@ class MaxHeap {
   }
 
   getMax() {
-    return this.heap[0] || null;
+    return this.heap[0] !== undefined ? this.heap[0] : null;
   }
 
   remove() {
-    const max = this.heap[0] || null;
+    const max = this.heap[0] !== undefined ? this.heap[0] : null;
     // return the element at the root
     if (this.heap.length === 1) {
       this.heap.pop();
