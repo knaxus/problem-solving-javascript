@@ -19,10 +19,13 @@ class MaxHeap {
     return this.heap[0] || null;
   }
 
-  // eslint-disable-next-line consistent-return
   remove() {
-    // return the element at the root
     const max = this.heap[0] || null;
+    // return the element at the root
+    if (this.heap.length === 1) {
+      this.heap.pop();
+    }
+
     if (this.heap.length > 1) {
       // move the leaf to the root
       this.heap[0] = this.heap[this.heap.length - 1];
@@ -31,11 +34,6 @@ class MaxHeap {
       // eslint-disable-next-line no-underscore-dangle
       this.__heapify(0);
     }
-
-    if (this.heap.length === 1) {
-      this.heap.pop();
-    }
-
     return max;
   }
 
