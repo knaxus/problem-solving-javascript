@@ -13,7 +13,7 @@ function findKSmallest(collection, k) {
   const mh = new MinHeap(collection);
   const result = [];
   for (let i = 0; i < k; i += 1) {
-    result.push(mh.getMin());
+    result.push(mh.remove());
   }
   return result;
 }

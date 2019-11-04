@@ -14,7 +14,7 @@ function findKLargest(collection, k) {
   const result = [];
 
   for (let i = 0; i < k; i += 1) {
-    result.push(mh.getMax());
+    result.push(mh.remove());
   }
   return result;
 }
