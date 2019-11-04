@@ -45,6 +45,7 @@
     - [Unique words in a Trie](src/_DataStructures_/Trees/Trie/get-unique-words)
 - [Heaps](src/_DataStructures_/Heaps)
   - [MaxHeap](src/_DataStructures_/Heaps/MaxHeap)
+  - [MinHeap](src/_DataStructures_/Heaps/MinHeap)
 
 ### Logical Problems
 
