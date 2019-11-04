@@ -1,4 +1,4 @@
-const MaxHeap = require('../../_DataStructures_/Heaps/MaxHeap');
+const MaxHeap = require('../MaxHeap');
 
 /**
  * Find the 4 largest elements from an array
