@@ -15,10 +15,10 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 This repo contains the following sections implemented in **JavaScript**
 
-- Data Structures
-- Algorithms
-- Logical Problems
-- Classics (Few of the classical questions)
+- [Data Structures](src/_DataStructures_)
+- [Algorithms](src/_Algorithms_)
+- [Logical Problems](src/_Problems_)
+- [Classics (Few of the classical questions)](src/_Classics_)
 
 Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
