@@ -5,7 +5,10 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo/HacktoberFest)
 [![Build Status](https://travis-ci.org/knaxus/problem-solving-javascript.svg?branch=master)](https://travis-ci.org/knaxus/problem-solving-javascript)
 [![Coverage Status](https://coveralls.io/repos/github/knaxus/problem-solving-javascript/badge.svg?branch=master)](https://coveralls.io/github/knaxus/problem-solving-javascript?branch=master)
+![GitHub stars](https://img.shields.io/github/stars/knaxus/problem-solving-javascript)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub contributors](https://img.shields.io/github/contributors/knaxus/problem-solving-javascript)
+![Twitter Follow](https://img.shields.io/twitter/follow/ashokdey_?label=%40ashokdey_&style=social)
 
 Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
 
