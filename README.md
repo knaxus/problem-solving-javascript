@@ -1,6 +1,6 @@
-# Problem Solving using Javascript
-
 <img src=".assets/logo.png" align="right"/>
+
+# Problem Solving using Javascript
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo/HacktoberFest)
 [![Build Status](https://travis-ci.org/knaxus/problem-solving-javascript.svg?branch=master)](https://travis-ci.org/knaxus/problem-solving-javascript)
@@ -11,18 +11,18 @@ Collection of interview questions with Unit Tests. Problems includes Data Struct
 
 ![DSA](.assets/dsa.jpeg)
 
-## Table of Contents
+## Overview
 
-This repo contains the following in **JavaScript**
+This repo contains the following sections implemented in **JavaScript**
 
 - Data Structures
 - Algorithms
 - Logical Problems
 - Classics (Few of the classical questions)
 
-Find the detailed Table of Contents here: [Detailed TOC](TOC.md)
+Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
-## CONTRIBUTION Guide
+## Contribution Guide
 
 It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 
