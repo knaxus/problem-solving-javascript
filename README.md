@@ -1,3 +1,5 @@
+<img src=".assets/logo.png" align="right"/>
+
 # Problem Solving using Javascript
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo/HacktoberFest)
@@ -7,17 +9,20 @@
 
 Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
 
-## Table of Contents
+![DSA](.assets/dsa.jpeg)
 
-This repo contains the following in **JavaScript**
-- Data Structures
-- Algorithms
-- Logical Problems
-- Classics (Few of the classical questions)
+## Overview
 
-Find the detailed Table of Contents here: [Detailed TOC](TOC.md)
+This repo contains the following sections implemented in **JavaScript**
 
-## CONTRIBUTION Guide
+- [Data Structures](src/_DataStructures_)
+- [Algorithms](src/_Algorithms_)
+- [Logical Problems](src/_Problems_)
+- [Classics (Few of the classical questions)](src/_Classics_)
+
+Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
+
+## Contribution Guide
 
 It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 

@@ -1,4 +1,3 @@
-
 ## Table of Contents
 
 ### Data Structures
@@ -44,6 +43,12 @@
     - [Unique words count in a Trie](src/_DataStructures_/Trees/Trie/unique-word-count)
     - [All the words from a Trie](src/_DataStructures_/Trees/Trie/all-words-in-trie)
     - [Unique words in a Trie](src/_DataStructures_/Trees/Trie/get-unique-words)
+- [Heaps](src/_DataStructures_/Heaps)
+  - [MaxHeap](src/_DataStructures_/Heaps/MaxHeap)
+  - [MinHeap](src/_DataStructures_/Heaps/MinHeap)
+  - Problems
+    - [K Largest Elements](src/_DataStructures_/Heaps/k-largest-in-array)
+    - [K Smallest Elements](src/_DataStructures_/Heaps/k-smallest-in-array)
 
 ### Logical Problems
 
@@ -75,8 +80,7 @@
 
 - [LRU Cache](src/_Algorithms_/lru-cache)
 - Path Finders
-  - [A*](src/_Algorithms_/path-finder/a-star)
-
+  - [A\*](src/_Algorithms_/path-finder/a-star)
 
 ### Classics
 

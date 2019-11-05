@@ -15,6 +15,11 @@ describe('MaxHeap', () => {
     expect(mh instanceof MaxHeap).toEqual(true);
   });
 
+  it('Should create a MaxHeap using collection', () => {
+    const mHBulk = new MaxHeap([1, 3, 21, 9, 101, 0]);
+    expect(mHBulk.getMax()).toEqual(101);
+  });
+
   it('Should add an element to the MaxHeap', () => {
     mh.add(10);
     expect(mh.getMax()).toEqual(10);
@@ -45,6 +50,10 @@ describe('MaxHeap', () => {
     expect(mh.getMax()).toEqual(34);
     expect(mh.remove()).toEqual(34);
     expect(mh.remove()).toEqual(1);
+    expect(mh.getMax()).toEqual(null);
+  });
+
+  it('Should return `null` on `remove() called on empty heap`', () => {
     expect(mh.getMax()).toEqual(null);
   });
 });
