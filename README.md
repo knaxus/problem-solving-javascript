@@ -8,6 +8,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/knaxus/problem-solving-javascript)
 ![GitHub contributors](https://img.shields.io/github/contributors/knaxus/problem-solving-javascript)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4212bba8c1a8f894871a/maintainability)](https://codeclimate.com/github/knaxus/problem-solving-javascript/maintainability)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/knaxus/problem-solving-javascript/issues)
 ![GitHub](https://img.shields.io/github/license/knaxus/problem-solving-javascript)
 ![Twitter Follow](https://img.shields.io/twitter/follow/ashokdey_?label=%40ashokdey_&style=social)
 
