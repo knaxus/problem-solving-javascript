@@ -7,6 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/knaxus/problem-solving-javascript/badge.svg?branch=master)](https://coveralls.io/github/knaxus/problem-solving-javascript?branch=master)
 ![GitHub stars](https://img.shields.io/github/stars/knaxus/problem-solving-javascript)
 ![GitHub contributors](https://img.shields.io/github/contributors/knaxus/problem-solving-javascript)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4212bba8c1a8f894871a/maintainability)](https://codeclimate.com/github/knaxus/problem-solving-javascript/maintainability)
 ![GitHub](https://img.shields.io/github/license/knaxus/problem-solving-javascript)
 ![Twitter Follow](https://img.shields.io/twitter/follow/ashokdey_?label=%40ashokdey_&style=social)
 
