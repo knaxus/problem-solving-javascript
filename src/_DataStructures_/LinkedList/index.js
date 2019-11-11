@@ -126,12 +126,7 @@ class LinkedList {
       return null;
     }
     if (index === 0) {
-      const node = this.head;
-      this.head = this.head.next;
-      this.size -= 1;
-      // set the next of the node null
-      node.next = null;
-      return node;
+      return this.removeFromBeginning();
     }
 
     if (index >= this.size - 1) {
@@ -147,7 +142,7 @@ class LinkedList {
       address = address.next;
       count -= 1;
     }
-    const node = previous.next;
+    const node = address;
     previous.next = address.next;
     this.size -= 1;
 
