@@ -126,8 +126,11 @@ class LinkedList {
     if (!this.head) {
       return null;
     }
+    if (index === 0) {
+      return this.removeFromBeginning();
+    }
 
-    if (index >= this.length()) {
+    if (index >= this.size - 1) {
       return this.removeFromEnd();
     }
 
@@ -135,15 +138,15 @@ class LinkedList {
     let previous = address;
     let count = index;
 
-    while (count) {
-      address = address.next;
+    while (count >= 1) {
       previous = address;
+      address = address.next;
       count -= 1;
     }
-
     const node = address;
-    previous.next = address.next.next;
+    previous.next = address.next;
     this.size -= 1;
+
     node.next = null;
     return node;
   }
@@ -168,5 +171,19 @@ class LinkedList {
     return arr;
   }
 }
+
+// const ll = new LinkedList();
+// ll.addAtBeginning(20);
+// ll.addAtBeginning(15);
+// ll.addAtBeginning(10);
+// ll.addAtBeginning(5);
+
+// console.log(ll.traverseList());
+
+// console.log(ll.removeAt(0));
+// console.log(ll.traverseList());
+
+// console.log(ll.removeAt(1));
+// console.log(ll.traverseList());
 
 module.exports = { LinkedList, Node };
