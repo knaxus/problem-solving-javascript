@@ -1,4 +1,4 @@
-<img src=".assets/logo.png" align="right"/>
+<img src=".github/logo.png" align="right"/>
 
 # Problem Solving using Javascript
 
@@ -13,7 +13,7 @@
 
 Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
 
-![DSA](.assets/dsa.jpeg)
+![DSA](.github/dsa.jpeg)
 
 ## Overview
 
