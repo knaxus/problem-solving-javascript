@@ -8,7 +8,7 @@
  */
 
 /** At first glance, the below solution may seem the answer */
-const hightestNumber = Number([60, 548].sort((a, b) => b - a).join(""));
+// const hightestNumber = Number([60, 548].sort((a, b) => b - a).join(''));
 
 /** The above will fail for test case 2 & 3 */
 
@@ -22,14 +22,16 @@ function compare(a, b) {
 /** final function */
 function composeHighest(arr) {
   if (!arr || !Array.isArray(arr)) {
-    throw new Error("Invalid array/missing argument");
+    throw new Error('Invalid array/missing argument');
   }
 
-  return Number(arr.sort(compare).join(""));
+  return Number(arr.sort(compare).join(''));
 }
 
 /** tests */
 
-console.log(composeHighest([3, 6, 0, 9]) === 9630);
-console.log(composeHighest([60, 548]) === 60548);
-console.log(composeHighest([1, 34, 3, 98, 9, 76, 45, 4]) === 998764543431);
+// console.log(composeHighest([3, 6, 0, 9]) === 9630);
+// console.log(composeHighest([60, 548]) === 60548);
+// console.log(composeHighest([1, 34, 3, 98, 9, 76, 45, 4]) === 998764543431);
+
+module.exports = { composeHighest, compare };
