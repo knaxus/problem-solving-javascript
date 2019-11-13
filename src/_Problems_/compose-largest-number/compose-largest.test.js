@@ -22,7 +22,7 @@ describe('Compose Largest Number', () => {
     });
   });
 
-  describe('Testing `compare()`', () => {
+  describe('Testing custom `compare()` for `sort()`', () => {
     it('Should return [60, 548] instead of [548, 60]', () => {
       expect([60, 548].sort(compare)).toEqual([60, 548]);
     });
