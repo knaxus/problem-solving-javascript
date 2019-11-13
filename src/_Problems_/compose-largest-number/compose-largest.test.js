@@ -1,4 +1,4 @@
-const { composeHighest, compare } = require('.');
+const { composeHighest, compare, ErrorMessage } = require('.');
 
 /**
  * Test cases
@@ -9,6 +9,10 @@ const { composeHighest, compare } = require('.');
 
 describe('Compose Largest Number', () => {
   describe('The main function returning the Highest NUmber', () => {
+    it('Should throw error for invalid argument', () => {
+      expect(() => composeHighest('abcd')).toThrow(ErrorMessage);
+    });
+
     it('Should return 9630 for `[3, 6, 0, 9]`', () => {
       expect(composeHighest([3, 6, 0, 9])).toEqual(9630);
     });

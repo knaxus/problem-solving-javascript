@@ -1,6 +1,6 @@
-## Table of Contents
+# Table of Contents
 
-### Data Structures
+## Data Structures
 
 - [Singly Linked List](src/_DataStructures_/LinkedList)
 

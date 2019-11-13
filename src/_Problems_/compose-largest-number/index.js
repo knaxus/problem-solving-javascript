@@ -19,10 +19,12 @@ function compare(a, b) {
   return x > y ? -1 : 1;
 }
 
+const ErrorMessage = 'Invalid array/missing argument';
+
 /** final function */
 function composeHighest(arr) {
   if (!arr || !Array.isArray(arr)) {
-    throw new Error('Invalid array/missing argument');
+    throw new Error(ErrorMessage);
   }
 
   return Number(arr.sort(compare).join(''));
@@ -34,4 +36,4 @@ function composeHighest(arr) {
 // console.log(composeHighest([60, 548]) === 60548);
 // console.log(composeHighest([1, 34, 3, 98, 9, 76, 45, 4]) === 998764543431);
 
-module.exports = { composeHighest, compare };
+module.exports = { composeHighest, compare, ErrorMessage };
