@@ -1,6 +1,6 @@
-## Table of Contents
+# Table of Contents
 
-### Data Structures
+## Data Structures
 
 - [Singly Linked List](src/_DataStructures_/LinkedList)
 
@@ -71,6 +71,7 @@
 - [Reverse String](src/_Problems_/reverse_string)
 - [Maximum Product of Three Numbers](src/_Problems_/max-product-of-3-numbers)
 - [Next Greater for Every Element in an Array](src/_Problems_/next-greater-element)
+- [Compose Largest Number](src/_Problems_/compose-largest-number)
 
 ### Searching
 

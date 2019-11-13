@@ -2,7 +2,7 @@ const { getSubesequence } = require('.');
 
 describe('GetSubesequence', () => {
   it('Sequence of abc', () => {
-    expect(getSubesequence('abc').sort()).toEqual([ '', 'a', 'ab', 'abc', 'ac', 'b', 'bc', 'c' ]);
+    expect(getSubesequence('abc').sort()).toEqual(['', 'a', 'ab', 'abc', 'ac', 'b', 'bc', 'c']);
   });
 
   it('Sequence of bc', () => {

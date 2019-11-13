@@ -3,5 +3,6 @@
     "node": true,
     "jest": true
   },
-  "extends": "airbnb-base"
+  "extends": ["prettier", "airbnb-base"],
+  "plugins": ["prettier"]
 }
