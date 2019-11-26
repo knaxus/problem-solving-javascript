@@ -1,8 +1,8 @@
-const BinaryTree = require("../index");
+const BinaryTree = require('../index');
 const bottomView = require('.');
 
 describe('Bottom View Binary Tree', () => {
-  let btree
+  let btree;
 
   beforeEach(() => {
     btree = new BinaryTree([1, 2, 3, 4, 5, 6]);

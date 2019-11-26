@@ -13,10 +13,6 @@ class TrieNode {
     this.isEndOfWord = true;
   }
 
-  unmarkAsLeaf() {
-    this.isEndOfWord = false;
-  }
-
   increaseCount() {
     this.wordCount += 1;
   }
