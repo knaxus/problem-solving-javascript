@@ -38,8 +38,11 @@ describe('MaxHeap', () => {
   });
 
   it('Should return `null` when heap is empty', () => {
-    [1, 34].forEach(el => mh.add(el));
-    expect(mh.getMax()).toEqual(34);
+    [1, 34, 43, 54, 123].forEach(el => mh.add(el));
+    mh.remove();
+    mh.remove();
+    mh.remove();
+    mh.remove();
     mh.remove();
     mh.remove();
     expect(mh.getMax()).toEqual(null);

@@ -20,9 +20,7 @@ function nextGreaterElement(arr) {
   for (let i = arr.length - 1; i >= 0; i -= 1) {
     if (s1.peek()) {
       let top = s1.peek();
-      while (top <= arr[i]) {
-        // if the stack is empty, break the while loop
-        if (!s1.peek()) break;
+      while (top && top <= arr[i]) {
         // pop the elements
         s1.pop();
         // get the new top

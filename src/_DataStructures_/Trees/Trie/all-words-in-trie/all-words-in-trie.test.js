@@ -2,6 +2,12 @@ const allWordsInTrie = require('./index');
 const Trie = require('../index');
 
 describe('Data Structure : Trie : All Words In Tree', () => {
+  it('Should return empty array', () => {
+    const trie = new Trie();
+    const result = allWordsInTrie(trie.root);
+    expect(result.length).toEqual(0);
+  });
+
   it('Should return all words sorted alphabetically', () => {
     const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
     const trie = new Trie();

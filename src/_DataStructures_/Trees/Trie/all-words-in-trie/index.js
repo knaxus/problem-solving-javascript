@@ -5,8 +5,6 @@ const TrieNode = require('../Node');
 function getAllWords(root, level, word) {
   let result = [];
 
-  if (!root) return result;
-
   if (root.isEndOfWord) {
     let temp = '';
     for (let i = 0; i < level; i += 1) {
