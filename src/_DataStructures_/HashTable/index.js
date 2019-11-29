@@ -1,4 +1,4 @@
-const { Node } = require('../LinkedList');
+const HashEntry = require('./HashEntry');
 
 class HashTable {
   constructor(slots) {
@@ -37,7 +37,7 @@ class HashTable {
      * Util to add a SSL to the index in case of more than once
      * value for the same key exixts
      */
-    const node = new Node(value);
+    const node = new HashEntry(value);
     if (!this.bucket[index]) {
       this.bucket[index] = node;
       this.size += 1;
@@ -62,8 +62,8 @@ class HashTable {
     const res = [];
     let head = this.bucket[index];
     while (head !== null) {
-      if (head.data.key === key) {
-        res.push(head.data.value);
+      if (head.key === key) {
+        res.push(head.value);
       }
       head = head.next;
     }
@@ -96,7 +96,7 @@ class HashTable {
   }
 }
 
-// const ht = new HashTable();
+// const ht = new HashTable(5);
 // ht.set('hello', 'I am a new value');
 // ht.set('hello', 'I am a yet another value');
 // ht.set('maroon', 'I maroon');
