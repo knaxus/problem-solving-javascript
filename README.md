@@ -28,10 +28,12 @@ Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
 ## Contributors
 
-| Name         | Twitter                                     | LinkedIn                                      | Website                                    |
-| ------------ | ------------------------------------------- | --------------------------------------------- | ------------------------------------------ |
-| Ashok Dey    | [ashokdey\_](https://twitter.com/ashokdey_) | [Ashok Dey](https://linkedin.com/in/ashokdey) | [https://ashokdey.in](https://ashokdey.in) |
-| Ashu Deshwal | [\_TheSTL](https://twitter.com/_TheSTL_)    | -                                             | -                                          |
+| Name                                      | Twitter                                     | LinkedIn                                      | Website                                    |
+| ----------------------------------------- | ------------------------------------------- | --------------------------------------------- | ------------------------------------------ |
+| [Ashok Dey](https://github.com/ashokdey)  | [ashokdey\_](https://twitter.com/ashokdey_) | [Ashok Dey](https://linkedin.com/in/ashokdey) | [https://ashokdey.in](https://ashokdey.in) |
+| [Ashu Deshwal](https://github.com/TheSTL) | [\_TheSTL\_](https://twitter.com/_TheSTL_)  | -                                             | -                                          |
+
+[Detailed list of contributors](https://github.com/knaxus/problem-solving-javascript/graphs/contributors)
 
 ## Contribution Guide
 
