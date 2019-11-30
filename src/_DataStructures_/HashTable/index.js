@@ -8,7 +8,7 @@ class HashTable {
     // and help to resize when the table is half filled
     this.size = 0;
     // threshold (let it be 70%)
-    this.threshold = 0.7;
+    this.threshold = 0.8;
     // the main bucket
     this.bucket = new Array(this.slot);
 
@@ -21,15 +21,17 @@ class HashTable {
     const stringKey = String(key);
 
     let index = 0;
-    const PRIME = 1801;
+    const PRIME_MULTIPLIER = 1801; // Random prime number
+    const PRIME_ADDER = 2029; // Random prime number
 
-    // loop till the length of the key or mamx 100
+    // loop till the length of the key or max 100
     const loopTill = Math.min(stringKey.length, 100);
 
     for (let i = 0; i < loopTill; i += 1) {
       const char = stringKey[i];
       const value = char.charCodeAt(0) - 96;
-      index = (index + PRIME + value) % this.bucket.length;
+      index = (index * PRIME_MULTIPLIER + value) % this.bucket.length;
+      index = (index + PRIME_ADDER) % this.bucket.length;
     }
     return index;
   }
@@ -47,7 +49,6 @@ class HashTable {
 
     for (let i = 0; i < oldSlot; i += 1) {
       if (oldBucket[i]) {
-        // get all the nodes associated here
         let head = oldBucket[i];
 
         while (head !== null) {
@@ -64,8 +65,8 @@ class HashTable {
 
   _push(index, value) {
     /**
-     * Util to add a SSL to the index in case of more than once
-     * value for the same key exixts
+     * Utility to add a SLL to the index in case of more than one
+     * key hashes to the same index
      */
     const node = new HashEntry(value);
     if (!this.bucket[index]) {
@@ -87,7 +88,7 @@ class HashTable {
 
   _values(index, key) {
     /**
-     * Util to return the values as an array
+     * Utility to return the values as an array for a given key
      */
     const res = [];
     let head = this.bucket[index];
@@ -111,7 +112,7 @@ class HashTable {
      * calculate the load factor, if it's greater than threshold
      * resize the hash table
      */
-    const loadFactor = (this.size / this.slot).toFixed(1);
+    const loadFactor = Number((this.size / this.slot).toFixed(1));
     if (loadFactor > this.threshold) {
       // console.log('Resizing hash table');
       // eslint-disable-next-line no-underscore-dangle
@@ -120,7 +121,7 @@ class HashTable {
   }
 
   get(key) {
-    // get the index
+    // get the index for the given key
     // eslint-disable-next-line no-underscore-dangle
     const index = this._hash(key);
     if (!this.bucket[index]) return null;
@@ -137,14 +138,18 @@ class HashTable {
   }
 }
 
-// const ht = new HashTable(5);
-// ht.set('hello', 'I am a new value');
-// ht.set('hello', 'I am a yet another value');
-// ht.set('maroon', 'I maroon');
-// ht.set('yellow', 'I am yellow');
+const ht = new HashTable(5);
+console.log('HT slots = ', ht.slot);
+ht.set('maroon', 'I maroon');
+ht.set('hello', 'I am a new value');
+console.log(ht.bucket);
+ht.set('hell', 'Bad value');
+ht.set('hello', 'I am a yet another value');
+console.log('HT slots = ', ht.slot);
+ht.set('yellow', 'I am yellow');
 
 // console.log(ht.get('hello'));
 // console.log(ht.get('maroon'));
-// console.log(ht.bucket);
+console.log(ht.bucket);
 
 module.exports = HashTable;
