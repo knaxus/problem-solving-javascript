@@ -8,7 +8,7 @@ class HashTable {
     // and help to resize when the table is half filled
     this.size = 0;
     // threshold (let it be 70%)
-    this.threshold = 0.8;
+    this.threshold = 0.7;
     // the main bucket
     this.bucket = new Array(this.slot);
 
