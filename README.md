@@ -26,6 +26,13 @@ This repo contains the following sections implemented in **JavaScript**
 
 Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
+## Contributors
+
+| Name         | Twitter                                     | LinkedIn                                      | Website                                    |
+| ------------ | ------------------------------------------- | --------------------------------------------- | ------------------------------------------ |
+| Ashok Dey    | [ashokdey\_](https://twitter.com/ashokdey_) | [Ashok Dey](https://linkedin.com/in/ashokdey) | [https://ashokdey.in](https://ashokdey.in) |
+| Ashu Deshwal | [\_TheSTL](https://twitter.com/_TheSTL_)    | -                                             | -                                          |
+
 ## Contribution Guide
 
 It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
