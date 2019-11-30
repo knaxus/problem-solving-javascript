@@ -14,6 +14,7 @@ class HashTable {
     this.allowResize = allowResize;
     this.strongHash = strongHash;
     if (custonHash) {
+      // eslint-disable-next-line no-underscore-dangle
       this._hash = custonHash;
     }
 
@@ -108,6 +109,21 @@ class HashTable {
     return res;
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  _convertNodesToSLL(nodeCollection) {
+    // convert collection of nodes into a SLL
+    let head = nodeCollection[0];
+    const start = head;
+    let i = 1;
+    while (i < nodeCollection.length) {
+      head.next = nodeCollection[i];
+      i += 1;
+      head = head.next;
+    }
+
+    return start;
+  }
+
   set(key, value) {
     // eslint-disable-next-line no-underscore-dangle
     const index = this._hash(key);
@@ -143,7 +159,6 @@ class HashTable {
 
     // get the SLL using the index
     let head = this.bucket[index];
-
     // return null if the head is null
     if (!head) {
       return null;
@@ -152,17 +167,19 @@ class HashTable {
     // get all the values for the key to return
     // eslint-disable-next-line no-underscore-dangle
     const vals = this._values(index, key);
-
-    let newHead = null; // to hold the start of the new SLL
+    const nodes = [];
     while (head !== null) {
-      if (head.key === key) {
-        // we have to delete current node
-        newHead = head.next;
+      if (head.key !== key) {
+        nodes.push(new HashEntry({ key: head.key, value: head.value }));
       }
       head = head.next;
     }
+
+    // eslint-disable-next-line no-underscore-dangle
+    const sll = this._convertNodesToSLL(nodes);
+
+    this.bucket[index] = sll;
     // update the index with the lastest head value
-    this.bucket[index] = newHead;
     return { key: vals };
   }
 
@@ -171,18 +188,16 @@ class HashTable {
   }
 
   isEmpty() {
-    return this.getSize() === 0;
+    return this.size === 0;
   }
 }
 
-// const ht = new HashTable(5);
-// console.log('HT slots = ', ht.slot);
+// const ht = new HashTable(5, { allowResize: false, strongHash: false });
 // ht.set('maroon', 'I maroon');
 // ht.set('hello', 'I am a new value');
-// console.log(ht.bucket);
+// // console.log(ht.bucket);
 // ht.set('hell', 'Bad value');
 // ht.set('hello', 'I am a yet another value');
-// console.log('HT slots = ', ht.slot);
 // ht.set('yellow', 'I am yellow');
 
 // // console.log(ht.get('hello'));
