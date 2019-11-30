@@ -129,6 +129,34 @@ class HashTable {
     return this._values(index, key);
   }
 
+  delete(key) {
+    // get the index
+    // eslint-disable-next-line no-underscore-dangle
+    const index = this._hash(key);
+
+    // get the SLL using the index
+    let head = this.bucket[index];
+
+    // return null if the head is null
+    if (!head) {
+      return null;
+    }
+
+    // get all the values for the key to return
+    // eslint-disable-next-line no-underscore-dangle
+    const vals = this._values(index, key);
+
+    while (head !== null) {
+      if (head.key === key) {
+        // we have to delete current node
+        head = head.next;
+      }
+    }
+    // update the index with the lastest head value
+    this.bucket[index] = head;
+    return vals;
+  }
+
   getSize() {
     return this.size;
   }
@@ -138,18 +166,22 @@ class HashTable {
   }
 }
 
-const ht = new HashTable(5);
-console.log('HT slots = ', ht.slot);
-ht.set('maroon', 'I maroon');
-ht.set('hello', 'I am a new value');
-console.log(ht.bucket);
-ht.set('hell', 'Bad value');
-ht.set('hello', 'I am a yet another value');
-console.log('HT slots = ', ht.slot);
-ht.set('yellow', 'I am yellow');
+// const ht = new HashTable(5);
+// console.log('HT slots = ', ht.slot);
+// ht.set('maroon', 'I maroon');
+// ht.set('hello', 'I am a new value');
+// console.log(ht.bucket);
+// ht.set('hell', 'Bad value');
+// ht.set('hello', 'I am a yet another value');
+// console.log('HT slots = ', ht.slot);
+// ht.set('yellow', 'I am yellow');
 
-// console.log(ht.get('hello'));
-// console.log(ht.get('maroon'));
-console.log(ht.bucket);
+// // console.log(ht.get('hello'));
+// // console.log(ht.get('maroon'));
+// console.log(ht.bucket);
+
+// console.log('deleting hello........');
+// ht.delete('hello');
+// console.log(ht.bucket);
 
 module.exports = HashTable;
