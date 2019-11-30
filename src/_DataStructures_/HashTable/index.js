@@ -164,23 +164,29 @@ class HashTable {
       return null;
     }
 
-    // get all the values for the key to return
-    // eslint-disable-next-line no-underscore-dangle
-    const vals = this._values(index, key);
-    const nodes = [];
-    while (head !== null) {
-      if (head.key !== key) {
-        nodes.push(new HashEntry({ key: head.key, value: head.value }));
-      }
-      head = head.next;
+    if (head.key === key) {
+      let node = head;
+      this.bucket[index] = head.next;
+      const val = { key, value: node.value };
+      node = null;
+      this.size -= 1;
+      return val;
     }
 
-    // eslint-disable-next-line no-underscore-dangle
-    const sll = this._convertNodesToSLL(nodes);
+    let previous = null;
 
-    this.bucket[index] = sll;
-    // update the index with the lastest head value
-    return { key: vals };
+    while (head !== null) {
+      if (head.key === key) {
+        let node = head;
+        previous.next = head.next;
+        this.size -= 1;
+        const res = { key, value: node.value };
+        node = null;
+        return res;
+      }
+      previous = head;
+      head = head.next;
+    }
   }
 
   getSize() {
@@ -197,7 +203,7 @@ class HashTable {
 // ht.set('hello', 'I am a new value');
 // // console.log(ht.bucket);
 // ht.set('hell', 'Bad value');
-// ht.set('hello', 'I am a yet another value');
+// // ht.set('hello', 'I am a yet another value');
 // ht.set('yellow', 'I am yellow');
 
 // // console.log(ht.get('hello'));
@@ -206,6 +212,9 @@ class HashTable {
 
 // console.log('deleting hello........');
 // console.log(ht.remove('hello'));
+// console.log(ht.bucket);
+
+// console.log(ht.remove('yellow'));
 // console.log(ht.bucket);
 
 module.exports = HashTable;
