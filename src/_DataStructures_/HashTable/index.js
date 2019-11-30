@@ -129,7 +129,7 @@ class HashTable {
     return this._values(index, key);
   }
 
-  delete(key) {
+  remove(key) {
     // get the index
     // eslint-disable-next-line no-underscore-dangle
     const index = this._hash(key);
