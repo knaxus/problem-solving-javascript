@@ -1,7 +1,7 @@
 const HashEntry = require('./HashEntry');
 
 class HashTable {
-  constructor(slots) {
+  constructor(slots, { allowResize = true, strongHash = true, custonHash = null }) {
     // init with a default set of slots
     this.slot = slots || 19;
     // size to hold the current size
@@ -11,6 +11,11 @@ class HashTable {
     this.threshold = 0.7;
     // the main bucket
     this.bucket = new Array(this.slot);
+    this.allowResize = allowResize;
+    this.strongHash = strongHash;
+    if (custonHash) {
+      this._hash = custonHash;
+    }
 
     // fill the bucket with null
     for (let i = 0; i < this.slot; i += 1) this.bucket[i] = null;
@@ -31,7 +36,9 @@ class HashTable {
       const char = stringKey[i];
       const value = char.charCodeAt(0) - 96;
       index = (index * PRIME_MULTIPLIER + value) % this.bucket.length;
-      index = (index + PRIME_ADDER) % this.bucket.length;
+      if (this.strongHash) {
+        index = (index + PRIME_ADDER) % this.bucket.length;
+      }
     }
     return index;
   }
@@ -113,7 +120,7 @@ class HashTable {
      * resize the hash table
      */
     const loadFactor = Number((this.size / this.slot).toFixed(1));
-    if (loadFactor > this.threshold) {
+    if (loadFactor > this.threshold && this.allowResize) {
       // console.log('Resizing hash table');
       // eslint-disable-next-line no-underscore-dangle
       this._resize();
@@ -146,15 +153,17 @@ class HashTable {
     // eslint-disable-next-line no-underscore-dangle
     const vals = this._values(index, key);
 
+    let newHead = null; // to hold the start of the new SLL
     while (head !== null) {
       if (head.key === key) {
         // we have to delete current node
-        head = head.next;
+        newHead = head.next;
       }
+      head = head.next;
     }
     // update the index with the lastest head value
-    this.bucket[index] = head;
-    return vals;
+    this.bucket[index] = newHead;
+    return { key: vals };
   }
 
   getSize() {
@@ -181,7 +190,7 @@ class HashTable {
 // console.log(ht.bucket);
 
 // console.log('deleting hello........');
-// ht.delete('hello');
+// console.log(ht.remove('hello'));
 // console.log(ht.bucket);
 
 module.exports = HashTable;
