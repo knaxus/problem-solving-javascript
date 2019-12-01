@@ -84,29 +84,33 @@ class HashTable {
     }
 
     let head = this.bucket[index];
+    // extract the key and see if it already exists
+    const { key, value: newValue } = value;
 
     // traverse to the end
     while (head.next !== null) {
+      if (head.key === key) {
+        // overridet the value with the new value
+        head.value = newValue;
+        return index;
+      }
       head = head.next;
     }
+    // if the key was not found
     head.next = node;
     this.size += 1;
     return index;
   }
 
-  _values(index, key) {
-    /**
-     * Utility to return the values as an array for a given key
-     */
-    const res = [];
+  _value(index, key) {
     let head = this.bucket[index];
     while (head !== null) {
       if (head.key === key) {
-        res.push(head.value);
+        return head.value;
       }
       head = head.next;
     }
-    return res;
+    return null;
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -149,7 +153,7 @@ class HashTable {
     const index = this._hash(key);
     if (!this.bucket[index]) return null;
     // eslint-disable-next-line no-underscore-dangle
-    return this._values(index, key);
+    return this._value(index, key);
   }
 
   remove(key) {
@@ -187,6 +191,7 @@ class HashTable {
       previous = head;
       head = head.next;
     }
+    return null;
   }
 
   getSize() {
@@ -201,13 +206,13 @@ class HashTable {
 // const ht = new HashTable(5, { allowResize: false, strongHash: false });
 // ht.set('maroon', 'I maroon');
 // ht.set('hello', 'I am a new value');
-// // console.log(ht.bucket);
+// console.log(ht.bucket);
 // ht.set('hell', 'Bad value');
-// // ht.set('hello', 'I am a yet another value');
+// ht.set('hello', 'I am a yet another value');
 // ht.set('yellow', 'I am yellow');
 
-// // console.log(ht.get('hello'));
-// // console.log(ht.get('maroon'));
+// console.log(ht.get('hello'));
+// console.log(ht.get('maroon'));
 // console.log(ht.bucket);
 
 // console.log('deleting hello........');
