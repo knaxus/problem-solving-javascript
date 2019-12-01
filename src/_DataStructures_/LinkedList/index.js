@@ -1,8 +1,8 @@
-// do not change the node class, you never know how many things it caan break! :) 
+// do not change the node class, you never know how many things it caan break! :)
 class Node {
   constructor(data, next) {
     this.data = data;
-    this.next = next;
+    this.next = next || null;
   }
 }
 
