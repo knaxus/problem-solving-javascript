@@ -1,27 +1,23 @@
 // XSet because ES6 already has a Set class
 class XSet {
   constructor() {
-    this.data = {};
+    this.data = this.getStore();
   }
 
   add(element) {
-    if (!this.data[element]) {
-      this.data[element] = true;
-    }
+    this.data.push(element);
   }
 
   remove(element) {
-    if (this.data[element]) {
-      delete this.data[element];
-    }
+    this.data.pop(element);
   }
 
   has(element) {
-    return !!this.data[element];
+    return this.data.contains(element);
   }
 
   values() {
-    return Object.keys(this.data);
+    return this.data.val();
   }
 
   union(givenSet) {
@@ -36,6 +32,30 @@ class XSet {
     for (const e of givenSetValues) result.add(e);
 
     return result;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  getStore() {
+    const store = {};
+
+    return {
+      push(el) {
+        if (!store[el]) {
+          store[el] = true;
+        }
+      },
+      pop(el) {
+        if (store[el]) {
+          delete store[el];
+        }
+      },
+      contains(el) {
+        return !!store[el];
+      },
+      val() {
+        return Object.keys(store);
+      },
+    };
   }
 }
 
