@@ -151,6 +151,31 @@ class LinkedList {
     return node;
   }
 
+  filter(value) {
+    if (!this.head) {
+      return null;
+    }
+
+    if (this.head.data === value) {
+      this.head = this.head.next;
+      this.size -= 1;
+    }
+
+    let { head } = this;
+    let previous = null;
+
+    while (head !== null) {
+      if (head.data === value) {
+        previous.next = head.next;
+        this.size -= 1;
+      }
+      previous = head;
+      head = head.next;
+    }
+
+    return this.head;
+  }
+
   length() {
     return this.size;
   }
