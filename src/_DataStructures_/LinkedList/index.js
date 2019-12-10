@@ -168,11 +168,14 @@ class LinkedList {
       if (head.data === value) {
         previous.next = head.next;
         this.size -= 1;
+
+        if (head.next === null) {
+          this.tail = previous;
+        }
       }
       previous = head;
       head = head.next;
     }
-
     return this.head;
   }
 
@@ -210,5 +213,15 @@ class LinkedList {
 
 // console.log(ll.removeAt(1));
 // console.log(ll.traverseList());
+
+// const list = new LinkedList();
+// [1, 2, 3, 5, 3, 6, 7, 10, 3].forEach(el => {
+//   list.addAtEnd(el);
+// });
+
+// console.log(list.traverseList());
+// list.filter(3);
+// console.log(list.traverseList());
+// console.log(list.tail);
 
 module.exports = { LinkedList, Node };

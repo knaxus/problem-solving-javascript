@@ -16,10 +16,13 @@
   "author": "Ashok Dey <ashokdey100@gmail.com> (http://ashokdey.in)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.11.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^25.0.0",
     "prettier": "^1.19.1"
