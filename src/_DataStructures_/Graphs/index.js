@@ -25,7 +25,7 @@ class Graph {
     return this.data.getEdges(v);
   }
 
-  displayMatrix() {
+  display() {
     return this.data.displayMatrix();
   }
 
@@ -77,7 +77,7 @@ class Graph {
 // const g = new Graph();
 
 // g.addVertex('Noida');
-// console.log(g.displayMatrix());
+// console.log(g.display());
 
 // g.addEdge('Noida', 'Greater Noida');
 // g.addEdge('Noida', 'Ghaziabaad');
@@ -88,16 +88,16 @@ class Graph {
 // g.addVertex('Mathura');
 // g.addEdge('Mathura', 'Noida');
 // g.addEdge('Mathura', 'Meerut');
-// console.log(g.displayMatrix());
+// console.log(g.display());
 // // g.data['Noida'].size = 10;
 
 // // console.log(g.data['Noida']);
 // // g.filter('Noida', 'Greater Noida');
-// console.log(g.displayMatrix());
+// console.log(g.display());
 // console.log('removing Mathura');
 
 // g.removeVertex('Mathura');
-// console.log(g.displayMatrix());
+// console.log(g.display());
 // console.log(g.getEdges('Noida'));
 
 module.exports = Graph;
