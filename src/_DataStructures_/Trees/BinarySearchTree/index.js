@@ -3,6 +3,7 @@ const Node = require('./Node');
 
 class BinarySearchTree {
   constructor(value) {
+    if (!value) throw new Error('Root node value required');
     this.root = new Node(value);
   }
 
