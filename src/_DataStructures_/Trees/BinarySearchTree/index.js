@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 const Node = require('./Node');
 const BSTUtils = require('./utils');
 
@@ -50,15 +49,7 @@ class BinarySearchTree {
 }
 
 // const bst = new BinarySearchTree(6);
-// console.log(bst.root);
-// bst.add(4);
-// bst.add(9);
-// bst.add(2);
-// bst.add(5);
-// bst.add(8);
-// bst.add(12);
-
-// console.log(bst.root);
+// [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
 
 // const preorder = bst.preorder();
 // console.log('Preorder Traversal - ', preorder);
