@@ -70,7 +70,7 @@ describe('Data Structure : Binary Search Tree', () => {
     });
   });
 
-  describe('Check if BST `Is Empty`', () => {
+  describe('Check if BST `Is Empty`, find Min & Max in BST', () => {
     const keys = [4, 9, 2, 5, 8, 12];
 
     beforeEach(() => {
@@ -87,16 +87,11 @@ describe('Data Structure : Binary Search Tree', () => {
     });
 
     it('Should return `true` when BST is empty', () => {
-      bst.remove(6);
+      // remove all the nodes
+      keys.push(6); // head node
+      keys.forEach(e => bst.remove(e));
       expect(bst.isEmpty()).toEqual(true);
     });
-  });
-
-  /*
-
-  describe('Find maximum value in BST', () => {
-    bst = new BinarySearchTree(6);
-    [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
 
     it('Should expect maximum key', () => {
       expect(bst.getMaximum()).toEqual(12);
@@ -106,11 +101,6 @@ describe('Data Structure : Binary Search Tree', () => {
       bst.add(20);
       expect(bst.getMaximum()).toEqual(20);
     });
-  });
-
-  describe('Find the minimum value in BST', () => {
-    bst = new BinarySearchTree(6);
-    [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
 
     it('Should expect minimum key', () => {
       expect(bst.getMinimum()).toEqual(2);
@@ -123,8 +113,6 @@ describe('Data Structure : Binary Search Tree', () => {
   });
 
   describe('Remove Node in BST', () => {
-    bst = null;
-
     beforeEach(() => {
       bst = new BinarySearchTree(5);
     });
@@ -133,9 +121,9 @@ describe('Data Structure : Binary Search Tree', () => {
       bst.add(4);
       bst.add(9);
       bst.add(2);
-      bst.delete(bst.root, 4);
+      bst.remove(4);
       expect(bst.inorder()).toEqual([2, 5, 9]);
-      bst.delete(bst.root, 2);
+      bst.remove(2);
       expect(bst.inorder()).toEqual([5, 9]);
     });
 
@@ -149,18 +137,26 @@ describe('Data Structure : Binary Search Tree', () => {
 
   describe('Search value in BST', () => {
     bst = new BinarySearchTree(6);
-    [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
 
     it('Should return `true` for 8', () => {
-      expect(bst.searchFor(8)).toEqual(true);
+      [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
+      expect(bst.search(8)).toEqual(true);
     });
 
     it('Should return `false` for 100', () => {
-      expect(bst.searchFor(100)).toEqual(false);
+      expect(bst.search(100)).toEqual(false);
     });
   });
 
   describe('Traversals in BST', () => {
+    beforeEach(() => {
+      bst = new BinarySearchTree(6);
+      [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
+    });
+    afterEach(() => {
+      if (bst.root) bst.root = null;
+    });
+
     it('Should return the `Preorder Traversal` for given BST', () => {
       const preOrderTraversal = bst.preorder();
       expect(preOrderTraversal).toEqual([6, 4, 2, 5, 9, 8, 12]);
@@ -176,5 +172,4 @@ describe('Data Structure : Binary Search Tree', () => {
       expect(postOrderTraversal).toEqual([2, 5, 4, 8, 12, 9, 6]);
     });
   });
-  */
 });

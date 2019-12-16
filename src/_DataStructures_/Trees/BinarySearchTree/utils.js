@@ -66,6 +66,7 @@ const utils = {
     return [...arr, root.value];
   },
 
+  // eslint-disable-next-line consistent-return
   search(root, value) {
     if (root === null) return false;
     if (value === root.value) return true;
@@ -76,7 +77,6 @@ const utils = {
     if (value > root.value) {
       return this.search(root.rightChild, value);
     }
-    return false;
   },
 
   delete(root, value) {

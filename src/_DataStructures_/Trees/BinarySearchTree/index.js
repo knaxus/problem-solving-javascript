@@ -31,7 +31,7 @@ class BinarySearchTree {
     return this.BSTUtils.inorder(this.root);
   }
 
-  searchFor(value) {
+  search(value) {
     return this.BSTUtils.search(this.root, value);
   }
 
