@@ -6,7 +6,6 @@ class BinarySearchTree {
   constructor(value) {
     if (!value) throw new Error('Root node value required');
     this.root = new Node(value);
-    this.BSTUtils = BSTUtils;
   }
 
   isEmpty() {
@@ -16,37 +15,37 @@ class BinarySearchTree {
   /** Layered methods to simplify the BST API using utils under the hood  */
 
   add(value) {
-    return this.BSTUtils.insert(this.root, value);
+    return BSTUtils.insert(this.root, value);
   }
 
   preorder() {
-    return this.BSTUtils.preorder(this.root);
+    return BSTUtils.preorder(this.root);
   }
 
   postorder() {
-    return this.BSTUtils.postorder(this.root);
+    return BSTUtils.postorder(this.root);
   }
 
   inorder() {
-    return this.BSTUtils.inorder(this.root);
+    return BSTUtils.inorder(this.root);
   }
 
   search(value) {
-    return this.BSTUtils.search(this.root, value);
+    return BSTUtils.search(this.root, value);
   }
 
   getMinimum() {
-    const minNode = this.BSTUtils.findMinNode(this.root);
+    const minNode = BSTUtils.findMinNode(this.root);
     return minNode.value;
   }
 
   getMaximum() {
-    const maxNode = this.BSTUtils.findMaxNode(this.root);
+    const maxNode = BSTUtils.findMaxNode(this.root);
     return maxNode.value;
   }
 
   remove(value) {
-    this.root = this.BSTUtils.delete(this.root, value);
+    this.root = BSTUtils.delete(this.root, value);
   }
 }
 
