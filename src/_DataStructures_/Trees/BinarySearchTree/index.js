@@ -19,15 +19,15 @@ class BinarySearchTree {
   }
 
   preorder() {
-    return BSTUtils.preorder(this.root);
+    return BSTUtils.preorder(this.root, []);
   }
 
   postorder() {
-    return BSTUtils.postorder(this.root);
+    return BSTUtils.postorder(this.root, []);
   }
 
   inorder() {
-    return BSTUtils.inorder(this.root);
+    return BSTUtils.inorder(this.root, []);
   }
 
   search(value) {
@@ -70,7 +70,7 @@ class BinarySearchTree {
 // console.log('Postorder Traversal - ', postorder);
 
 // const search = 18;
-// console.log(`Search for ${search}`, bst.searchFor(search));
+// console.log(`Search for ${search}`, bst.search(search));
 
 // const minNode = bst.getMinimum();
 // console.log('Minimum value =>', minNode);

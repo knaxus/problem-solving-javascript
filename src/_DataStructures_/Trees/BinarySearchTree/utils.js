@@ -22,48 +22,28 @@ const utils = {
     }
   },
 
-  preorder(root) {
-    /** returning an array so as to make testing easy */
-    let arr = [];
-    if (root === null) return [];
-    arr.push(root.value);
-
-    const left = this.preorder(root.leftChild);
-    arr = [...arr, ...left];
-
-    const right = this.preorder(root.rightChild);
-    arr = [...arr, ...right];
-    return arr;
+  preorder(root, array) {
+    if (root === null) return array;
+    array.push(root.value);
+    this.preorder(root.leftChild, array);
+    this.preorder(root.rightChild, array);
+    return array;
   },
 
-  inorder(root) {
-    /** left - root - right */
-    if (root === null) return [];
-    let arr = [];
-    const left = this.inorder(root.leftChild);
-    arr = [...left, ...arr];
-
-    // print root
-    arr = [...arr, root.value];
-
-    const right = this.inorder(root.rightChild);
-    arr = [...arr, ...right];
-    return arr;
+  inorder(root, array) {
+    if (root === null) return array;
+    this.inorder(root.leftChild, array);
+    array.push(root.value);
+    this.inorder(root.rightChild, array);
+    return array;
   },
 
-  postorder(root) {
-    /** left - right - root */
-
-    if (root === null) return [];
-    let arr = [];
-
-    const left = this.postorder(root.leftChild);
-    arr = [...left, ...arr];
-
-    const right = this.postorder(root.rightChild);
-    arr = [...arr, ...right];
-
-    return [...arr, root.value];
+  postorder(root, array) {
+    if (root === null) return array;
+    this.postorder(root.leftChild, array);
+    this.postorder(root.rightChild, array);
+    array.push(root.value);
+    return array;
   },
 
   // eslint-disable-next-line consistent-return
