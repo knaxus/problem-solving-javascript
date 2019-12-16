@@ -23,11 +23,11 @@ class BinarySearchTree {
     return this.BSTUtils.preorder(this.root);
   }
 
-  traversePostorder() {
+  postorder() {
     return this.BSTUtils.postorder(this.root);
   }
 
-  traverseInorder() {
+  inorder() {
     return this.BSTUtils.inorder(this.root);
   }
 
@@ -61,13 +61,13 @@ class BinarySearchTree {
 
 // console.log(bst.root);
 
-// const preorder = bst.traversePreorder();
+// const preorder = bst.preorder();
 // console.log('Preorder Traversal - ', preorder);
 
-// const inorder = bst.traverseInorder();
+// const inorder = bst.inorder();
 // console.log('Inorder Traversal - ', inorder);
 
-// const postorder = bst.traversePostorder();
+// const postorder = bst.postorder();
 // console.log('Postorder Traversal - ', postorder);
 
 // const search = 18;
@@ -80,7 +80,7 @@ class BinarySearchTree {
 // console.log('Maximum value =>', maxNode);
 
 // bst.remove(4);
-// console.log(bst.traversePreorder());
+// console.log(bst.preorder());
 
 // console.log(bst.root);
 

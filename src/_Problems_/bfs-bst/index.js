@@ -23,7 +23,7 @@ const myBST = new BST(51);
 
 [10, 34, 32, 12, 90, 54, 61, 2, 71, 9].forEach(e => myBST.add(e));
 
-const preOrderElements = myBST.traversePreorder();
+const preOrderElements = myBST.preorder();
 const levelOrderElements = traverseBFS(myBST.root);
 
 // eslint-disable-next-line no-console

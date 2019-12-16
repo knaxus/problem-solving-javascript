@@ -21,7 +21,7 @@ class BinaryTree {
     return root;
   }
 
-  traversePreorder(root) {
+  preorder(root) {
     let arr = [];
 
     if (root === null) return arr;
@@ -29,18 +29,18 @@ class BinaryTree {
     arr.push(root.value);
 
     // push left node
-    const left = this.traversePreorder(root.leftChild);
+    const left = this.preorder(root.leftChild);
     arr = [...arr, ...left];
 
     // push right node
-    const right = this.traversePreorder(root.rightChild);
+    const right = this.preorder(root.rightChild);
     arr = [...arr, ...right];
 
     return arr;
   }
 
   preOrder() {
-    return this.traversePreorder(this.root);
+    return this.preorder(this.root);
   }
 }
 
