@@ -11,15 +11,15 @@ class HashTable {
     this.threshold = 0.7;
     // the main bucket
     this.bucket = new Array(this.slot);
+    // fill the bucket with null
+    // for (let i = 0; i < this.slot; i += 1) this.bucket[i] = null;
+    this.bucket.fill(null);
     this.allowResize = allowResize;
     this.strongHash = strongHash;
     if (custonHash) {
       // eslint-disable-next-line no-underscore-dangle
       this._hash = custonHash;
     }
-
-    // fill the bucket with null
-    for (let i = 0; i < this.slot; i += 1) this.bucket[i] = null;
   }
 
   _hash(key) {
@@ -36,12 +36,14 @@ class HashTable {
     for (let i = 0; i < loopTill; i += 1) {
       const char = stringKey[i];
       const value = char.charCodeAt(0) - 96;
-      index = (index * PRIME_MULTIPLIER + value) % this.bucket.length;
+      // eslint-disable-next-line no-bitwise
+      index &= index;
+      index = index * PRIME_MULTIPLIER + value;
       if (this.strongHash) {
-        index = (index + PRIME_ADDER) % this.bucket.length;
+        index += PRIME_ADDER;
       }
     }
-    return index;
+    return Math.abs(index % this.bucket.length);
   }
 
   _resize() {

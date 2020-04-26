@@ -50,6 +50,8 @@
     - [K Largest Elements](src/_DataStructures_/Heaps/k-largest-in-array)
     - [K Smallest Elements](src/_DataStructures_/Heaps/k-smallest-in-array)
 - [Hash Table](src/_DataStructures_/HashTable)
+- [Set](src/_DataStructures_/Set)
+- [Bloom Filters](src/_DataStructures_/BloomFilters)
 
 ### Logical Problems
 
