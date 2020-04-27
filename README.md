@@ -9,7 +9,6 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/knaxus/problem-solving-javascript)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/knaxus/problem-solving-javascript/issues)
 ![GitHub](https://img.shields.io/github/license/knaxus/problem-solving-javascript)
-![Twitter Follow](https://img.shields.io/twitter/follow/ashokdey_?label=%40ashokdey_&style=social)
 
 Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
 
@@ -30,8 +29,8 @@ Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
 | Name                                      | Twitter                                     | LinkedIn                                      | Website                                    |
 | ----------------------------------------- | ------------------------------------------- | --------------------------------------------- | ------------------------------------------ |
-| [Ashok Dey](https://github.com/ashokdey)  | [ashokdey\_](https://twitter.com/ashokdey_) | [Ashok Dey](https://linkedin.com/in/ashokdey) | [https://ashokdey.in](https://ashokdey.in) |
-| [Ashu Deshwal](https://github.com/TheSTL) | [\_TheSTL\_](https://twitter.com/_TheSTL_)  | -                                             | -                                          |
+| [Ashok Dey](https://github.com/ashokdey)  |![Twitter Follow](https://img.shields.io/twitter/follow/ashokdey_?label=%40ashokdey_&style=social) | [Ashok Dey](https://linkedin.com/in/ashokdey) | [https://ashokdey.in](https://ashokdey.in)|
+| [Ashu Deshwal](https://github.com/TheSTL) | ![Twitter Follow](https://img.shields.io/twitter/follow/_TheSTL_?label=%40_TheSTL&style=social)| [Ashu Deshwal](https://www.linkedin.com/in/ashu-deshwal/) | - |
 
 [Detailed list of contributors](https://github.com/knaxus/problem-solving-javascript/graphs/contributors)
 

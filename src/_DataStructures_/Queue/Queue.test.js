@@ -69,14 +69,5 @@ describe('Data Structure : Queue', () => {
       queue.destroy();
       expect(queue.length()).toEqual(0);
     });
-
-    it('Override and throw error for other LL methods', () => {
-      expect(() => { queue.addAtBeginning(); }).toThrowError('Not Allowed');
-      expect(() => { queue.addAt(); }).toThrowError('Not Allowed');
-      expect(() => { queue.removeFromEnd(); }).toThrowError('Not Allowed');
-      expect(() => { queue.getLast(); }).toThrowError('Not Allowed');
-      expect(() => { queue.getAt(); }).toThrowError('Not Allowed');
-      expect(() => { queue.removeAt(); }).toThrowError('Not Allowed');
-    });
   });
 });
