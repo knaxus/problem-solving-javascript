@@ -37,6 +37,7 @@ class BloomFilters {
     }
 
     // eslint-disable-next-line no-bitwise
+    // To get a better hash. It may look useless but here is the explanation: https://stackoverflow.com/questions/38356644/why-is-the-bitwise-and-of-two-of-the-same-value-producing-a-different-value
     hashVal &= hashVal;
 
     return Math.abs(hashVal % this.size);
