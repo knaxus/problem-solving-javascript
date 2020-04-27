@@ -1,56 +1,54 @@
-const { LinkedList: SinglyLinkedLists } = require('../LinkedList');
+const { LinkedList: SLL } = require('../LinkedList');
 
-class Queue extends SinglyLinkedLists {
+class Queue {
   constructor() {
-    super();
-    this.NotAllowed = 'Not Allowed';
+    this.data = this.getStorage();
   }
 
-  enqueue(data) {
-    return this.addAtEnd(data);
+  enqueue(element) {
+    this.data.enqueue(element);
   }
 
   dequeue() {
-    const node = this.removeFromBeginning();
-    return node ? node.data : node;
+    return this.data.dequeue();
   }
 
   peek() {
-    const node = this.getFirst();
-    return node ? node.data : node;
+    return this.data.peek();
   }
 
   length() {
-    return this.size;
+    return this.data.length();
   }
 
   destroy() {
-    this.delete();
+    return this.data.destroy();
   }
 
-  /** Override and throw error for other LL methods */
-  addAtBeginning() {
-    throw new Error(this.NotAllowed);
-  }
+  // eslint-disable-next-line class-methods-use-this
+  getStorage() {
+    // encapsulating the internal implementation here
+    const storage = new SLL();
 
-  addAt() {
-    throw new Error(this.NotAllowed);
-  }
-
-  removeFromEnd() {
-    throw new Error(this.NotAllowed);
-  }
-
-  getLast() {
-    throw new Error(this.NotAllowed);
-  }
-
-  getAt() {
-    throw new Error(this.NotAllowed);
-  }
-
-  removeAt() {
-    throw new Error(this.NotAllowed);
+    return {
+      enqueue(element) {
+        return storage.addAtEnd(element);
+      },
+      dequeue() {
+        const node = storage.removeFromBeginning();
+        return node ? node.data : node;
+      },
+      peek() {
+        const node = storage.getFirst();
+        return node ? node.data : node;
+      },
+      length() {
+        return storage.size;
+      },
+      destroy() {
+        storage.delete();
+      },
+    };
   }
 }
 

@@ -27,7 +27,7 @@ function findHeightOfBST(root) {
 // myBST.add(10);
 
 // // console.log(myBST.root);
-// console.log(myBST.traversePreorder());
+// console.log(myBST.preorder());
 // console.log(findHeightOfBST(myBST.root));
 
 module.exports = findHeightOfBST;
