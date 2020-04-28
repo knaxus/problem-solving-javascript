@@ -21,7 +21,7 @@ class XSet {
   }
 
   union(givenSet) {
-    const result = new Set();
+    const result = new XSet();
     const firstSetValues = this.values();
     const givenSetValues = givenSet.values();
 
