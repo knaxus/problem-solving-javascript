@@ -61,7 +61,7 @@
 - [Find 2 numbers that add upto N](src/_Problems_/find-2-nums-adding-to-n)
 - [Find 2nd Maxinum from an Array](src/_Problems_/find-2nd-max)
 - [FizzBuzz](src/_Problems_/fizzbuzz)
-- [String Permutaions](src/_Problems_/get-string-permutations)
+- [String Permutations](src/_Problems_/get-string-permutations)
 - [Get Subsequence](src/_Problems_/get_subsequence)
 - [Get Maze Path](src/_Problems_/get-mazePath)
 - [Get longest consecutive 1s](src/_Problems_/max-consecutive-1s)
