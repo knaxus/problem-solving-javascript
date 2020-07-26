@@ -12,8 +12,13 @@
 
 function balancedParantheses(string) {
   return !string.split('').reduce((prev, char) => {
-    const result = prev < 0 ? prev : char === '(' ? ++prev : char === ')' ? --prev : prev;
-    return result;
+    if (prev < 0) return prev;
+
+    if (char === '(') return ++prev;
+
+    if (char === ')') return --prev;
+
+    return prev;
   }, 0);
 }
 
