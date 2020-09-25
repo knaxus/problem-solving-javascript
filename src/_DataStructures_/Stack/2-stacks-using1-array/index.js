@@ -78,6 +78,7 @@ s.push2('c23');
 console.log(s.data);
 
 console.log(s.pop2());
+
 console.log(s.data);
 
 console.log(s.pop1());
