@@ -10,7 +10,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/knaxus/problem-solving-javascript/issues)
 ![GitHub](https://img.shields.io/github/license/knaxus/problem-solving-javascript)
 
-Collection of interview questions with Unit Tests. Problems includes Data Structures, Logical and few Classical problems.
+Collection of interview questions with Unit Tests. Problems include Data Structures, Logical and few Classical problems.
 
 ![DSA](.github/dsa.jpeg)
 
@@ -36,6 +36,6 @@ Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
 ## Contribution Guide
 
-It's great to know that you want to contribute to this repo. Thanks for taking interest. please fing the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
+It's great to know that you want to contribute to this repo. Thanks for taking interest. please find the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 
 Keep an eye on this guide, it's subjected to change frequently.
