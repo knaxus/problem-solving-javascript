@@ -1,14 +1,15 @@
 function reverseLinkedList(linkedList) {
-    let next = linkedList.getFirst();
-    let current = null;
-    let prev;
-    while(next != null){
-        prev = current;
-        current = next;
-        next = next.next;
+    let current = linkedList.getFirst();
+    let prev = null;
+    let keeper = null;
+    do{
+        keeper = current.next;
         current.next = prev;
-    }
-    return current;
+        prev = current;
+        current = keeper;
+    } while(current.next != null);
+    
+  return current;
 };
 module.exports = {
     reverseLinkedList,
