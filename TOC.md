@@ -75,6 +75,7 @@
 - [Maximum Product of Three Numbers](src/_Problems_/max-product-of-3-numbers)
 - [Next Greater for Every Element in an Array](src/_Problems_/next-greater-element)
 - [Compose Largest Number](src/_Problems_/compose-largest-number)
+- [Rotate Image](src/_Problems_/rotate-image)
 
 ### Searching
 
