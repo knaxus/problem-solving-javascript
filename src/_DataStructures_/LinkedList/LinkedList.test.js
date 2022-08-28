@@ -18,7 +18,7 @@ describe('Data Structures: Linked Lists', () => {
       expect(typeof LinkedList.prototype.constructor).toEqual('function');
     });
 
-    it('Should set the data and next field of a node', () => {
+    it('Should set the head, tail and size of a LinkedList', () => {
       const list = new LinkedList();
       expect(list.head).not.toEqual(undefined);
       expect(list.head).toEqual(null);
