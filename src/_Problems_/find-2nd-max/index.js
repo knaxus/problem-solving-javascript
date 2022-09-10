@@ -8,7 +8,7 @@ function findSecondMax(arr) {
   let max = arr[0];
   let max2 = Number.MIN_SAFE_INTEGER;
 
-  for (let el of arr) {
+  for (const el of arr) {
     if (el > max) {
       max2 = max;
       max = el;

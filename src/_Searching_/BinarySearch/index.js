@@ -6,7 +6,7 @@ function binarySearch(arr, key) {
   let high = arr.length - 1;
 
   while (low <= high) {
-    let mid = Math.floor((low + high) / 2);
+    const mid = Math.floor((low + high) / 2);
 
     if (key < arr[mid]) {
       high = mid - 1;
@@ -25,13 +25,17 @@ function binarySearchRecursive(arr, low, high, key) {
 
   if (high <= low && arr[mid] !== key) {
     return null;
-  } else if (key === arr[mid]) {
+  }
+  if (key === arr[mid]) {
     return mid;
-  } else if (key < arr[mid]) {
+  }
+  if (key < arr[mid]) {
     return binarySearchRecursive(arr, low, mid - 1, key);
-  } else if (key > arr[mid]) {
+  }
+  if (key > arr[mid]) {
     return binarySearchRecursive(arr, mid + 1, high, key);
   }
+  return null;
 }
 
 module.exports = {

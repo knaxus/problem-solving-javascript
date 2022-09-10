@@ -5,7 +5,7 @@
  * Average case time complexity: O(√N)
  * Best case time complexity: O(1)
  * Space complexity: O(1)
-*/
+ */
 function jumpSearch(arr, key) {
   const n = arr.length;
   const jump = Math.floor(Math.sqrt(n));
@@ -15,14 +15,18 @@ function jumpSearch(arr, key) {
   while (arr[Math.min(step, n) - 1] < key) {
     prev = step;
     step += jump;
-    if (prev >= n) { return -1; }
+    if (prev >= n) {
+      return -1;
+    }
   }
 
   while (arr[prev] < key && prev < Math.min(step, n)) {
     prev += 1;
   }
 
-  if (arr[prev] === key) { return prev; }
+  if (arr[prev] === key) {
+    return prev;
+  }
 
   return -1;
 }

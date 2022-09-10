@@ -15,12 +15,7 @@ function createCharMap(str) {
 }
 
 function sanitizeAndSortString(str) {
-  return str
-    .replace(pattern, '')
-    .toLowerCase()
-    .split('')
-    .sort()
-    .join('');
+  return str.replace(pattern, '').toLowerCase().split('').sort().join('');
 }
 
 function checkAnagrams({ firstString, secondString }) {

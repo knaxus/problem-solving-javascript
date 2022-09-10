@@ -1,24 +1,24 @@
 // GET PERMUTATION OF A GIVEN STRING
 
 const getPermutations = (str) => {
-  let result = [];
+  const result = [];
 
-  if (str.length == 0) {
+  if (str.length === 0) {
     return result;
   }
 
-  if (str.length == 1) {
+  if (str.length === 1) {
     result.push(str);
     return result;
   }
 
-  let currentCharacter = str.charAt(0);
-  let restOfString = str.substring(1);
-  let returnResult = getPermutations(restOfString);
+  const currentCharacter = str.charAt(0);
+  const restOfString = str.substring(1);
+  const returnResult = getPermutations(restOfString);
 
-  for (j = 0; j < returnResult.length; j++) {
-    for (i = 0; i <= returnResult[j].length; i++) {
-      let value = returnResult[j].substring(0, i) + currentCharacter + returnResult[j].substring(i);
+  for (let j = 0; j < returnResult.length; j += 1) {
+    for (let i = 0; i <= returnResult[j].length; i += 1) {
+      const value = returnResult[j].substring(0, i) + currentCharacter + returnResult[j].substring(i);
       result.push(value);
     }
   }

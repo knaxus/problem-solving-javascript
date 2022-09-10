@@ -1,6 +1,4 @@
-const {
-  arrayChunk, errFirstArgument, errSecondArguemnt, chunkUsingSlice,
-} = require('.');
+const { arrayChunk, errFirstArgument, errSecondArguemnt, chunkUsingSlice } = require('.');
 
 describe('Chunk of Arrays', () => {
   describe('Using normal itteration', () => {
@@ -50,9 +48,7 @@ describe('Chunk of Arrays', () => {
     });
 
     it('Should throw an error for invalid `size` value', () => {
-      expect(() => chunkUsingSlice({ array: [1, 2, 3, 4, 5], size: 'A' })).toThrow(
-        errSecondArguemnt,
-      );
+      expect(() => chunkUsingSlice({ array: [1, 2, 3, 4, 5], size: 'A' })).toThrow(errSecondArguemnt);
     });
 
     it('Should return 5 chunks of size 2 of array with 10 elements', () => {

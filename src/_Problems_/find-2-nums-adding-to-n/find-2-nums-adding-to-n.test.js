@@ -27,8 +27,9 @@ describe('Find two numbers adding to N', () => {
 
   describe('function differences findTwoNumsAddingToN and findTwoNumsAddingToN2', () => {
     it('Should return different arrays', () => {
-      expect(findTwoNumsAddingToN([1, 2, 3, 4], 5))
-        .toEqual(expect.not.arrayContaining(findTwoNumsAddingToN2([1, 2, 3, 4], 5)));
+      expect(findTwoNumsAddingToN([1, 2, 3, 4], 5)).toEqual(
+        expect.not.arrayContaining(findTwoNumsAddingToN2([1, 2, 3, 4], 5)),
+      );
     });
   });
 });

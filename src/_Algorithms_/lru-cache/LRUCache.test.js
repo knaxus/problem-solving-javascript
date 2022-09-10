@@ -19,7 +19,7 @@ describe('Algorithms: LRU Cache', () => {
         expect(lruCache.get('foo')).toEqual(false);
       });
 
-      it('Should return cached value if the key exists in the LRUCache', () =>{
+      it('Should return cached value if the key exists in the LRUCache', () => {
         lruCache.set('foo', 'bar');
         expect(lruCache.get('foo')).toEqual('bar');
       });
@@ -28,21 +28,21 @@ describe('Algorithms: LRU Cache', () => {
         lruCache.set('key1', 'value1');
         lruCache.set('key2', 'value2');
 
-        expect(lruCache.list.head.next.data['key']).toEqual('key2');
-        expect(lruCache.list.head.next.data['value']).toEqual('value2');
+        expect(lruCache.list.head.next.data.key).toEqual('key2');
+        expect(lruCache.list.head.next.data.value).toEqual('value2');
 
         // The least recently used key is moved at the beginning of the list
         lruCache.get('key1');
-        expect(lruCache.list.head.next.data['key']).toEqual('key1');
-        expect(lruCache.list.head.next.data['value']).toEqual('value1');
+        expect(lruCache.list.head.next.data.key).toEqual('key1');
+        expect(lruCache.list.head.next.data.value).toEqual('value1');
       });
     });
 
-    describe('set(key, value)', () =>{
+    describe('set(key, value)', () => {
       it('Should append each <key:value> pair to the beginning of list', () => {
         lruCache.set('foo', 'bar');
-        expect(lruCache.list.head.next.data['key']).toEqual('foo');
-        expect(lruCache.list.head.next.data['value']).toEqual('bar');
+        expect(lruCache.list.head.next.data.key).toEqual('foo');
+        expect(lruCache.list.head.next.data.value).toEqual('bar');
       });
 
       it('Should update value if key already exists', () => {
@@ -59,14 +59,14 @@ describe('Algorithms: LRU Cache', () => {
         lruCache.set('key1', 'value1');
 
         expect(lruCache.list.length()).toEqual(lruCache.size);
-        expect(lruCache.list.head.next.data['key']).toEqual('key1');
-        expect(lruCache.list.head.next.data['value']).toEqual('value1');
-        expect(lruCache.list.head.next.next.data['key']).toEqual('key2');
-        expect(lruCache.list.head.next.next.data['value']).toEqual('value2');
-        expect(lruCache.list.head.next.next.next.data['key']).toEqual('key3');
-        expect(lruCache.list.head.next.next.next.data['value']).toEqual('value3');
-        expect(lruCache.list.head.next.next.next.next.data['key']).toEqual('key4');
-        expect(lruCache.list.head.next.next.next.next.data['value']).toEqual('value4');
+        expect(lruCache.list.head.next.data.key).toEqual('key1');
+        expect(lruCache.list.head.next.data.value).toEqual('value1');
+        expect(lruCache.list.head.next.next.data.key).toEqual('key2');
+        expect(lruCache.list.head.next.next.data.value).toEqual('value2');
+        expect(lruCache.list.head.next.next.next.data.key).toEqual('key3');
+        expect(lruCache.list.head.next.next.next.data.value).toEqual('value3');
+        expect(lruCache.list.head.next.next.next.next.data.key).toEqual('key4');
+        expect(lruCache.list.head.next.next.next.next.data.value).toEqual('value4');
       });
     });
   });

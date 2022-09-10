@@ -7,7 +7,7 @@ const BinarySearchTree = require('../index');
 describe('Lowest Common Ancestor in BST', () => {
   const bst = new BinarySearchTree(20);
   const keys = [22, 8, 12, 4, 14, 10];
-  keys.forEach(el => bst.add(el));
+  keys.forEach((el) => bst.add(el));
 
   it('Should return Lowest Common Ancestor Node ', () => {
     expect(lowestCommonAncestor(bst.root, 10, 14).value).toEqual(12);

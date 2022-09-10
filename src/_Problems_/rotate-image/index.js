@@ -53,12 +53,13 @@
     input matrix
 */
 
-function rotateImage(matrix) {
+function rotateImage(m) {
+  const matrix = m;
   const n = matrix.length;
 
   // take transpose
-  for (let i = 0; i < n; i++) {
-    for (let j = i; j < n; j++) {
+  for (let i = 0; i < n; i += 1) {
+    for (let j = i; j < n; j += 1) {
       const temp = matrix[i][j];
       matrix[i][j] = matrix[j][i];
       matrix[j][i] = temp;
@@ -66,7 +67,7 @@ function rotateImage(matrix) {
   }
 
   // flip horizontally
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < n; i += 1) {
     let left = 0;
     let right = n - 1;
 
@@ -74,8 +75,8 @@ function rotateImage(matrix) {
       const temp = matrix[i][left];
       matrix[i][left] = matrix[i][right];
       matrix[i][right] = temp;
-      left++;
-      right--;
+      left += 1;
+      right -= 1;
     }
   }
 }

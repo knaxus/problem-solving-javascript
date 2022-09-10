@@ -13,7 +13,7 @@ function findProduct(arr) {
   const result = [];
 
   // multiply all the numbers to the left side
-  for (let el of arr) {
+  for (const el of arr) {
     result.push(left);
     left *= el;
   }

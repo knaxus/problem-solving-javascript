@@ -6,7 +6,7 @@ describe('Data Structure : Trie : Get unique words', () => {
     const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = getUniqueWords(trie.root);
 
@@ -18,7 +18,7 @@ describe('Data Structure : Trie : Get unique words', () => {
     const words = ['bed', 'bed', 'bed'];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = getUniqueWords(trie.root);
     expect(result.length).toBe(1);
@@ -28,7 +28,7 @@ describe('Data Structure : Trie : Get unique words', () => {
     const words = [];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = getUniqueWords(trie.root);
     expect(result).toEqual([]);
@@ -52,7 +52,6 @@ describe('Data Structure : Trie : Get unique words', () => {
       getUniqueWords([]);
     }).toThrow('Invalid argument: Root of Trie is required');
   });
-
 
   it('passing an array not in a Trie will throw an error ', () => {
     expect(() => {

@@ -37,7 +37,8 @@ function reverseNumber(num) {
   For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
  */
 
-function reverse32BitInt(x) {
+function reverse32BitInt(n) {
+  let x = n;
   let isNegetive = 0;
   if (x < 0) {
     x *= -1;
@@ -57,5 +58,5 @@ function reverse32BitInt(x) {
 
 module.exports = {
   reverseNumber,
-  reverse32BitInt
+  reverse32BitInt,
 };
