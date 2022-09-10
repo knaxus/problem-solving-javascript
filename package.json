@@ -17,6 +17,11 @@
   "jest": {
     "testEnvironment": "node"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
+  },
   "keywords": [],
   "author": "Ashok Dey <ashokdey100@gmail.com> (http://ashokdey.in)",
   "license": "MIT",
@@ -29,6 +34,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.1",
     "jest": "^25.0.0"
   }
 }
