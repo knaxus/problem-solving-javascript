@@ -12,7 +12,7 @@ describe('Data Structure : Trie', () => {
     let trie;
     it('Should insert string', () => {
       trie = new Trie();
-      words.forEach(word => trie.insert(word));
+      words.forEach((word) => trie.insert(word));
     });
 
     it('Should return `True` if string present', () => {

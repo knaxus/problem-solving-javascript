@@ -1,13 +1,18 @@
 {
   "name": "problem-solving-in-js",
   "version": "1.0.0",
+  "engines": {
+    "node": "^14"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "coverage": "jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "test": "jest --verbose",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "format": "prettier --write .",
+    "lint": "eslint --fix ."
   },
   "jest": {
     "testEnvironment": "node"
@@ -16,15 +21,14 @@
   "author": "Ashok Dey <ashokdey100@gmail.com> (http://ashokdey.in)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-node": "^4.0.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "jest": "^25.0.0",
-    "prettier": "^1.19.1"
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^25.0.0"
   }
 }

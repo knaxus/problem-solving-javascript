@@ -60,6 +60,5 @@ describe('Postfix expression evaluation', () => {
     });
 
     expect(() => evaluatePostfixExpression('1&2')).toThrow('Operation is not valid');
-
   });
 });

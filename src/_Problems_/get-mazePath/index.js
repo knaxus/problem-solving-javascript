@@ -8,30 +8,32 @@
 // --->> ec = end column
 
 const getMazePath = (cr, cc, er, ec) => {
-    if(cr == er && cc == ec) {              //============POSITIVE BASE CASE===========
-        let br = [];
-        br.push('');
-        return br;
-    }
-    
-    if(cr > er || cc > ec) {                //============NEGATIVE BASE CASE===========
-        let br = [];
-        return br;
-    }
-    
-    let myResult = [];
-    
-    let recResultH = getMazePath(cr, cc + 1, er, ec);
-    recResultH.forEach((rrh) => {
-        myResult.push("H" + rrh);
-    });
-    
-    let recResultV = getMazePath(cr + 1, cc, er, ec);
-    recResultV.forEach((rrv) => {
-        myResult.push("V" + rrv);
-    }); 
-    
-    return myResult;
-}
+  if (cr == er && cc == ec) {
+    //============POSITIVE BASE CASE===========
+    let br = [];
+    br.push('');
+    return br;
+  }
+
+  if (cr > er || cc > ec) {
+    //============NEGATIVE BASE CASE===========
+    let br = [];
+    return br;
+  }
+
+  let myResult = [];
+
+  let recResultH = getMazePath(cr, cc + 1, er, ec);
+  recResultH.forEach((rrh) => {
+    myResult.push('H' + rrh);
+  });
+
+  let recResultV = getMazePath(cr + 1, cc, er, ec);
+  recResultV.forEach((rrv) => {
+    myResult.push('V' + rrv);
+  });
+
+  return myResult;
+};
 
 module.exports = { getMazePath };

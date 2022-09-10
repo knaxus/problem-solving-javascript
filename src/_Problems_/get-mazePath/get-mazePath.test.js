@@ -10,7 +10,7 @@ describe('Get maze path', () => {
   it('returns an even amount of horizontal and vertical movements', () => {
     const solutions = getMazePath(0, 0, 3, 3);
 
-    solutions.forEach(solution => {
+    solutions.forEach((solution) => {
       expect(solution.length).toEqual(6);
 
       expect(solution.match(/H/g).length).toEqual(3);

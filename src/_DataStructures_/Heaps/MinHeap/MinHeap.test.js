@@ -26,19 +26,19 @@ describe('MinHeap', () => {
   });
 
   it('Should keep the smallest element at the root', () => {
-    [12, 5, 34].forEach(el => mh.add(el));
+    [12, 5, 34].forEach((el) => mh.add(el));
     expect(mh.getMin()).toEqual(5);
   });
 
   it('Should retain Heap properties after removal of an element', () => {
-    [12, 45, 1, 34].forEach(el => mh.add(el));
+    [12, 45, 1, 34].forEach((el) => mh.add(el));
     expect(mh.getMin()).toEqual(1);
     mh.remove();
     expect(mh.getMin()).toEqual(12);
   });
 
   it('Should return `null` when heap is empty', () => {
-    [1, 34, 43, 54, 123].forEach(el => mh.add(el));
+    [1, 34, 43, 54, 123].forEach((el) => mh.add(el));
     expect(mh.getMin()).toEqual(1);
     mh.remove();
     mh.remove();
@@ -50,7 +50,7 @@ describe('MinHeap', () => {
   });
 
   it('Should return the elelment value on `remove()`', () => {
-    [1, 34].forEach(el => mh.add(el));
+    [1, 34].forEach((el) => mh.add(el));
     expect(mh.getMin()).toEqual(1);
     expect(mh.remove()).toEqual(1);
     expect(mh.remove()).toEqual(34);

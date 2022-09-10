@@ -9,7 +9,7 @@ describe('Binary search tree traversals', () => {
       // Creates BST
       bst = new BinarySearchTree(6);
       const keys = [4, 9, 2, 5, 8, 12];
-      keys.forEach(el => bst.add(el));
+      keys.forEach((el) => bst.add(el));
     });
   });
 
@@ -48,7 +48,7 @@ describe('Binary search tree traversals', () => {
   describe('When root left subtree height is greater than right', () => {
     const bst2 = new BinarySearchTree(10);
     const keys = [11, 20, 9, 8, 7, 6, 5, 4];
-    keys.forEach(el => bst2.add(el));
+    keys.forEach((el) => bst2.add(el));
 
     it('should return height of BST ', () => {
       expect(heightOfBST(bst2.root)).toEqual(7);

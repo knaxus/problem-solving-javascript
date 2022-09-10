@@ -57,5 +57,5 @@ function reverse32BitInt(x) {
 
 module.exports = {
   reverseNumber,
-  reverse32BitInt
+  reverse32BitInt,
 };

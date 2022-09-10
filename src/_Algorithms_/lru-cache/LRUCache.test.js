@@ -19,7 +19,7 @@ describe('Algorithms: LRU Cache', () => {
         expect(lruCache.get('foo')).toEqual(false);
       });
 
-      it('Should return cached value if the key exists in the LRUCache', () =>{
+      it('Should return cached value if the key exists in the LRUCache', () => {
         lruCache.set('foo', 'bar');
         expect(lruCache.get('foo')).toEqual('bar');
       });
@@ -38,7 +38,7 @@ describe('Algorithms: LRU Cache', () => {
       });
     });
 
-    describe('set(key, value)', () =>{
+    describe('set(key, value)', () => {
       it('Should append each <key:value> pair to the beginning of list', () => {
         lruCache.set('foo', 'bar');
         expect(lruCache.list.head.next.data['key']).toEqual('foo');

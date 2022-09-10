@@ -32,11 +32,8 @@ function fibonacciMemoized(index, cache) {
       return index;
     } else if (index < 0) {
       throw new Error('Invalid Position');
-
     } else {
-      cache[index] =
-        fibonacciMemoized(index - 1, cache) +
-        fibonacciMemoized(index - 2, cache);
+      cache[index] = fibonacciMemoized(index - 1, cache) + fibonacciMemoized(index - 2, cache);
     }
   }
   return cache[index];

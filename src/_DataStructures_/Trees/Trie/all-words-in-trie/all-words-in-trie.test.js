@@ -12,7 +12,7 @@ describe('Data Structure : Trie : All Words In Tree', () => {
     const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = allWordsInTrie(trie.root);
 
@@ -24,7 +24,7 @@ describe('Data Structure : Trie : All Words In Tree', () => {
     const words = ['bed', 'bed', 'bed'];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = allWordsInTrie(trie.root);
     expect(result.length).toBe(3);
@@ -34,7 +34,7 @@ describe('Data Structure : Trie : All Words In Tree', () => {
     const words = [];
     const trie = new Trie();
 
-    words.forEach(word => trie.insert(word));
+    words.forEach((word) => trie.insert(word));
 
     const result = allWordsInTrie(trie.root);
     expect(result).toEqual([]);

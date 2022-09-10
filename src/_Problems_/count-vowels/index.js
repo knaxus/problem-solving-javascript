@@ -1,7 +1,7 @@
 const pattern = /[^\w]/g;
 
-const cleanString = str => str.replace(pattern, '').toLowerCase();
-const isVowel = char => char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
+const cleanString = (str) => str.replace(pattern, '').toLowerCase();
+const isVowel = (char) => char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
 
 function countVowelsItteratively(str) {
   const cleanedString = cleanString(str);

@@ -1,8 +1,5 @@
 function usingInbuiltReverse(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('');
+  return str.split('').reverse().join('');
 }
 
 function usingLoopToReverse(str) {

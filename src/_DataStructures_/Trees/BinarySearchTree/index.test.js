@@ -75,7 +75,7 @@ describe('Data Structure : Binary Search Tree', () => {
 
     beforeEach(() => {
       bst = new BinarySearchTree(6);
-      keys.forEach(el => bst.add(el));
+      keys.forEach((el) => bst.add(el));
     });
 
     afterEach(() => {
@@ -89,7 +89,7 @@ describe('Data Structure : Binary Search Tree', () => {
     it('Should return `true` when BST is empty', () => {
       // remove all the nodes
       keys.push(6); // head node
-      keys.forEach(e => bst.remove(e));
+      keys.forEach((e) => bst.remove(e));
       expect(bst.isEmpty()).toEqual(true);
     });
 
@@ -139,7 +139,7 @@ describe('Data Structure : Binary Search Tree', () => {
     bst = new BinarySearchTree(6);
 
     it('Should return `true` for 8', () => {
-      [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
+      [4, 9, 2, 5, 8, 12].forEach((el) => bst.add(el));
       expect(bst.search(8)).toEqual(true);
     });
 
@@ -151,7 +151,7 @@ describe('Data Structure : Binary Search Tree', () => {
   describe('Traversals in BST', () => {
     beforeEach(() => {
       bst = new BinarySearchTree(6);
-      [4, 9, 2, 5, 8, 12].forEach(el => bst.add(el));
+      [4, 9, 2, 5, 8, 12].forEach((el) => bst.add(el));
     });
     afterEach(() => {
       if (bst.root) bst.root = null;

@@ -225,7 +225,7 @@ describe('Data Structures: Linked Lists', () => {
 
         it('Should remove and return the element at given index value', () => {
           list.delete();
-          [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(el => list.addAtBeginning(el));
+          [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((el) => list.addAtBeginning(el));
           expect(list.removeAt(10).data).toEqual(1);
           expect(list.removeAt(0).data).toEqual(9);
           expect(list.removeAt(5).data).toEqual(3);

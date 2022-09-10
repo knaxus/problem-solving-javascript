@@ -3,7 +3,7 @@
  * Complexity can be imporved by using Min-heap.
  * Worse case time complexity is O(E), where E is the number of edges in the graph.
  * Read more: [http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html]
-*/
+ */
 function AStar(s, e, row, col, inputGrid) {
   const Row = row;
   const Col = col;
@@ -12,7 +12,6 @@ function AStar(s, e, row, col, inputGrid) {
   const path = [];
 
   const isValid = (i, j) => i >= 0 && j >= 0 && i < Row && j < Col;
-
 
   if (!isValid(start.i, start.j) || !isValid(end.i, end.j)) {
     throw new Error('Error: Endpoint outside grid bounds');
@@ -51,8 +50,8 @@ function AStar(s, e, row, col, inputGrid) {
 
   const isBlocked = (i, j) => grid[i][j].cellValue === 0;
 
-  const euclideanDistance = (i, j) => Math.abs(i - end.i) * Math.abs(i - end.i)
-  + Math.abs(j - end.j) * Math.abs(j - end.j);
+  const euclideanDistance = (i, j) =>
+    Math.abs(i - end.i) * Math.abs(i - end.i) + Math.abs(j - end.j) * Math.abs(j - end.j);
 
   const trace = () => {
     const endRow = end.i;
@@ -74,8 +73,7 @@ function AStar(s, e, row, col, inputGrid) {
     path.push([i, j]);
   };
 
-  const neighbourExplorer = (i, j, parentI, parentJ, openList, openListMap,
-    closedListMap, distanceFromParent) => {
+  const neighbourExplorer = (i, j, parentI, parentJ, openList, openListMap, closedListMap, distanceFromParent) => {
     if (!isValid(i, j)) {
       return false;
     }
@@ -91,14 +89,15 @@ function AStar(s, e, row, col, inputGrid) {
       return true;
     }
 
-
     const g = grid[parentI][parentJ].g + distanceFromParent;
     const h = euclideanDistance(i, j);
     const f = g + h;
 
-    if ((openListMap[[i, j]] && openListMap[[i, j]] > f)
-    || (closedListMap[[i, j]] && closedListMap[[i, j]] > f)
-    || (!closedListMap[[i, j]] && !openListMap[[i, j]])) {
+    if (
+      (openListMap[[i, j]] && openListMap[[i, j]] > f) ||
+      (closedListMap[[i, j]] && closedListMap[[i, j]] > f) ||
+      (!closedListMap[[i, j]] && !openListMap[[i, j]])
+    ) {
       openListMap[[i, j]] = f;
       grid[i][j].parent_i = parentI;
       grid[i][j].parent_j = parentJ;
@@ -150,23 +149,38 @@ function AStar(s, e, row, col, inputGrid) {
       const parentJ = j;
 
       foundDest = neighbourExplorer(i - 1, j, parentI, parentJ, openList, openListMap, closedListMap, 1); // for North
-      if (foundDest) { break; }
+      if (foundDest) {
+        break;
+      }
       foundDest = neighbourExplorer(i, j - 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for West
-      if (foundDest) { break; }
+      if (foundDest) {
+        break;
+      }
       foundDest = neighbourExplorer(i + 1, j, parentI, parentJ, openList, openListMap, closedListMap, 1); // for South
-      if (foundDest) { break; }
+      if (foundDest) {
+        break;
+      }
       foundDest = neighbourExplorer(i, j + 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for East
-      if (foundDest) { break; }
+      if (foundDest) {
+        break;
+      }
       foundDest = neighbourExplorer(i - 1, j - 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for N.W
-      if (foundDest) { break; }
-      foundDest = neighbourExplorer(i - 1, j + 1, parentI, parentJ, openList, openListMap, closedListMap, 1);// for S.W
-      if (foundDest) { break; }
-      foundDest = neighbourExplorer(i + 1, j + 1, parentI, parentJ, openList, openListMap, closedListMap, 1);// for S.E
-      if (foundDest) { break; }
-      foundDest = neighbourExplorer(i + 1, j - 1, parentI, parentJ, openList, openListMap, closedListMap, 1);// for N.E
-      if (foundDest) { break; }
+      if (foundDest) {
+        break;
+      }
+      foundDest = neighbourExplorer(i - 1, j + 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for S.W
+      if (foundDest) {
+        break;
+      }
+      foundDest = neighbourExplorer(i + 1, j + 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for S.E
+      if (foundDest) {
+        break;
+      }
+      foundDest = neighbourExplorer(i + 1, j - 1, parentI, parentJ, openList, openListMap, closedListMap, 1); // for N.E
+      if (foundDest) {
+        break;
+      }
     }
-
 
     if (!foundDest) {
       return false;
@@ -178,7 +192,6 @@ function AStar(s, e, row, col, inputGrid) {
   }
   return path;
 }
-
 
 // const inputGrid = [
 //   [1, 1, 1, 1, 1],
@@ -240,8 +253,6 @@ function AStar(s, e, row, col, inputGrid) {
 //   j: 0,
 // };
 // console.log(AStar(start, end8, ROW, COL, inputGrid));
-
-
 
 module.exports = {
   AStar,

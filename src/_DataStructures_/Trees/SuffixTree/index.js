@@ -57,7 +57,11 @@ class SuffixTree {
           const partialMatchString = partialMatchNode.data;
 
           let matchString = '';
-          while (k < partialMatchString.length && j < currentString.length && partialMatchString[k] === currentString[j]) {
+          while (
+            k < partialMatchString.length &&
+            j < currentString.length &&
+            partialMatchString[k] === currentString[j]
+          ) {
             matchString += currentString[j];
             k++;
             j++;
@@ -111,7 +115,8 @@ class SuffixTree {
     let currentNode = this.head.next.get(string[0]);
     let currentNodeValue = currentNode.data;
 
-    let i = 0; let j = 0;
+    let i = 0;
+    let j = 0;
 
     while (i < string.length) {
       j = 0;
@@ -135,7 +140,6 @@ class SuffixTree {
 // const st = 'CatatecheeseMouseatecheesetooCatatemousetoo';
 // const s = new SuffixTree(st);
 // s.constructSuffixTree();
-
 
 // for (let i = 0; i < st.length; i++) {
 //   const e = st.substring(i);

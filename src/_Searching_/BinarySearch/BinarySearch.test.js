@@ -37,5 +37,4 @@ describe('Binary Search', () => {
       expect(binarySearchRecursive(array, low, high, 10)).toEqual(null);
     });
   });
-  
 });

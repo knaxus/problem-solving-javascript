@@ -9,11 +9,10 @@ describe('Data Structure : Trie', () => {
   });
 
   describe('Trie', () => {
-
     it('Should return 6.', () => {
       const newTrie = new Trie();
       const words = ['bed', 'ball', 'apple', 'java', 'javascript', 'bed'];
-      words.forEach(word => newTrie.insert(word));
+      words.forEach((word) => newTrie.insert(word));
       const result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });
@@ -26,8 +25,8 @@ describe('Data Structure : Trie', () => {
 
     it('Should return 6.', () => {
       const newTrie = new Trie();
-      const words = ['bed', 'ball','', 'apple', 'java', 'javascript', 'bed'];
-      words.forEach(word => newTrie.insert(word));
+      const words = ['bed', 'ball', '', 'apple', 'java', 'javascript', 'bed'];
+      words.forEach((word) => newTrie.insert(word));
       const result = totalWordsInTrie(newTrie.root);
       assert.equal(result, 6);
     });

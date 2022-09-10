@@ -8,10 +8,14 @@ function lowestCommonAncestor(node, n1, n2) {
   if (node === null) return null;
 
   // If both n1 and n2 are smaller than root, then LCA lies in left
-  if (node.value > n1 && node.value > n2) { return lowestCommonAncestor(node.leftChild, n1, n2); }
+  if (node.value > n1 && node.value > n2) {
+    return lowestCommonAncestor(node.leftChild, n1, n2);
+  }
 
   // If both n1 and n2 are greater than root, then LCA lies in right
-  if (node.value < n1 && node.value < n2) { return lowestCommonAncestor(node.rightChild, n1, n2); }
+  if (node.value < n1 && node.value < n2) {
+    return lowestCommonAncestor(node.rightChild, n1, n2);
+  }
 
   return node;
 }

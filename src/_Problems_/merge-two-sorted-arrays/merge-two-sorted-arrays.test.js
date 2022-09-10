@@ -1,6 +1,5 @@
 const { mergeTwoSortedArrays, mergeTwoSortedArrays2 } = require('.');
 
-
 describe('Merge Two Sorted Array which are already in ascending order ', () => {
   let array1 = [];
   let array2 = [];
