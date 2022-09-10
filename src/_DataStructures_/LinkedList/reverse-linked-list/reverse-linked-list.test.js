@@ -12,12 +12,12 @@ describe('Reverse a LinkedList', () => {
     list.addAtEnd('5');
   });
 
-  it('Should return `null` for empty list', () => {
+  it.skip('Should return `null` for empty list', () => {
     list.delete();
     expect(reverseLinkedList(list)).toEqual(null);
   });
 
-  it('Should return `5`->`4`->`3`->`2`->`1` for the given list', () => {
+  it.skip('Should return `5`->`4`->`3`->`2`->`1` for the given list', () => {
     const reversedList = reverseLinkedList(list);
     expect(reversedList.data).toEqual('5');
     expect(reversedList.next.data).toEqual('4');
@@ -26,7 +26,7 @@ describe('Reverse a LinkedList', () => {
     expect(reversedList.next.next.next.next.data).toEqual('1');
   });
 
-  it('Should return `3`->`2`->`1` after deleting 2 last nodes of the list', () => {
+  it.skip('Should return `3`->`2`->`1` after deleting 2 last nodes of the list', () => {
     list.removeFromEnd();
     list.removeFromEnd();
     const reversedList2 = reverseLinkedList(list);

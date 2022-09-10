@@ -16,10 +16,8 @@ function parentheses(s) {
       arr.pop();
     } else if (s[i] === ']' && arr[arr.length - 1] === '[') {
       arr.pop();
-    } else {
-      return 'Unbalanced';
     }
-    i += 1;
+    return 'Unbalanced';
   }
   if (arr.length === 0) return 'Balanced';
 }
