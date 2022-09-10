@@ -6,7 +6,7 @@
 function parentheses(s) {
   if (typeof s !== 'string' || s.length % 2 !== 0) return false;
   let i = 0;
-  let arr = [];
+  const arr = [];
   while (i < s.length) {
     if (s[i] === '{' || s[i] === '(' || s[i] === '[') {
       arr.push(s[i]);
@@ -16,10 +16,10 @@ function parentheses(s) {
       arr.pop();
     } else if (s[i] === ']' && arr[arr.length - 1] === '[') {
       arr.pop();
+    } else {
+      return 'Unbalanced';
     }
-    return 'Unbalanced';
-
-    i++;
+    i += 1;
   }
   if (arr.length === 0) return 'Balanced';
 }

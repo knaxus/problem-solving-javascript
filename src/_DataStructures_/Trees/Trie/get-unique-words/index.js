@@ -1,4 +1,3 @@
-const Trie = require('../index');
 const TrieNode = require('../Node');
 
 function getAllUniqueWords(root, level, word) {

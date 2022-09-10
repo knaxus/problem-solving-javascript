@@ -1,10 +1,11 @@
-//The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
+// The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
 // the algorithm has time complexity of O(n^2), very bad!
 function fibonacci(position) {
   // if position is 1 or 2, the number in fibonacci sequence will be 1
   if (position === 1 || position === 0) {
     return position;
-  } else if (position < 0) {
+  }
+  if (position < 0) {
     throw new Error('Invalid Position');
   }
 
@@ -27,15 +28,16 @@ function fibonacciMemoized(index, cache) {
 
   if (cache[index]) {
     return cache[index];
-  } else {
-    if (index === 1 || index === 0) {
-      return index;
-    } else if (index < 0) {
-      throw new Error('Invalid Position');
-    } else {
-      cache[index] = fibonacciMemoized(index - 1, cache) + fibonacciMemoized(index - 2, cache);
-    }
   }
+  if (index === 1 || index === 0) {
+    return index;
+  }
+  if (index < 0) {
+    throw new Error('Invalid Position');
+  } else {
+    cache[index] = fibonacciMemoized(index - 1, cache) + fibonacciMemoized(index - 2, cache);
+  }
+
   return cache[index];
 }
 
@@ -47,7 +49,8 @@ function fibonacciTabular(n) {
   const table = [0, 1];
   if (n === 1 || n === 0) {
     return n;
-  } else if (n < 0) {
+  }
+  if (n < 0) {
     throw new Error('Invalid Position');
   }
   for (let i = 2; i <= n; i += 1) {
@@ -63,3 +66,9 @@ function fibonacciTabular(n) {
 // console.log('--');
 // console.log(`Fib memo - ${fibonacciMemoized(number)}`);
 // console.log(`Fib table - ${fibonacciTabular(number)}`);
+
+module.exports = {
+  fibonacci,
+  fibonacciMemoized,
+  fibonacciTabular,
+};

@@ -9,7 +9,7 @@
 function findMaxConsecutive1s(arr) {
   let count = 0;
   let max = 0;
-  const length = arr.length;
+  const { length } = arr;
 
   for (let i = 0; i < length; i += 1) {
     if (arr[i] === 1) {

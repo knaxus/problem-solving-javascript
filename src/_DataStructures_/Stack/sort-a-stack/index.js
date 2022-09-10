@@ -9,17 +9,19 @@ const Stack = require('../index');
 function sortStack(stack) {
   const tempStack = new Stack();
   while (!stack.isEmpty()) {
-    //pop the first element from stack
-    let temp = stack.pop();
-    //for ascending order (tempStack.peek() < temp)
+    // pop the first element from stack
+    const temp = stack.pop();
+    // for ascending order (tempStack.peek() < temp)
     while (!tempStack.isEmpty() && tempStack.peek() > temp) {
       stack.push(tempStack.pop());
     }
-    //push the first element(temp) onto tempStack if tempStack.peek()<temp
+    // push the first element(temp) onto tempStack if tempStack.peek()<temp
     tempStack.push(temp);
   }
   return tempStack;
 }
+
+module.exports = sortStack;
 /*
 const s = new Stack();
 

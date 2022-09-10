@@ -18,7 +18,7 @@ describe('Reverse a LinkedList', () => {
   });
 
   it('Should return `5`->`4`->`3`->`2`->`1` for the given list', () => {
-    let reversedList = reverseLinkedList(list);
+    const reversedList = reverseLinkedList(list);
     expect(reversedList.data).toEqual('5');
     expect(reversedList.next.data).toEqual('4');
     expect(reversedList.next.next.data).toEqual('3');
@@ -29,7 +29,7 @@ describe('Reverse a LinkedList', () => {
   it('Should return `3`->`2`->`1` after deleting 2 last nodes of the list', () => {
     list.removeFromEnd();
     list.removeFromEnd();
-    let reversedList2 = reverseLinkedList(list);
+    const reversedList2 = reverseLinkedList(list);
     expect(reversedList2.data).toEqual('3');
     expect(reversedList2.next.data).toEqual('2');
     expect(reversedList2.next.next.data).toEqual('1');

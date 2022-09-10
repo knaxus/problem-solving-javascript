@@ -10,7 +10,7 @@ function AStar(s, e, row, col, inputGrid) {
   const start = s;
   const end = e;
 
-  function cell() {
+  function Cell() {
     this.cellValue = null;
     this.parent_i = -1;
     this.parent_j = -1;
@@ -19,7 +19,7 @@ function AStar(s, e, row, col, inputGrid) {
     this.f = Number.MAX_SAFE_INTEGER;
   }
 
-  function pair(i, j, f) {
+  function Pair(i, j, f) {
     this.i = i;
     this.j = j;
     this.f = f;
@@ -30,15 +30,13 @@ function AStar(s, e, row, col, inputGrid) {
   for (let i = 0; i < Row; i += 1) {
     grid[i] = [];
     for (let j = 0; j < Col; j += 1) {
-      grid[i][j] = new cell();
+      grid[i][j] = new Cell();
       grid[i][j].cellValue = inputGrid[i][j];
     }
   }
 
   const isValid = (i, j) => i >= 0 && j >= 0 && i < Row && j < Col;
-
   const isDestination = (i, j) => end.i === i && end.j === j;
-
   const isBlocked = (i, j) => grid[i][j].cellValue === 0;
 
   const euclideanDistance = (i, j) =>
@@ -64,7 +62,7 @@ function AStar(s, e, row, col, inputGrid) {
     }
     path.push([i, j]);
 
-    for (let i = 0; i < path.length; i += 1) {
+    for (let z = 0; z < path.length; z += 1) {
       console.log(path[i]);
     }
   };
@@ -101,7 +99,7 @@ function AStar(s, e, row, col, inputGrid) {
       grid[i][j].h = h;
       grid[i][j].f = g + h;
 
-      const item = new pair(i, j, f);
+      const item = new Pair(i, j, f);
       // can be improved by using Min-Heap DataStructure
       if (!openList.length) {
         openList.push(item);
@@ -123,8 +121,8 @@ function AStar(s, e, row, col, inputGrid) {
       return false;
     }
 
-    let i = start.i;
-    let j = start.j;
+    let { i } = start;
+    let { j } = start;
     const openList = [];
     const openListMap = new Map();
     const closedListMap = new Map();
@@ -135,7 +133,7 @@ function AStar(s, e, row, col, inputGrid) {
     grid[i][j].g = 0;
     grid[i][j].f = 0;
 
-    openList.push(new pair(i, j, 0.0));
+    openList.push(new Pair(i, j, 0.0));
 
     openListMap[[i, j]] = 0;
 

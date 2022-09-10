@@ -34,8 +34,12 @@ function maxProductof3NumbersII(arr) {
     throw new Error('Invalid Argument');
   }
 
-  let firstMax = (secondMax = thirdMax = Number.MIN_SAFE_INTEGER);
-  let firstMin = (secondMin = Number.MAX_SAFE_INTEGER);
+  let firstMax = Number.MIN_SAFE_INTEGER;
+  let secondMax = Number.MIN_SAFE_INTEGER;
+  let thirdMax = Number.MIN_SAFE_INTEGER;
+
+  let firstMin = Number.MAX_SAFE_INTEGER;
+  let secondMin = Number.MAX_SAFE_INTEGER;
 
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] > firstMax) {

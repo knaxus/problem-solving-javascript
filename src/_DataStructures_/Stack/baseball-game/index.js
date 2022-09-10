@@ -100,3 +100,7 @@ The size of the input list will be between 1 and 1000.
 Every integer represented in the list will be between -30000 and 30000.
 
 */
+
+module.exports = {
+  sumOfPoints,
+};
