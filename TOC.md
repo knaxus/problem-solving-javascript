@@ -76,7 +76,7 @@
 - [Next Greater for Every Element in an Array](src/_Problems_/next-greater-element)
 - [Compose Largest Number](src/_Problems_/compose-largest-number)
 - [Rotate Image](src/_Problems_/rotate-image)
-
+- [3 Sum](src/_Problems_/3Sum/)
 ### Searching
 
 - [Binary Search](src/_Searching_/BinarySearch)
