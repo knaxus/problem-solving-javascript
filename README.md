@@ -37,7 +37,6 @@ Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
    <img src = "https://contrib.rocks/image?repo=knaxus/problem-solving-javascript"/>
  </a>
 
-
 ## Contribution Guide
 
 It's great to know that you want to contribute to this repo. Thanks for taking interest. please find the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)

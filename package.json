@@ -7,35 +7,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
-    "coverage": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "test": "jest --verbose",
-    "test:watch": "jest --watchAll",
-    "format": "prettier --write .",
-    "lint": "eslint --fix ."
+
   },
   "jest": {
     "testEnvironment": "node"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format && npm run lint"
-    }
-  },
+
   "keywords": [],
   "author": "Ashok Dey <ashokdey100@gmail.com> (http://ashokdey.in)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^8.0.1",
+    "chai": "^4.3.8",
     "jest": "^25.0.0"
+  },
+  "dependencies": {
+    "14": "^3.1.6",
+    "node": "^20.6.0",
+    "react": "^18.2.0"
   }
 }
