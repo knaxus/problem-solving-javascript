@@ -40,6 +40,6 @@ Find the detailed contents and problem list here: [Table Of Contents](TOC.md)
 
 ## Contribution Guide
 
-It's great to know that you want to contribute to this repo. Thanks for taking interest. please find the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
+It's great to know that you want to contribute to this repo. Thanks for taking interest. Please find the [guide here](https://github.com/knaxus/problem-solving-javascript/blob/master/CONTRIBUTING.md)
 
-Keep an eye on this guide, it's subjected to change frequently.
+Keep an eye on this guide. It's subject to frequent change.
